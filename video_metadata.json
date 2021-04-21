@@ -1,0 +1,4426 @@
+{
+    "yNHlC1aaCz8": {
+        "duration": "594.260333",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "17810",
+        "avg_frame_rate": "30000/1001"
+    },
+    "qpcA__nHLnc": {
+        "duration": "12.979633",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "389",
+        "avg_frame_rate": "30000/1001"
+    },
+    "K9cmufsg5Io": {
+        "duration": "791.200000",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "19781",
+        "avg_frame_rate": "98905/3956"
+    },
+    "QdVdXfRmORE": {
+        "duration": "791.200000",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "19781",
+        "avg_frame_rate": "98905/3956"
+    },
+    "y-f1GcDPOuI": {
+        "duration": "158.758600",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "4758",
+        "avg_frame_rate": "30000/1001"
+    },
+    "25ZbNoeOF3E": {
+        "duration": "368.600000",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "9215",
+        "avg_frame_rate": "25/1"
+    },
+    "TcaZYDvl_as": {
+        "duration": "247.920000",
+        "height": 360,
+        "width": 640,
+        "num_orig_frames": "6198",
+        "avg_frame_rate": "25/1"
+    },
+    "NI-P3ysiQSk": {
+        "duration": "160.120000",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "4003",
+        "avg_frame_rate": "25/1"
+    },
+    "abXQKPx9loE": {
+        "duration": "9.142467",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "274",
+        "avg_frame_rate": "30000/1001"
+    },
+    "OaSovqEimyA": {
+        "duration": "390.223167",
+        "height": 360,
+        "width": 640,
+        "num_orig_frames": "11695",
+        "avg_frame_rate": "30000/1001"
+    },
+    "B5BtJzB-CN4": {
+        "duration": "450.400000",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "11260",
+        "avg_frame_rate": "25/1"
+    },
+    "tLa_92pZE8E": {
+        "duration": "71.337933",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "2138",
+        "avg_frame_rate": "30000/1001"
+    },
+    "APEWFGZLYxg": {
+        "duration": "288.955333",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "6928",
+        "avg_frame_rate": "24000/1001"
+    },
+    "4HR3wdinY20": {
+        "duration": "48.266667",
+        "height": 480,
+        "width": 640,
+        "num_orig_frames": "1448",
+        "avg_frame_rate": "30/1"
+    },
+    "spwZO5WMM_s": {
+        "duration": "48.266667",
+        "height": 480,
+        "width": 640,
+        "num_orig_frames": "1448",
+        "avg_frame_rate": "30/1"
+    },
+    "eNr9x3VJZyM": {
+        "duration": "811.920000",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "20298",
+        "avg_frame_rate": "25/1"
+    },
+    "_oGHRYXPTCw": {
+        "duration": "357.557200",
+        "height": 480,
+        "width": 640,
+        "num_orig_frames": "10716",
+        "avg_frame_rate": "30000/1001"
+    },
+    "Zh_uWrNaVQI": {
+        "duration": "370.828792",
+        "height": 360,
+        "width": 640,
+        "num_orig_frames": "8891",
+        "avg_frame_rate": "24000/1001"
+    },
+    "UBggPxlx_JQ": {
+        "duration": "1216.133333",
+        "height": 720,
+        "width": 960,
+        "num_orig_frames": "36484",
+        "avg_frame_rate": "30/1"
+    },
+    "P43YawIICZk": {
+        "duration": "1216.133333",
+        "height": 720,
+        "width": 960,
+        "num_orig_frames": "36484",
+        "avg_frame_rate": "30/1"
+    },
+    "qRNNCkVgRQY": {
+        "duration": "208.000000",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "5201",
+        "avg_frame_rate": "5201/208"
+    },
+    "chi-Qcb3xxA": {
+        "duration": "95.395300",
+        "height": 480,
+        "width": 720,
+        "num_orig_frames": "2859",
+        "avg_frame_rate": "30000/1001"
+    },
+    "90q19HTvm28": {
+        "duration": "1302.668033",
+        "height": 480,
+        "width": 852,
+        "num_orig_frames": "39041",
+        "avg_frame_rate": "30000/1001"
+    },
+    "ofx_J55mpbA": {
+        "duration": "320.080000",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "8002",
+        "avg_frame_rate": "25/1"
+    },
+    "HvNkWpZmdHA": {
+        "duration": "320.080000",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "8002",
+        "avg_frame_rate": "25/1"
+    },
+    "E8ugt5CbEgQ": {
+        "duration": "111.375000",
+        "height": 1636,
+        "width": 3840,
+        "num_orig_frames": "2673",
+        "avg_frame_rate": "24/1"
+    },
+    "6uK9lkmzh4s": {
+        "duration": "251.918333",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "7550",
+        "avg_frame_rate": "30000/1001"
+    },
+    "O7Ae-gYvHJk": {
+        "duration": "793.000542",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "19013",
+        "avg_frame_rate": "24000/1001"
+    },
+    "Kih6922gd5c": {
+        "duration": "793.000542",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "19013",
+        "avg_frame_rate": "24000/1001"
+    },
+    "IRmIQ0vlhbc": {
+        "duration": "525.900000",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "15777",
+        "avg_frame_rate": "30/1"
+    },
+    "SV0r0fWFlNs": {
+        "duration": "2384.800000",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "59620",
+        "avg_frame_rate": "25/1"
+    },
+    "ajYOxzXmJ8g": {
+        "duration": "523.500000",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "12565",
+        "avg_frame_rate": "25130/1047"
+    },
+    "YIo0ULHsvYY": {
+        "duration": "260.426833",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "6244",
+        "avg_frame_rate": "24000/1001"
+    },
+    "gn5ahjaGf_s": {
+        "duration": "282.666667",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "8480",
+        "avg_frame_rate": "30/1"
+    },
+    "ephT6k-CSlg": {
+        "duration": "121.600000",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "3648",
+        "avg_frame_rate": "30/1"
+    },
+    "CcqfI9jRbSE": {
+        "duration": "624.720000",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "15618",
+        "avg_frame_rate": "25/1"
+    },
+    "iQuZiOrjBRk": {
+        "duration": "201.333333",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "6040",
+        "avg_frame_rate": "30/1"
+    },
+    "UVRYE_oGHmk": {
+        "duration": "95.361933",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "2858",
+        "avg_frame_rate": "30000/1001"
+    },
+    "ibd4edu1Zhs": {
+        "duration": "372.163458",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "8923",
+        "avg_frame_rate": "24000/1001"
+    },
+    "Di_J4Lx0XSM": {
+        "duration": "39.640000",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "991",
+        "avg_frame_rate": "25/1"
+    },
+    "oDBEUzwvNwY": {
+        "duration": "311.720000",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "7793",
+        "avg_frame_rate": "25/1"
+    },
+    "Mhze-_MEllw": {
+        "duration": "359.942917",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "8630",
+        "avg_frame_rate": "24000/1001"
+    },
+    "sSZAio7cjdM": {
+        "duration": "10.910900",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "327",
+        "avg_frame_rate": "30000/1001"
+    },
+    "HLZmMu5Tg-E": {
+        "duration": "45.545500",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "1365",
+        "avg_frame_rate": "30000/1001"
+    },
+    "n65HW1iJUuY": {
+        "duration": "45.545500",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "1365",
+        "avg_frame_rate": "30000/1001"
+    },
+    "xmWJB2fCGe0": {
+        "duration": "45.545500",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "1365",
+        "avg_frame_rate": "30000/1001"
+    },
+    "rilRC9C_w2s": {
+        "duration": "251.184267",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "7528",
+        "avg_frame_rate": "30000/1001"
+    },
+    "lRyWUcsXJMk": {
+        "duration": "215.715500",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "6465",
+        "avg_frame_rate": "30000/1001"
+    },
+    "Pv9UJ0kIOa8": {
+        "duration": "215.715500",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "6465",
+        "avg_frame_rate": "30000/1001"
+    },
+    "qRCV8mR2aDc": {
+        "duration": "215.715500",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "6465",
+        "avg_frame_rate": "30000/1001"
+    },
+    "B5JCwD7K3Yk": {
+        "duration": "215.715500",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "6465",
+        "avg_frame_rate": "30000/1001"
+    },
+    "d4N0--eFn9s": {
+        "duration": "192.458933",
+        "height": 360,
+        "width": 640,
+        "num_orig_frames": "5768",
+        "avg_frame_rate": "30000/1001"
+    },
+    "_2qXp2LfKm4": {
+        "duration": "171.504291",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "4112",
+        "avg_frame_rate": "5011/209"
+    },
+    "s6ZYgps4AWk": {
+        "duration": "230.240000",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "5756",
+        "avg_frame_rate": "25/1"
+    },
+    "e4_uxP8yBB8": {
+        "duration": "60.561000",
+        "height": 480,
+        "width": 852,
+        "num_orig_frames": "1816",
+        "avg_frame_rate": "1816000/60561"
+    },
+    "Q2g7KqZH9IA": {
+        "duration": "902.768533",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "27056",
+        "avg_frame_rate": "30000/1001"
+    },
+    "x02kaOZvnU4": {
+        "duration": "317.550567",
+        "height": 470,
+        "width": 854,
+        "num_orig_frames": "9517",
+        "avg_frame_rate": "30000/1001"
+    },
+    "_zQpiDhTc-0": {
+        "duration": "293.441000",
+        "height": 480,
+        "width": 854,
+        "num_orig_frames": "7337",
+        "avg_frame_rate": "7337000/293441"
+    },
+    "6ebHTRaw6_U": {
+        "duration": "171.838333",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "4120",
+        "avg_frame_rate": "24000/1001"
+    },
+    "nACUAZOh19s": {
+        "duration": "100.166733",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "3002",
+        "avg_frame_rate": "30000/1001"
+    },
+    "b_2ZRSpp6Ic": {
+        "duration": "263.496567",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "7897",
+        "avg_frame_rate": "30000/1001"
+    },
+    "8wEL5vomCNw": {
+        "duration": "193.920000",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "4848",
+        "avg_frame_rate": "25/1"
+    },
+    "aydU8hT_mqY": {
+        "duration": "185.418567",
+        "height": 360,
+        "width": 490,
+        "num_orig_frames": "5557",
+        "avg_frame_rate": "30000/1001"
+    },
+    "lLiBMUn4lO0": {
+        "duration": "185.418567",
+        "height": 360,
+        "width": 490,
+        "num_orig_frames": "5557",
+        "avg_frame_rate": "30000/1001"
+    },
+    "PSHYK8hBCLM": {
+        "duration": "234.525956",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "5623",
+        "avg_frame_rate": "63258750/2638417"
+    },
+    "wa5oPu2hTdw": {
+        "duration": "234.525956",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "5623",
+        "avg_frame_rate": "63258750/2638417"
+    },
+    "BTkM9CDQjc4": {
+        "duration": "434.867767",
+        "height": 2048,
+        "width": 3840,
+        "num_orig_frames": "13033",
+        "avg_frame_rate": "30000/1001"
+    },
+    "pIPmUTdJYAY": {
+        "duration": "434.867767",
+        "height": 2048,
+        "width": 3840,
+        "num_orig_frames": "13033",
+        "avg_frame_rate": "30000/1001"
+    },
+    "D0QagLNitTk": {
+        "duration": "148.541667",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "3565",
+        "avg_frame_rate": "24/1"
+    },
+    "wtJwYwJP_cQ": {
+        "duration": "114.147367",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "3421",
+        "avg_frame_rate": "30000/1001"
+    },
+    "JKLTUL1hIiE": {
+        "duration": "57.891167",
+        "height": 480,
+        "width": 720,
+        "num_orig_frames": "1735",
+        "avg_frame_rate": "30000/1001"
+    },
+    "LO9iZFGP2Tw": {
+        "duration": "520.099667",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "15604",
+        "avg_frame_rate": "46812000/1560299"
+    },
+    "0LS2HH9JTWY": {
+        "duration": "189.800000",
+        "height": 480,
+        "width": 640,
+        "num_orig_frames": "5694",
+        "avg_frame_rate": "30/1"
+    },
+    "pAlakMfI6c0": {
+        "duration": "78.578500",
+        "height": 470,
+        "width": 854,
+        "num_orig_frames": "1884",
+        "avg_frame_rate": "24000/1001"
+    },
+    "tQgAytsJwjA": {
+        "duration": "68.168100",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "2043",
+        "avg_frame_rate": "30000/1001"
+    },
+    "BQUDzWt6TJo": {
+        "duration": "4346.175167",
+        "height": 360,
+        "width": 640,
+        "num_orig_frames": "104204",
+        "avg_frame_rate": "24000/1001"
+    },
+    "Vap7T6LTGV4": {
+        "duration": "139.539400",
+        "height": 480,
+        "width": 640,
+        "num_orig_frames": "4182",
+        "avg_frame_rate": "30000/1001"
+    },
+    "si9-9qKe2-E": {
+        "duration": "133.800333",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "3208",
+        "avg_frame_rate": "24000/1001"
+    },
+    "GAyko89Uxvs": {
+        "duration": "9.433333",
+        "height": 360,
+        "width": 266,
+        "num_orig_frames": "283",
+        "avg_frame_rate": "30/1"
+    },
+    "NWZ7uC17NU4": {
+        "duration": "561.216667",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "33673",
+        "avg_frame_rate": "60/1"
+    },
+    "a2MVbZgwzrc": {
+        "duration": "120.933333",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "3628",
+        "avg_frame_rate": "30/1"
+    },
+    "toPjR8LcXGM": {
+        "duration": "188.680000",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "4718",
+        "avg_frame_rate": "117950/4717"
+    },
+    "UeibjyfqcTw": {
+        "duration": "728.060667",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "21820",
+        "avg_frame_rate": "30000/1001"
+    },
+    "J-C6XmAWYKs": {
+        "duration": "30.100000",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "903",
+        "avg_frame_rate": "30/1"
+    },
+    "vHDBEuSJXmM": {
+        "duration": "12.500000",
+        "height": 480,
+        "width": 854,
+        "num_orig_frames": "375",
+        "avg_frame_rate": "30/1"
+    },
+    "45O0IkzwM8c": {
+        "duration": "351.040000",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "8776",
+        "avg_frame_rate": "25/1"
+    },
+    "1RDJKyq4tqI": {
+        "duration": "351.040000",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "8776",
+        "avg_frame_rate": "25/1"
+    },
+    "pk53b_eweyk": {
+        "duration": "351.040000",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "8776",
+        "avg_frame_rate": "25/1"
+    },
+    "IzbnQ3JJsFY": {
+        "duration": "393.160000",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "9829",
+        "avg_frame_rate": "25/1"
+    },
+    "wD17hkI5ElA": {
+        "duration": "111.840000",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "2796",
+        "avg_frame_rate": "25/1"
+    },
+    "UUp3l1KiHgU": {
+        "duration": "388.560000",
+        "height": 1080,
+        "width": 1080,
+        "num_orig_frames": "9714",
+        "avg_frame_rate": "25/1"
+    },
+    "DMi7hujGeSY": {
+        "duration": "525.320000",
+        "height": 360,
+        "width": 640,
+        "num_orig_frames": "13133",
+        "avg_frame_rate": "25/1"
+    },
+    "N_b5wYiRwZE": {
+        "duration": "525.320000",
+        "height": 360,
+        "width": 640,
+        "num_orig_frames": "13133",
+        "avg_frame_rate": "25/1"
+    },
+    "AthCTidepsw": {
+        "duration": "525.320000",
+        "height": 360,
+        "width": 640,
+        "num_orig_frames": "13133",
+        "avg_frame_rate": "25/1"
+    },
+    "Qb8YtgKrWzs": {
+        "duration": "284.720000",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "7118",
+        "avg_frame_rate": "25/1"
+    },
+    "5D-bw-JNAxQ": {
+        "duration": "32.032000",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "960",
+        "avg_frame_rate": "30000/1001"
+    },
+    "6WwyCI2BJvg": {
+        "duration": "32.032000",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "960",
+        "avg_frame_rate": "30000/1001"
+    },
+    "jInRkit-mFw": {
+        "duration": "32.032000",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "960",
+        "avg_frame_rate": "30000/1001"
+    },
+    "8OCAzfwEaKQ": {
+        "duration": "334.534200",
+        "height": 480,
+        "width": 852,
+        "num_orig_frames": "10026",
+        "avg_frame_rate": "30000/1001"
+    },
+    "klMd9gZO9uI": {
+        "duration": "212.078533",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "6356",
+        "avg_frame_rate": "30000/1001"
+    },
+    "dDAkHiRhKXQ": {
+        "duration": "100.266833",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "2404",
+        "avg_frame_rate": "24000/1001"
+    },
+    "H1gow4_KxT4": {
+        "duration": "450.116322",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "10793",
+        "avg_frame_rate": "971370000/40510469"
+    },
+    "SG6gMosTTeM": {
+        "duration": "201.501300",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "6039",
+        "avg_frame_rate": "30000/1001"
+    },
+    "YNQLsRcO5Gk": {
+        "duration": "294.560933",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "8828",
+        "avg_frame_rate": "30000/1001"
+    },
+    "WR1Y1vA2WRY": {
+        "duration": "294.560933",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "8828",
+        "avg_frame_rate": "30000/1001"
+    },
+    "XhrUms1mUyE": {
+        "duration": "670.603267",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "20098",
+        "avg_frame_rate": "30000/1001"
+    },
+    "f4QdNjwwur4": {
+        "duration": "9.976633",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "299",
+        "avg_frame_rate": "30000/1001"
+    },
+    "dGMSxrT3VL4": {
+        "duration": "9.976633",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "299",
+        "avg_frame_rate": "30000/1001"
+    },
+    "8YsGI2BOsl0": {
+        "duration": "9.976633",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "299",
+        "avg_frame_rate": "30000/1001"
+    },
+    "9-OZib0pfS4": {
+        "duration": "123.756967",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "3709",
+        "avg_frame_rate": "30000/1001"
+    },
+    "THOiQhnahZw": {
+        "duration": "123.756967",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "3709",
+        "avg_frame_rate": "30000/1001"
+    },
+    "iQdMy4-5Wjc": {
+        "duration": "123.756967",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "3709",
+        "avg_frame_rate": "30000/1001"
+    },
+    "w5snpqV6bNk": {
+        "duration": "186.052533",
+        "height": 480,
+        "width": 852,
+        "num_orig_frames": "5576",
+        "avg_frame_rate": "30000/1001"
+    },
+    "R7mXqkfXN9k": {
+        "duration": "235.040000",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "5876",
+        "avg_frame_rate": "25/1"
+    },
+    "eKGlDVOI9Jc": {
+        "duration": "219.600000",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "5490",
+        "avg_frame_rate": "25/1"
+    },
+    "-DgysqMvp5c": {
+        "duration": "174.083333",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "4178",
+        "avg_frame_rate": "24/1"
+    },
+    "svlWs4I4W0c": {
+        "duration": "301.440000",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "7536",
+        "avg_frame_rate": "25/1"
+    },
+    "S7gUrEOK_CY": {
+        "duration": "301.440000",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "7536",
+        "avg_frame_rate": "25/1"
+    },
+    "QLDghhHtmug": {
+        "duration": "44.002551",
+        "height": 360,
+        "width": 640,
+        "num_orig_frames": "1327",
+        "avg_frame_rate": "8625/286"
+    },
+    "vQG3tW6wJE8": {
+        "duration": "80.250000",
+        "height": 360,
+        "width": 640,
+        "num_orig_frames": "1926",
+        "avg_frame_rate": "24/1"
+    },
+    "VZZqNsMp714": {
+        "duration": "80.250000",
+        "height": 360,
+        "width": 640,
+        "num_orig_frames": "1926",
+        "avg_frame_rate": "24/1"
+    },
+    "s3E3ibO8xYY": {
+        "duration": "159.000000",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "7950",
+        "avg_frame_rate": "50/1"
+    },
+    "o_eub7iNBtc": {
+        "duration": "124.190733",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "3722",
+        "avg_frame_rate": "30000/1001"
+    },
+    "U1zq4T7MEWw": {
+        "duration": "824.156667",
+        "height": 480,
+        "width": 854,
+        "num_orig_frames": "24700",
+        "avg_frame_rate": "30000/1001"
+    },
+    "7m5tPiTXL5A": {
+        "duration": "69.300000",
+        "height": 360,
+        "width": 638,
+        "num_orig_frames": "2079",
+        "avg_frame_rate": "30/1"
+    },
+    "HG9Ndi0HELY": {
+        "duration": "69.300000",
+        "height": 360,
+        "width": 638,
+        "num_orig_frames": "2079",
+        "avg_frame_rate": "30/1"
+    },
+    "l9-Z_iriglU": {
+        "duration": "69.300000",
+        "height": 360,
+        "width": 638,
+        "num_orig_frames": "2079",
+        "avg_frame_rate": "30/1"
+    },
+    "NjbX7RgjgH8": {
+        "duration": "305.538567",
+        "height": 480,
+        "width": 854,
+        "num_orig_frames": "9157",
+        "avg_frame_rate": "30000/1001"
+    },
+    "O1Sy5QNPPQI": {
+        "duration": "583.480000",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "14587",
+        "avg_frame_rate": "25/1"
+    },
+    "LWxepwy9wU0": {
+        "duration": "493.359533",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "14786",
+        "avg_frame_rate": "30000/1001"
+    },
+    "fb29LCjX4-E": {
+        "duration": "493.359533",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "14786",
+        "avg_frame_rate": "30000/1001"
+    },
+    "gpscQ0ytyJ8": {
+        "duration": "493.359533",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "14786",
+        "avg_frame_rate": "30000/1001"
+    },
+    "zlvaaWTwbb4": {
+        "duration": "278.640000",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "6966",
+        "avg_frame_rate": "25/1"
+    },
+    "ijhlaVcCMfQ": {
+        "duration": "482.448633",
+        "height": 480,
+        "width": 854,
+        "num_orig_frames": "14459",
+        "avg_frame_rate": "30000/1001"
+    },
+    "Hp9qkNfP8lg": {
+        "duration": "819.666667",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "24591",
+        "avg_frame_rate": "73773/2459"
+    },
+    "bQNO6G-o7d4": {
+        "duration": "819.666667",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "24591",
+        "avg_frame_rate": "73773/2459"
+    },
+    "1dzAdJmPZE4": {
+        "duration": "794.766667",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "23843",
+        "avg_frame_rate": "30/1"
+    },
+    "G_2p7Nbo-X0": {
+        "duration": "794.766667",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "23843",
+        "avg_frame_rate": "30/1"
+    },
+    "uMfDmXJVHy4": {
+        "duration": "36.970267",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "1108",
+        "avg_frame_rate": "30000/1001"
+    },
+    "Gv6l4lidYKQ": {
+        "duration": "141.040567",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "4228",
+        "avg_frame_rate": "126840000/4231217"
+    },
+    "A02_pA-ckL0": {
+        "duration": "115.733333",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "3472",
+        "avg_frame_rate": "30/1"
+    },
+    "ZRVFvtoLkRM": {
+        "duration": "290.423467",
+        "height": 360,
+        "width": 480,
+        "num_orig_frames": "8704",
+        "avg_frame_rate": "30000/1001"
+    },
+    "tR30BstP56E": {
+        "duration": "85.933333",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "5156",
+        "avg_frame_rate": "60/1"
+    },
+    "2L9xuu-u-SA": {
+        "duration": "1856.560000",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "46414",
+        "avg_frame_rate": "25/1"
+    },
+    "-NodDRTsV88": {
+        "duration": "116.491367",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "2793",
+        "avg_frame_rate": "83790000/3494741"
+    },
+    "eaWWhFB2n_o": {
+        "duration": "254.654400",
+        "height": 360,
+        "width": 640,
+        "num_orig_frames": "7632",
+        "avg_frame_rate": "30000/1001"
+    },
+    "Jegmjf1XA34": {
+        "duration": "675.100000",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "20254",
+        "avg_frame_rate": "202540/6751"
+    },
+    "lWh-Uo99dhs": {
+        "duration": "587.560000",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "14689",
+        "avg_frame_rate": "25/1"
+    },
+    "phqTsghsopo": {
+        "duration": "102.836067",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "3082",
+        "avg_frame_rate": "30000/1001"
+    },
+    "chMd3jjfrmo": {
+        "duration": "102.836067",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "3082",
+        "avg_frame_rate": "30000/1001"
+    },
+    "SBMR7DHB9dw": {
+        "duration": "168.084583",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "4030",
+        "avg_frame_rate": "24000/1001"
+    },
+    "Bw5n7MKjgqk": {
+        "duration": "224.120000",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "5604",
+        "avg_frame_rate": "140100/5603"
+    },
+    "ZHzL5_eeIu0": {
+        "duration": "50.890840",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "1271",
+        "avg_frame_rate": "25000/1001"
+    },
+    "mQlGqu1soyM": {
+        "duration": "591.424167",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "17725",
+        "avg_frame_rate": "30000/1001"
+    },
+    "qQ8xu-tLTc0": {
+        "duration": "591.424167",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "17725",
+        "avg_frame_rate": "30000/1001"
+    },
+    "JrAQ4GTwIsg": {
+        "duration": "591.424167",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "17725",
+        "avg_frame_rate": "30000/1001"
+    },
+    "C9rh8KKJkrw": {
+        "duration": "591.424167",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "17725",
+        "avg_frame_rate": "30000/1001"
+    },
+    "d5kkUZeqYZo": {
+        "duration": "591.424167",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "17725",
+        "avg_frame_rate": "30000/1001"
+    },
+    "1Mq6LTVkRUE": {
+        "duration": "216.960000",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "5425",
+        "avg_frame_rate": "135625/5424"
+    },
+    "uaccPA5fy_Y": {
+        "duration": "265.098156",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "6357",
+        "avg_frame_rate": "286065000/11929417"
+    },
+    "FQNy3OyT444": {
+        "duration": "239.120000",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "5978",
+        "avg_frame_rate": "25/1"
+    },
+    "xDBC4rbre5o": {
+        "duration": "1073.447375",
+        "height": 360,
+        "width": 638,
+        "num_orig_frames": "25737",
+        "avg_frame_rate": "24000/1001"
+    },
+    "MAdq7pUCO3I": {
+        "duration": "268.301367",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "8041",
+        "avg_frame_rate": "30000/1001"
+    },
+    "kPSKsTWBLLQ": {
+        "duration": "187.160000",
+        "height": 360,
+        "width": 640,
+        "num_orig_frames": "4679",
+        "avg_frame_rate": "25/1"
+    },
+    "-Gwg5XNMBbE": {
+        "duration": "187.160000",
+        "height": 360,
+        "width": 640,
+        "num_orig_frames": "4679",
+        "avg_frame_rate": "25/1"
+    },
+    "iN1zmfl8bHc": {
+        "duration": "297.497533",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "8917",
+        "avg_frame_rate": "133755000/4462463"
+    },
+    "BmPB85y4ChU": {
+        "duration": "297.497533",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "8917",
+        "avg_frame_rate": "133755000/4462463"
+    },
+    "eXmAzsRQi9I": {
+        "duration": "297.497533",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "8917",
+        "avg_frame_rate": "133755000/4462463"
+    },
+    "Ua85l_kEU6w": {
+        "duration": "252.952700",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "7581",
+        "avg_frame_rate": "30000/1001"
+    },
+    "sFh4VpJ49ko": {
+        "duration": "200.840000",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "5021",
+        "avg_frame_rate": "25/1"
+    },
+    "BOA5eg1_U-U": {
+        "duration": "284.484200",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "8526",
+        "avg_frame_rate": "30000/1001"
+    },
+    "hrc42OPDzQA": {
+        "duration": "284.484200",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "8526",
+        "avg_frame_rate": "30000/1001"
+    },
+    "q4f4Riy7tWc": {
+        "duration": "189.033333",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "5671",
+        "avg_frame_rate": "30/1"
+    },
+    "acmUa5sNdrI": {
+        "duration": "60.060000",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "1800",
+        "avg_frame_rate": "30000/1001"
+    },
+    "eUMF1aKl2fw": {
+        "duration": "3.816667",
+        "height": 1920,
+        "width": 1080,
+        "num_orig_frames": "229",
+        "avg_frame_rate": "60/1"
+    },
+    "CuUXdQI5LLs": {
+        "duration": "539.906033",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "16181",
+        "avg_frame_rate": "30000/1001"
+    },
+    "kuXDSu08bis": {
+        "duration": "258.875283",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "15517",
+        "avg_frame_rate": "60000/1001"
+    },
+    "9uljx0mHExs": {
+        "duration": "258.875283",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "15517",
+        "avg_frame_rate": "60000/1001"
+    },
+    "05ij6bmA9fY": {
+        "duration": "158.925433",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "4763",
+        "avg_frame_rate": "30000/1001"
+    },
+    "WLCE-BaWlKo": {
+        "duration": "1946.833333",
+        "height": 360,
+        "width": 640,
+        "num_orig_frames": "58405",
+        "avg_frame_rate": "30/1"
+    },
+    "83E0EIkP7t4": {
+        "duration": "155.321833",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "4655",
+        "avg_frame_rate": "30000/1001"
+    },
+    "MHbLPNrp-Bw": {
+        "duration": "157.423933",
+        "height": 480,
+        "width": 854,
+        "num_orig_frames": "4718",
+        "avg_frame_rate": "30000/1001"
+    },
+    "Qa7I1xf6eKE": {
+        "duration": "225.458567",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "6757",
+        "avg_frame_rate": "30000/1001"
+    },
+    "iJVnv0zvU4s": {
+        "duration": "781.500000",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "23445",
+        "avg_frame_rate": "30/1"
+    },
+    "oH7KciZ3UAQ": {
+        "duration": "781.500000",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "23445",
+        "avg_frame_rate": "30/1"
+    },
+    "aY0iwFsk8W8": {
+        "duration": "148.014533",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "4436",
+        "avg_frame_rate": "30000/1001"
+    },
+    "Bd7o6wdjmto": {
+        "duration": "159.920000",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "3999",
+        "avg_frame_rate": "99975/3998"
+    },
+    "n7kqiAu2gC8": {
+        "duration": "207.840000",
+        "height": 2160,
+        "width": 3840,
+        "num_orig_frames": "5196",
+        "avg_frame_rate": "25/1"
+    },
+    "HB68yVIdPrw": {
+        "duration": "272.280000",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "6807",
+        "avg_frame_rate": "25/1"
+    },
+    "kyezr3XDiGw": {
+        "duration": "71.591511",
+        "height": 360,
+        "width": 240,
+        "num_orig_frames": "1788",
+        "avg_frame_rate": "40230000/1610809"
+    },
+    "jdL1kRaN53A": {
+        "duration": "167.267091",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "10026",
+        "avg_frame_rate": "19001/317"
+    },
+    "xyBueL3Sm_g": {
+        "duration": "311.311000",
+        "height": 360,
+        "width": 640,
+        "num_orig_frames": "9330",
+        "avg_frame_rate": "30000/1001"
+    },
+    "R7qntF12e7M": {
+        "duration": "286.019067",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "8572",
+        "avg_frame_rate": "30000/1001"
+    },
+    "m89jrTfZx_c": {
+        "duration": "286.019067",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "8572",
+        "avg_frame_rate": "30000/1001"
+    },
+    "M8i5bfBxQhM": {
+        "duration": "286.019067",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "8572",
+        "avg_frame_rate": "30000/1001"
+    },
+    "rUUFklUdObI": {
+        "duration": "212.120000",
+        "height": 360,
+        "width": 640,
+        "num_orig_frames": "5303",
+        "avg_frame_rate": "25/1"
+    },
+    "3OHvJ2WqTSc": {
+        "duration": "55.979922",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "1672",
+        "avg_frame_rate": "150480000/5038193"
+    },
+    "KqClwoUrgZA": {
+        "duration": "297.400000",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "7435",
+        "avg_frame_rate": "25/1"
+    },
+    "sErVV0ks2YA": {
+        "duration": "104.187417",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "2498",
+        "avg_frame_rate": "24000/1001"
+    },
+    "VdSjfA1XftM": {
+        "duration": "19.800000",
+        "height": 480,
+        "width": 600,
+        "num_orig_frames": "495",
+        "avg_frame_rate": "25/1"
+    },
+    "X4Mckcw3HUw": {
+        "duration": "119.219100",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "3573",
+        "avg_frame_rate": "30000/1001"
+    },
+    "jyvSbYSq1u4": {
+        "duration": "126.680000",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "6334",
+        "avg_frame_rate": "50/1"
+    },
+    "dv1lEfL1EzY": {
+        "duration": "31.097733",
+        "height": 2160,
+        "width": 3840,
+        "num_orig_frames": "932",
+        "avg_frame_rate": "30000/1001"
+    },
+    "4_genMIIv4U": {
+        "duration": "31.097733",
+        "height": 2160,
+        "width": 3840,
+        "num_orig_frames": "932",
+        "avg_frame_rate": "30000/1001"
+    },
+    "rZM0IQl61Lw": {
+        "duration": "683.233333",
+        "height": 480,
+        "width": 852,
+        "num_orig_frames": "20497",
+        "avg_frame_rate": "30/1"
+    },
+    "XpEvQuOWME0": {
+        "duration": "683.233333",
+        "height": 480,
+        "width": 852,
+        "num_orig_frames": "20497",
+        "avg_frame_rate": "30/1"
+    },
+    "-BtEiJjukV4": {
+        "duration": "1120.168991",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "67143",
+        "avg_frame_rate": "19001/317"
+    },
+    "bON-zHYuC8I": {
+        "duration": "91.658233",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "2747",
+        "avg_frame_rate": "30000/1001"
+    },
+    "u3mV-W03ck4": {
+        "duration": "91.658233",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "2747",
+        "avg_frame_rate": "30000/1001"
+    },
+    "ulN1y3zuLmk": {
+        "duration": "236.903333",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "7100",
+        "avg_frame_rate": "30000/1001"
+    },
+    "CetjdBS8KQQ": {
+        "duration": "334.080000",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "8352",
+        "avg_frame_rate": "25/1"
+    },
+    "OtElCWpd6U8": {
+        "duration": "313.720000",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "7843",
+        "avg_frame_rate": "25/1"
+    },
+    "qz71n0saNhY": {
+        "duration": "155.788967",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "4669",
+        "avg_frame_rate": "30000/1001"
+    },
+    "Yt03peawqKM": {
+        "duration": "155.788967",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "4669",
+        "avg_frame_rate": "30000/1001"
+    },
+    "4j9XhwRtG2Q": {
+        "duration": "155.788967",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "4669",
+        "avg_frame_rate": "30000/1001"
+    },
+    "tQbuVX4wJU8": {
+        "duration": "120.120000",
+        "height": 468,
+        "width": 854,
+        "num_orig_frames": "3003",
+        "avg_frame_rate": "25/1"
+    },
+    "FhJGSk06BuA": {
+        "duration": "120.120000",
+        "height": 468,
+        "width": 854,
+        "num_orig_frames": "3003",
+        "avg_frame_rate": "25/1"
+    },
+    "id1q6et9cYk": {
+        "duration": "84.566667",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "2537",
+        "avg_frame_rate": "30/1"
+    },
+    "-Yqk5cHXsko": {
+        "duration": "133.333200",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "3996",
+        "avg_frame_rate": "30000/1001"
+    },
+    "uB-xNKtbbpg": {
+        "duration": "58.733667",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "1763",
+        "avg_frame_rate": "5289000/176201"
+    },
+    "nK2qHON5tvA": {
+        "duration": "147.614133",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "4424",
+        "avg_frame_rate": "30000/1001"
+    },
+    "-gEooEU66og": {
+        "duration": "64.264200",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "1927",
+        "avg_frame_rate": "9635000/321321"
+    },
+    "wGrDX6II_E8": {
+        "duration": "245.144900",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "7347",
+        "avg_frame_rate": "30000/1001"
+    },
+    "ThK7coZCsB0": {
+        "duration": "33.400000",
+        "height": 1920,
+        "width": 1080,
+        "num_orig_frames": "1002",
+        "avg_frame_rate": "30/1"
+    },
+    "gkjc-Ie1r0E": {
+        "duration": "273.189583",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "6550",
+        "avg_frame_rate": "24000/1001"
+    },
+    "WSgl3qx_F8U": {
+        "duration": "183.750233",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "5507",
+        "avg_frame_rate": "30000/1001"
+    },
+    "2k4cHni8lWo": {
+        "duration": "183.750233",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "5507",
+        "avg_frame_rate": "30000/1001"
+    },
+    "kpQqqZJIptM": {
+        "duration": "222.800000",
+        "height": 480,
+        "width": 640,
+        "num_orig_frames": "5570",
+        "avg_frame_rate": "25/1"
+    },
+    "NO4-rTAUN_U": {
+        "duration": "183.240000",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "4581",
+        "avg_frame_rate": "25/1"
+    },
+    "tVTHSFGzTU4": {
+        "duration": "703.366667",
+        "height": 720,
+        "width": 720,
+        "num_orig_frames": "21101",
+        "avg_frame_rate": "30/1"
+    },
+    "ElLTHbslJZc": {
+        "duration": "327.927600",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "9828",
+        "avg_frame_rate": "30000/1001"
+    },
+    "zs5v8mecSV8": {
+        "duration": "58.900000",
+        "height": 480,
+        "width": 720,
+        "num_orig_frames": "1767",
+        "avg_frame_rate": "30/1"
+    },
+    "I6LX711TSU4": {
+        "duration": "1471.800000",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "44154",
+        "avg_frame_rate": "30/1"
+    },
+    "4W9gcL71TJ4": {
+        "duration": "83.450033",
+        "height": 240,
+        "width": 320,
+        "num_orig_frames": "2501",
+        "avg_frame_rate": "30000/1001"
+    },
+    "9E1dsuvmhdQ": {
+        "duration": "83.450033",
+        "height": 240,
+        "width": 320,
+        "num_orig_frames": "2501",
+        "avg_frame_rate": "30000/1001"
+    },
+    "IaY8PrKISeg": {
+        "duration": "148.720000",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "3718",
+        "avg_frame_rate": "25/1"
+    },
+    "fB51WLjJEEM": {
+        "duration": "60.280000",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "1507",
+        "avg_frame_rate": "25/1"
+    },
+    "DM4Z0usBcwQ": {
+        "duration": "164.266367",
+        "height": 360,
+        "width": 198,
+        "num_orig_frames": "4916",
+        "avg_frame_rate": "147480000/4927991"
+    },
+    "54n6EM5yskc": {
+        "duration": "73.740656",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "1769",
+        "avg_frame_rate": "159210000/6636659"
+    },
+    "Winb4jEoD2E": {
+        "duration": "261.640000",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "6541",
+        "avg_frame_rate": "25/1"
+    },
+    "RFGbnaL_ta0": {
+        "duration": "88.520000",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "2213",
+        "avg_frame_rate": "25/1"
+    },
+    "p502GB0Kw4Q": {
+        "duration": "66.200000",
+        "height": 1080,
+        "width": 608,
+        "num_orig_frames": "1986",
+        "avg_frame_rate": "30/1"
+    },
+    "4u69rGzWmcQ": {
+        "duration": "180.583333",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "4334",
+        "avg_frame_rate": "24/1"
+    },
+    "6zbCSYbnb_Y": {
+        "duration": "858.440000",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "21461",
+        "avg_frame_rate": "25/1"
+    },
+    "fCF7GtMPN5A": {
+        "duration": "332.240000",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "8306",
+        "avg_frame_rate": "25/1"
+    },
+    "FMaVmwjVKQc": {
+        "duration": "323.356367",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "9691",
+        "avg_frame_rate": "30000/1001"
+    },
+    "0SmCUo7qPuQ": {
+        "duration": "224.457567",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "6727",
+        "avg_frame_rate": "30000/1001"
+    },
+    "-VwRsnKR6u0": {
+        "duration": "12.300000",
+        "height": 1280,
+        "width": 720,
+        "num_orig_frames": "369",
+        "avg_frame_rate": "30/1"
+    },
+    "zz-n6qyUMx8": {
+        "duration": "563.646417",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "13514",
+        "avg_frame_rate": "24000/1001"
+    },
+    "MWOGI2mXuG4": {
+        "duration": "245.912333",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "7370",
+        "avg_frame_rate": "30000/1001"
+    },
+    "qR0QMj3Qb3A": {
+        "duration": "155.555400",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "4662",
+        "avg_frame_rate": "30000/1001"
+    },
+    "gKwXUhFeQBU": {
+        "duration": "515.314800",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "15444",
+        "avg_frame_rate": "30000/1001"
+    },
+    "fJ3dvbNps3U": {
+        "duration": "230.360000",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "5759",
+        "avg_frame_rate": "25/1"
+    },
+    "HIlFuml82Mc": {
+        "duration": "421.295875",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "10101",
+        "avg_frame_rate": "24000/1001"
+    },
+    "sINZ68C_67A": {
+        "duration": "252.819233",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "7577",
+        "avg_frame_rate": "30000/1001"
+    },
+    "O9T25SMyz3A": {
+        "duration": "252.819233",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "7577",
+        "avg_frame_rate": "30000/1001"
+    },
+    "NSzsMRzS1C4": {
+        "duration": "178.800000",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "4470",
+        "avg_frame_rate": "25/1"
+    },
+    "InCzFBdTYEc": {
+        "duration": "103.400000",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "3103",
+        "avg_frame_rate": "15515/517"
+    },
+    "bfF0TWs_iBw": {
+        "duration": "275.008067",
+        "height": 240,
+        "width": 426,
+        "num_orig_frames": "4121",
+        "avg_frame_rate": "15000/1001"
+    },
+    "pE6dSsMM6nE": {
+        "duration": "395.144750",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "9474",
+        "avg_frame_rate": "24000/1001"
+    },
+    "0oOb97QXKoI": {
+        "duration": "395.144750",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "9474",
+        "avg_frame_rate": "24000/1001"
+    },
+    "ydYa7NGfDco": {
+        "duration": "268.601667",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "6440",
+        "avg_frame_rate": "24000/1001"
+    },
+    "Dtb2BynKCAI": {
+        "duration": "157.640000",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "3941",
+        "avg_frame_rate": "25/1"
+    },
+    "znbrPJUPVDE": {
+        "duration": "93.960533",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "2816",
+        "avg_frame_rate": "30000/1001"
+    },
+    "idjGAW1cpzM": {
+        "duration": "364.160000",
+        "height": 480,
+        "width": 640,
+        "num_orig_frames": "9104",
+        "avg_frame_rate": "25/1"
+    },
+    "cBJmIAElSUM": {
+        "duration": "545.503289",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "13079",
+        "avg_frame_rate": "73569375/3068456"
+    },
+    "oXBCUzZguYM": {
+        "duration": "180.413567",
+        "height": 240,
+        "width": 320,
+        "num_orig_frames": "5407",
+        "avg_frame_rate": "30000/1001"
+    },
+    "IiY0c6yxH3o": {
+        "duration": "225.966667",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "6779",
+        "avg_frame_rate": "30/1"
+    },
+    "-f_-ozUYUOA": {
+        "duration": "13.066667",
+        "height": 720,
+        "width": 406,
+        "num_orig_frames": "392",
+        "avg_frame_rate": "30/1"
+    },
+    "MVXjpOSczuU": {
+        "duration": "29.829800",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "894",
+        "avg_frame_rate": "30000/1001"
+    },
+    "lacWv2RfPzg": {
+        "duration": "60.000000",
+        "height": 480,
+        "width": 854,
+        "num_orig_frames": "1500",
+        "avg_frame_rate": "25/1"
+    },
+    "T_MqnUTO30M": {
+        "duration": "9000.057733",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "269732",
+        "avg_frame_rate": "30000/1001"
+    },
+    "4JTg4DV9Ju8": {
+        "duration": "53.053000",
+        "height": 1080,
+        "width": 1440,
+        "num_orig_frames": "1590",
+        "avg_frame_rate": "30000/1001"
+    },
+    "mItAnx0vgcM": {
+        "duration": "287.400000",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "7185",
+        "avg_frame_rate": "25/1"
+    },
+    "LOjd3VAoCaI": {
+        "duration": "471.429292",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "11303",
+        "avg_frame_rate": "24000/1001"
+    },
+    "cosVBV96E2g": {
+        "duration": "298.423125",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "7155",
+        "avg_frame_rate": "24000/1001"
+    },
+    "Wfxg5Nst4Zc": {
+        "duration": "738.680000",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "18467",
+        "avg_frame_rate": "25/1"
+    },
+    "-NcbDHv8Wi4": {
+        "duration": "179.920000",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "4498",
+        "avg_frame_rate": "25/1"
+    },
+    "p0lWbEBOYFk": {
+        "duration": "179.920000",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "4498",
+        "avg_frame_rate": "25/1"
+    },
+    "0AFrUiRIeVo": {
+        "duration": "235.501933",
+        "height": 480,
+        "width": 720,
+        "num_orig_frames": "7058",
+        "avg_frame_rate": "30000/1001"
+    },
+    "wJRpbiKuFvU": {
+        "duration": "139.672867",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "4186",
+        "avg_frame_rate": "30000/1001"
+    },
+    "U7PWMRQYk-8": {
+        "duration": "139.672867",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "4186",
+        "avg_frame_rate": "30000/1001"
+    },
+    "uMPqTwLYWGc": {
+        "duration": "107.841067",
+        "height": 240,
+        "width": 352,
+        "num_orig_frames": "3232",
+        "avg_frame_rate": "30000/1001"
+    },
+    "tSM9YHSFYYU": {
+        "duration": "107.841067",
+        "height": 240,
+        "width": 352,
+        "num_orig_frames": "3232",
+        "avg_frame_rate": "30000/1001"
+    },
+    "VuZpoerC4fM": {
+        "duration": "107.841067",
+        "height": 240,
+        "width": 352,
+        "num_orig_frames": "3232",
+        "avg_frame_rate": "30000/1001"
+    },
+    "xMuBXLkPumo": {
+        "duration": "122.000000",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "7320",
+        "avg_frame_rate": "60/1"
+    },
+    "Uw0QZsBd9Pg": {
+        "duration": "29.933333",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "899",
+        "avg_frame_rate": "13485/449"
+    },
+    "cVWOh8ENx14": {
+        "duration": "29.933333",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "899",
+        "avg_frame_rate": "13485/449"
+    },
+    "UFvL7wTFzl0": {
+        "duration": "252.640000",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "6316",
+        "avg_frame_rate": "25/1"
+    },
+    "MllQpfwKsIM": {
+        "duration": "426.260000",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "21313",
+        "avg_frame_rate": "50/1"
+    },
+    "wFJAstA3kEo": {
+        "duration": "426.260000",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "21313",
+        "avg_frame_rate": "50/1"
+    },
+    "1lwRQTGzKcw": {
+        "duration": "284.250633",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "8519",
+        "avg_frame_rate": "30000/1001"
+    },
+    "KAu9l2pWOis": {
+        "duration": "106.520000",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "2663",
+        "avg_frame_rate": "25/1"
+    },
+    "v91FwCeLyjE": {
+        "duration": "416.949867",
+        "height": 4096,
+        "width": 4096,
+        "num_orig_frames": "12496",
+        "avg_frame_rate": "30000/1001"
+    },
+    "CVIYVis527c": {
+        "duration": "362.528833",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "10865",
+        "avg_frame_rate": "30000/1001"
+    },
+    "SeNZnm_ayiA": {
+        "duration": "88.933333",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "2668",
+        "avg_frame_rate": "30/1"
+    },
+    "FHfX2gNuEVE": {
+        "duration": "546.413793",
+        "height": 360,
+        "width": 638,
+        "num_orig_frames": "15846",
+        "avg_frame_rate": "29/1"
+    },
+    "JTqK7EIfm2o": {
+        "duration": "512.378533",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "15356",
+        "avg_frame_rate": "30000/1001"
+    },
+    "FVEe3t73g_s": {
+        "duration": "512.378533",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "15356",
+        "avg_frame_rate": "30000/1001"
+    },
+    "HLwfakhVo7Y": {
+        "duration": "378.010967",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "11329",
+        "avg_frame_rate": "30000/1001"
+    },
+    "2kMr7a5gA6s": {
+        "duration": "226.768208",
+        "height": 2160,
+        "width": 3840,
+        "num_orig_frames": "5437",
+        "avg_frame_rate": "24000/1001"
+    },
+    "id-LZUPcJ4U": {
+        "duration": "10.710700",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "321",
+        "avg_frame_rate": "30000/1001"
+    },
+    "ANs9cy8xMIU": {
+        "duration": "120.080000",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "3002",
+        "avg_frame_rate": "25/1"
+    },
+    "EB2gI3rG0aE": {
+        "duration": "100.933333",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "3028",
+        "avg_frame_rate": "30/1"
+    },
+    "fv9RomyyVAM": {
+        "duration": "105.040000",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "2626",
+        "avg_frame_rate": "25/1"
+    },
+    "ROEyvmZDStI": {
+        "duration": "105.040000",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "2626",
+        "avg_frame_rate": "25/1"
+    },
+    "6mzxyLQimyU": {
+        "duration": "61.920000",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "1548",
+        "avg_frame_rate": "25/1"
+    },
+    "vhaYVAhNWik": {
+        "duration": "156.489667",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "3752",
+        "avg_frame_rate": "24000/1001"
+    },
+    "rTZ1bsC-MWA": {
+        "duration": "278.144533",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "8336",
+        "avg_frame_rate": "30000/1001"
+    },
+    "BAWGjNAj_vA": {
+        "duration": "278.144533",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "8336",
+        "avg_frame_rate": "30000/1001"
+    },
+    "RrKd8eiXggE": {
+        "duration": "111.200000",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "2780",
+        "avg_frame_rate": "25/1"
+    },
+    "FLZmriUnuvY": {
+        "duration": "90.256833",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "2164",
+        "avg_frame_rate": "24000/1001"
+    },
+    "EtaMzoYWv8k": {
+        "duration": "51.760000",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "1294",
+        "avg_frame_rate": "25/1"
+    },
+    "xkrXBR3jNEU": {
+        "duration": "71.480000",
+        "height": 360,
+        "width": 480,
+        "num_orig_frames": "1787",
+        "avg_frame_rate": "25/1"
+    },
+    "awr1OTuVZpE": {
+        "duration": "62.495767",
+        "height": 720,
+        "width": 408,
+        "num_orig_frames": "1873",
+        "avg_frame_rate": "30000/1001"
+    },
+    "HF8ftI1ysns": {
+        "duration": "562.066667",
+        "height": 480,
+        "width": 720,
+        "num_orig_frames": "16862",
+        "avg_frame_rate": "30/1"
+    },
+    "aQXh6J7IVe8": {
+        "duration": "66.633233",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "1997",
+        "avg_frame_rate": "30000/1001"
+    },
+    "WsNAQZzcWGM": {
+        "duration": "47.300000",
+        "height": 1920,
+        "width": 1080,
+        "num_orig_frames": "1419",
+        "avg_frame_rate": "30/1"
+    },
+    "wa2Dehc2W1Q": {
+        "duration": "47.300000",
+        "height": 1920,
+        "width": 1080,
+        "num_orig_frames": "1419",
+        "avg_frame_rate": "30/1"
+    },
+    "Fif57GRExNM": {
+        "duration": "57.257200",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "1716",
+        "avg_frame_rate": "30000/1001"
+    },
+    "mnL_Dugm4y0": {
+        "duration": "506.706200",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "15186",
+        "avg_frame_rate": "30000/1001"
+    },
+    "YpJsL22xfKA": {
+        "duration": "121.754967",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "3649",
+        "avg_frame_rate": "30000/1001"
+    },
+    "1-g-XbIncOw": {
+        "duration": "347.360000",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "8684",
+        "avg_frame_rate": "25/1"
+    },
+    "O1lemt8-JWc": {
+        "duration": "97.397300",
+        "height": 360,
+        "width": 480,
+        "num_orig_frames": "2919",
+        "avg_frame_rate": "30000/1001"
+    },
+    "HNB9nc-v-9A": {
+        "duration": "165.680000",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "4142",
+        "avg_frame_rate": "25/1"
+    },
+    "Cb7k8hKMKd0": {
+        "duration": "145.945800",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "4374",
+        "avg_frame_rate": "30000/1001"
+    },
+    "KKA4AwK69VU": {
+        "duration": "65.520000",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "1638",
+        "avg_frame_rate": "25/1"
+    },
+    "mr4wb7J-Wv8": {
+        "duration": "786.880000",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "19672",
+        "avg_frame_rate": "25/1"
+    },
+    "k4IQBe01hmQ": {
+        "duration": "384.160000",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "19208",
+        "avg_frame_rate": "50/1"
+    },
+    "Vg4wjHigAV4": {
+        "duration": "555.721367",
+        "height": 480,
+        "width": 854,
+        "num_orig_frames": "16656",
+        "avg_frame_rate": "499680000/16671641"
+    },
+    "9NwawUF4jdE": {
+        "duration": "224.033333",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "6721",
+        "avg_frame_rate": "30/1"
+    },
+    "EK24OguMq6w": {
+        "duration": "595.333333",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "14288",
+        "avg_frame_rate": "24/1"
+    },
+    "UTuhA4WhkmI": {
+        "duration": "595.333333",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "14288",
+        "avg_frame_rate": "24/1"
+    },
+    "Syvz_jAW4Nw": {
+        "duration": "191.591400",
+        "height": 226,
+        "width": 400,
+        "num_orig_frames": "5742",
+        "avg_frame_rate": "30000/1001"
+    },
+    "jR7V3_l-aLw": {
+        "duration": "191.591400",
+        "height": 226,
+        "width": 400,
+        "num_orig_frames": "5742",
+        "avg_frame_rate": "30000/1001"
+    },
+    "DGI71r_7Sgo": {
+        "duration": "191.591400",
+        "height": 226,
+        "width": 400,
+        "num_orig_frames": "5742",
+        "avg_frame_rate": "30000/1001"
+    },
+    "hWBbgxwbV28": {
+        "duration": "283.449833",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "8495",
+        "avg_frame_rate": "30000/1001"
+    },
+    "3uhZPzvyu10": {
+        "duration": "242.675767",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "7273",
+        "avg_frame_rate": "30000/1001"
+    },
+    "adOxKZT8OVQ": {
+        "duration": "242.675767",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "7273",
+        "avg_frame_rate": "30000/1001"
+    },
+    "wfpQuYeyG78": {
+        "duration": "306.347708",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "7345",
+        "avg_frame_rate": "24000/1001"
+    },
+    "VLSmwfLZ7ro": {
+        "duration": "306.347708",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "7345",
+        "avg_frame_rate": "24000/1001"
+    },
+    "QSyROcZvtc0": {
+        "duration": "112.920000",
+        "height": 930,
+        "width": 1920,
+        "num_orig_frames": "2823",
+        "avg_frame_rate": "25/1"
+    },
+    "LvYPWGdEG14": {
+        "duration": "112.920000",
+        "height": 930,
+        "width": 1920,
+        "num_orig_frames": "2823",
+        "avg_frame_rate": "25/1"
+    },
+    "0RV4a8TwuZ0": {
+        "duration": "401.400000",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "12042",
+        "avg_frame_rate": "30/1"
+    },
+    "zB9UTdRYiTA": {
+        "duration": "10.833333",
+        "height": 480,
+        "width": 272,
+        "num_orig_frames": "325",
+        "avg_frame_rate": "30/1"
+    },
+    "mIdUOZJdPy8": {
+        "duration": "409.433333",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "12283",
+        "avg_frame_rate": "30/1"
+    },
+    "ofMAEsqswrQ": {
+        "duration": "355.100000",
+        "height": 360,
+        "width": 640,
+        "num_orig_frames": "10653",
+        "avg_frame_rate": "30/1"
+    },
+    "qkS6PTS3rhw": {
+        "duration": "198.280000",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "4957",
+        "avg_frame_rate": "25/1"
+    },
+    "_JzHvepPcbk": {
+        "duration": "198.280000",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "4957",
+        "avg_frame_rate": "25/1"
+    },
+    "v5BAQNm_9GQ": {
+        "duration": "4324.466667",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "129734",
+        "avg_frame_rate": "30/1"
+    },
+    "ATwG6H9l9dI": {
+        "duration": "4324.466667",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "129734",
+        "avg_frame_rate": "30/1"
+    },
+    "51tE815gFpQ": {
+        "duration": "111.240000",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "5562",
+        "avg_frame_rate": "50/1"
+    },
+    "lL4yBLuInrY": {
+        "duration": "163.863700",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "4912",
+        "avg_frame_rate": "49120000/1638637"
+    },
+    "mW3ugoteMsg": {
+        "duration": "851.466667",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "25544",
+        "avg_frame_rate": "30/1"
+    },
+    "wP6N8HX-AVs": {
+        "duration": "57.190467",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "1714",
+        "avg_frame_rate": "30000/1001"
+    },
+    "7ukk5hOV8e0": {
+        "duration": "234.609375",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "5625",
+        "avg_frame_rate": "24000/1001"
+    },
+    "sPRbnJzKEys": {
+        "duration": "438.137700",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "13131",
+        "avg_frame_rate": "30000/1001"
+    },
+    "4JlrJDrqfhc": {
+        "duration": "508.200000",
+        "height": 480,
+        "width": 854,
+        "num_orig_frames": "15246",
+        "avg_frame_rate": "30/1"
+    },
+    "IkMYw1H44gM": {
+        "duration": "1902.900000",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "57087",
+        "avg_frame_rate": "30/1"
+    },
+    "vmeC9jyBFrw": {
+        "duration": "309.242267",
+        "height": 480,
+        "width": 640,
+        "num_orig_frames": "9268",
+        "avg_frame_rate": "30000/1001"
+    },
+    "1iDFBs5Q2Sk": {
+        "duration": "617.266667",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "18518",
+        "avg_frame_rate": "30/1"
+    },
+    "l7vZqtUpCA8": {
+        "duration": "617.266667",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "18518",
+        "avg_frame_rate": "30/1"
+    },
+    "KW2THFXADuc": {
+        "duration": "82.680000",
+        "height": 240,
+        "width": 424,
+        "num_orig_frames": "2067",
+        "avg_frame_rate": "25/1"
+    },
+    "pemxJyoLmsw": {
+        "duration": "13.924586",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "417",
+        "avg_frame_rate": "18657/623"
+    },
+    "VPE8cvaxtgM": {
+        "duration": "80.113367",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "2402",
+        "avg_frame_rate": "72060000/2403401"
+    },
+    "PV3S1ko_PQY": {
+        "duration": "582.749167",
+        "height": 480,
+        "width": 854,
+        "num_orig_frames": "17466",
+        "avg_frame_rate": "20959200/699299"
+    },
+    "v-zep0MoHkI": {
+        "duration": "146.246100",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "4383",
+        "avg_frame_rate": "30000/1001"
+    },
+    "gNZYR2bKrhA": {
+        "duration": "323.160000",
+        "height": 480,
+        "width": 654,
+        "num_orig_frames": "8079",
+        "avg_frame_rate": "25/1"
+    },
+    "ngi8blAZTEE": {
+        "duration": "356.840000",
+        "height": 468,
+        "width": 854,
+        "num_orig_frames": "8921",
+        "avg_frame_rate": "25/1"
+    },
+    "i6HKA6yBCSk": {
+        "duration": "24.440000",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "611",
+        "avg_frame_rate": "25/1"
+    },
+    "2BlCvIu9bHg": {
+        "duration": "24.440000",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "611",
+        "avg_frame_rate": "25/1"
+    },
+    "yJXMxqtnw48": {
+        "duration": "50.066667",
+        "height": 1280,
+        "width": 720,
+        "num_orig_frames": "1496",
+        "avg_frame_rate": "22440/751"
+    },
+    "4LPK8Ivx-hI": {
+        "duration": "3337.880000",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "83448",
+        "avg_frame_rate": "2086200/83447"
+    },
+    "6VDQplcaigU": {
+        "duration": "23.038229",
+        "height": 1920,
+        "width": 1080,
+        "num_orig_frames": "687",
+        "avg_frame_rate": "1491/50"
+    },
+    "Ojq5lOlKdYA": {
+        "duration": "189.689500",
+        "height": 360,
+        "width": 640,
+        "num_orig_frames": "5685",
+        "avg_frame_rate": "30000/1001"
+    },
+    "ksVakjS6-54": {
+        "duration": "189.689500",
+        "height": 360,
+        "width": 640,
+        "num_orig_frames": "5685",
+        "avg_frame_rate": "30000/1001"
+    },
+    "ulJL3jFVKNs": {
+        "duration": "124.120000",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "3104",
+        "avg_frame_rate": "77600/3103"
+    },
+    "1SSiflULeRY": {
+        "duration": "426.826400",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "12792",
+        "avg_frame_rate": "30000/1001"
+    },
+    "z5V_da908wA": {
+        "duration": "426.826400",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "12792",
+        "avg_frame_rate": "30000/1001"
+    },
+    "12_yiRFJL4o": {
+        "duration": "341.090750",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "8178",
+        "avg_frame_rate": "24000/1001"
+    },
+    "ZaDzK7tGhto": {
+        "duration": "341.090750",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "8178",
+        "avg_frame_rate": "24000/1001"
+    },
+    "C3x33c6UYoc": {
+        "duration": "290.633333",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "8720",
+        "avg_frame_rate": "261600/8719"
+    },
+    "wCRcczIyVRk": {
+        "duration": "267.120000",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "6678",
+        "avg_frame_rate": "25/1"
+    },
+    "3CHzg6rIh9A": {
+        "duration": "243.076167",
+        "height": 240,
+        "width": 352,
+        "num_orig_frames": "7285",
+        "avg_frame_rate": "30000/1001"
+    },
+    "TNvrgjVgvJo": {
+        "duration": "785.326208",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "18829",
+        "avg_frame_rate": "24000/1001"
+    },
+    "nBhFX7Y7uMM": {
+        "duration": "785.326208",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "18829",
+        "avg_frame_rate": "24000/1001"
+    },
+    "I5alO8uCfuw": {
+        "duration": "155.188367",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "4651",
+        "avg_frame_rate": "30000/1001"
+    },
+    "qIbP3-zoB64": {
+        "duration": "974.480000",
+        "height": 480,
+        "width": 600,
+        "num_orig_frames": "24362",
+        "avg_frame_rate": "25/1"
+    },
+    "PlqyHRNTwCE": {
+        "duration": "949.833333",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "28495",
+        "avg_frame_rate": "30/1"
+    },
+    "tgC0WxAnNQk": {
+        "duration": "335.840000",
+        "height": 360,
+        "width": 640,
+        "num_orig_frames": "8396",
+        "avg_frame_rate": "25/1"
+    },
+    "XsqjnB58O-E": {
+        "duration": "233.816917",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "5606",
+        "avg_frame_rate": "24000/1001"
+    },
+    "Zbp74ri21YE": {
+        "duration": "576.208967",
+        "height": 1080,
+        "width": 1440,
+        "num_orig_frames": "17269",
+        "avg_frame_rate": "30000/1001"
+    },
+    "o6lMQITV5AY": {
+        "duration": "94.994900",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "2847",
+        "avg_frame_rate": "30000/1001"
+    },
+    "5SVudpUKW8U": {
+        "duration": "1444.342900",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "43287",
+        "avg_frame_rate": "30000/1001"
+    },
+    "dnLoBBUE9N8": {
+        "duration": "267.600667",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "8020",
+        "avg_frame_rate": "30000/1001"
+    },
+    "n6a9kYAmt7c": {
+        "duration": "62.160000",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "1554",
+        "avg_frame_rate": "25/1"
+    },
+    "XW8-t3Dk898": {
+        "duration": "62.160000",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "1554",
+        "avg_frame_rate": "25/1"
+    },
+    "gqer6W9fvjA": {
+        "duration": "163.499644",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "4827",
+        "avg_frame_rate": "29523/1000"
+    },
+    "gqq3truC23s": {
+        "duration": "163.499644",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "4827",
+        "avg_frame_rate": "29523/1000"
+    },
+    "HPJ1XG_Fork": {
+        "duration": "1109.908800",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "33264",
+        "avg_frame_rate": "30000/1001"
+    },
+    "FwQupUF3vfA": {
+        "duration": "196.446256",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "11775",
+        "avg_frame_rate": "1059750000/17680163"
+    },
+    "fUXpw_YK_ok": {
+        "duration": "863.533333",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "25906",
+        "avg_frame_rate": "30/1"
+    },
+    "stpWhn-EMmA": {
+        "duration": "146.400000",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "3660",
+        "avg_frame_rate": "25/1"
+    },
+    "y4E5_916Tz0": {
+        "duration": "245.044800",
+        "height": 360,
+        "width": 640,
+        "num_orig_frames": "7344",
+        "avg_frame_rate": "30000/1001"
+    },
+    "D3Fv6yZHVTk": {
+        "duration": "245.044800",
+        "height": 360,
+        "width": 640,
+        "num_orig_frames": "7344",
+        "avg_frame_rate": "30000/1001"
+    },
+    "O92KL1mw77c": {
+        "duration": "39.920000",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "998",
+        "avg_frame_rate": "25/1"
+    },
+    "8qc9_aQ_G1k": {
+        "duration": "39.920000",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "998",
+        "avg_frame_rate": "25/1"
+    },
+    "xlGpzCaCe0c": {
+        "duration": "39.920000",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "998",
+        "avg_frame_rate": "25/1"
+    },
+    "0nx-6_EaADA": {
+        "duration": "212.240000",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "5306",
+        "avg_frame_rate": "25/1"
+    },
+    "ZY95eQo--fI": {
+        "duration": "7.607600",
+        "height": 1280,
+        "width": 720,
+        "num_orig_frames": "228",
+        "avg_frame_rate": "30000/1001"
+    },
+    "qSlkpa2OjqA": {
+        "duration": "275.480000",
+        "height": 480,
+        "width": 854,
+        "num_orig_frames": "6887",
+        "avg_frame_rate": "25/1"
+    },
+    "zV7fBhwuvLM": {
+        "duration": "96.400000",
+        "height": 480,
+        "width": 848,
+        "num_orig_frames": "2892",
+        "avg_frame_rate": "30/1"
+    },
+    "OV--1W_d9N8": {
+        "duration": "278.011067",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "8332",
+        "avg_frame_rate": "30000/1001"
+    },
+    "JuuMEByMNI4": {
+        "duration": "569.001767",
+        "height": 1920,
+        "width": 1080,
+        "num_orig_frames": "17053",
+        "avg_frame_rate": "30000/1001"
+    },
+    "ObJ8IqDD6vI": {
+        "duration": "153.100000",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "4593",
+        "avg_frame_rate": "30/1"
+    },
+    "gb-boQWhmhU": {
+        "duration": "516.260000",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "25813",
+        "avg_frame_rate": "50/1"
+    },
+    "Q0YxhNsI40g": {
+        "duration": "365.560000",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "9139",
+        "avg_frame_rate": "25/1"
+    },
+    "vIDJk3fA3sU": {
+        "duration": "195.946122",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "4698",
+        "avg_frame_rate": "422820000/17635151"
+    },
+    "ODQdu2JPuDI": {
+        "duration": "692.833333",
+        "height": 360,
+        "width": 480,
+        "num_orig_frames": "20785",
+        "avg_frame_rate": "30/1"
+    },
+    "iF2pMkVUrEc": {
+        "duration": "2493.120000",
+        "height": 480,
+        "width": 640,
+        "num_orig_frames": "62328",
+        "avg_frame_rate": "25/1"
+    },
+    "ivl37Nq5MNg": {
+        "duration": "359.033333",
+        "height": 480,
+        "width": 720,
+        "num_orig_frames": "10771",
+        "avg_frame_rate": "30/1"
+    },
+    "EcbgpiKyUbs": {
+        "duration": "359.025333",
+        "height": 360,
+        "width": 480,
+        "num_orig_frames": "10760",
+        "avg_frame_rate": "30000/1001"
+    },
+    "n_JGBpdc_-U": {
+        "duration": "359.025333",
+        "height": 360,
+        "width": 480,
+        "num_orig_frames": "10760",
+        "avg_frame_rate": "30000/1001"
+    },
+    "Bvs3I6XqnuQ": {
+        "duration": "359.025333",
+        "height": 360,
+        "width": 480,
+        "num_orig_frames": "10760",
+        "avg_frame_rate": "30000/1001"
+    },
+    "gifpziAwKBk": {
+        "duration": "142.851042",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "3425",
+        "avg_frame_rate": "24000/1001"
+    },
+    "52kjmMz7vpU": {
+        "duration": "188.922067",
+        "height": 240,
+        "width": 320,
+        "num_orig_frames": "5662",
+        "avg_frame_rate": "30000/1001"
+    },
+    "eg6YseN5GU8": {
+        "duration": "151.720000",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "3793",
+        "avg_frame_rate": "25/1"
+    },
+    "PzslJaQUMow": {
+        "duration": "336.586250",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "8070",
+        "avg_frame_rate": "24000/1001"
+    },
+    "oalpVT9Zy9w": {
+        "duration": "336.586250",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "8070",
+        "avg_frame_rate": "24000/1001"
+    },
+    "6THKEJ_Ciag": {
+        "duration": "168.902067",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "5062",
+        "avg_frame_rate": "30000/1001"
+    },
+    "QzrXR89SkXE": {
+        "duration": "227.093533",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "6806",
+        "avg_frame_rate": "30000/1001"
+    },
+    "jpI3g_bEibQ": {
+        "duration": "192.520000",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "4813",
+        "avg_frame_rate": "25/1"
+    },
+    "4wjDoX1jqIc": {
+        "duration": "4949.533333",
+        "height": 360,
+        "width": 480,
+        "num_orig_frames": "74243",
+        "avg_frame_rate": "15/1"
+    },
+    "NLAA2odoFto": {
+        "duration": "79.112367",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "2371",
+        "avg_frame_rate": "30000/1001"
+    },
+    "N4xIpAKSN_w": {
+        "duration": "79.112367",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "2371",
+        "avg_frame_rate": "30000/1001"
+    },
+    "fkFjT5-g2CA": {
+        "duration": "941.280000",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "23532",
+        "avg_frame_rate": "25/1"
+    },
+    "o0ZzTyt8XGU": {
+        "duration": "325.280000",
+        "height": 360,
+        "width": 640,
+        "num_orig_frames": "8132",
+        "avg_frame_rate": "25/1"
+    },
+    "wl_hwIbM4-U": {
+        "duration": "272.472200",
+        "height": 360,
+        "width": 640,
+        "num_orig_frames": "8166",
+        "avg_frame_rate": "30000/1001"
+    },
+    "DrqEn1GOWzk": {
+        "duration": "239.200000",
+        "height": 480,
+        "width": 854,
+        "num_orig_frames": "5980",
+        "avg_frame_rate": "25/1"
+    },
+    "cqD-EvrqhKU": {
+        "duration": "243.466667",
+        "height": 478,
+        "width": 854,
+        "num_orig_frames": "7304",
+        "avg_frame_rate": "30/1"
+    },
+    "Wa6zhe8xlGc": {
+        "duration": "428.916667",
+        "height": 1080,
+        "width": 1906,
+        "num_orig_frames": "25735",
+        "avg_frame_rate": "60/1"
+    },
+    "3JHdrojxzSw": {
+        "duration": "507.174000",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "15201",
+        "avg_frame_rate": "2533500/84529"
+    },
+    "ZntZ5fVnfM8": {
+        "duration": "320.240000",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "8007",
+        "avg_frame_rate": "200175/8006"
+    },
+    "45HJuHdB5sk": {
+        "duration": "407.066667",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "12212",
+        "avg_frame_rate": "30/1"
+    },
+    "m7ApGVQnXng": {
+        "duration": "220.486933",
+        "height": 2160,
+        "width": 3840,
+        "num_orig_frames": "6608",
+        "avg_frame_rate": "30000/1001"
+    },
+    "hfQnwQZqVRk": {
+        "duration": "16.531669",
+        "height": 1280,
+        "width": 720,
+        "num_orig_frames": "747",
+        "avg_frame_rate": "22593/500"
+    },
+    "cMk_5EDbO-4": {
+        "duration": "24.491467",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "735",
+        "avg_frame_rate": "2756250/91843"
+    },
+    "Cw1UeIkQ7bg": {
+        "duration": "24.491467",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "735",
+        "avg_frame_rate": "2756250/91843"
+    },
+    "tPULt6BTDZM": {
+        "duration": "80.080000",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "2400",
+        "avg_frame_rate": "30000/1001"
+    },
+    "GkzN0KcG6eo": {
+        "duration": "263.880000",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "6597",
+        "avg_frame_rate": "25/1"
+    },
+    "fkJI9AiPZ5w": {
+        "duration": "178.478300",
+        "height": 480,
+        "width": 640,
+        "num_orig_frames": "5349",
+        "avg_frame_rate": "30000/1001"
+    },
+    "vj_tjPJ566w": {
+        "duration": "222.640000",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "5566",
+        "avg_frame_rate": "25/1"
+    },
+    "CCzN9Dvak4E": {
+        "duration": "312.979333",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "9380",
+        "avg_frame_rate": "30000/1001"
+    },
+    "uNI_Qn9RwA8": {
+        "duration": "312.979333",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "9380",
+        "avg_frame_rate": "30000/1001"
+    },
+    "xyedg0_fa-E": {
+        "duration": "365.133333",
+        "height": 352,
+        "width": 640,
+        "num_orig_frames": "10954",
+        "avg_frame_rate": "30/1"
+    },
+    "Ci2nIqI36T4": {
+        "duration": "231.164267",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "6928",
+        "avg_frame_rate": "30000/1001"
+    },
+    "WtN56rbzEgw": {
+        "duration": "197.238708",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "4729",
+        "avg_frame_rate": "24000/1001"
+    },
+    "M4ZWIaQXRj4": {
+        "duration": "528.828300",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "15849",
+        "avg_frame_rate": "30000/1001"
+    },
+    "YEDxAX9418c": {
+        "duration": "135.100000",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "4053",
+        "avg_frame_rate": "30/1"
+    },
+    "-zO1cc07YzM": {
+        "duration": "64.297567",
+        "height": 1920,
+        "width": 1080,
+        "num_orig_frames": "1927",
+        "avg_frame_rate": "30000/1001"
+    },
+    "rE_umD2AOMU": {
+        "duration": "194.920000",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "4873",
+        "avg_frame_rate": "25/1"
+    },
+    "2PngCv7NjaI": {
+        "duration": "20.120000",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "503",
+        "avg_frame_rate": "25/1"
+    },
+    "TukGRhxPNLk": {
+        "duration": "141.407933",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "4238",
+        "avg_frame_rate": "30000/1001"
+    },
+    "OTXGbdOdH2M": {
+        "duration": "586.680000",
+        "height": 480,
+        "width": 640,
+        "num_orig_frames": "14667",
+        "avg_frame_rate": "25/1"
+    },
+    "uH1eAwBRx3k": {
+        "duration": "326.759767",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "9793",
+        "avg_frame_rate": "30000/1001"
+    },
+    "RMd7OB_WTeU": {
+        "duration": "198.000000",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "4950",
+        "avg_frame_rate": "25/1"
+    },
+    "_Qd_3C09RWY": {
+        "duration": "448.881767",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "13453",
+        "avg_frame_rate": "30000/1001"
+    },
+    "-a1ox0mxo2Q": {
+        "duration": "129.868583",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "3271",
+        "avg_frame_rate": "25187/1000"
+    },
+    "1SbVvVKbpSI": {
+        "duration": "314.914600",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "9438",
+        "avg_frame_rate": "30000/1001"
+    },
+    "U85MsCLFcg4": {
+        "duration": "219.018800",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "6564",
+        "avg_frame_rate": "30000/1001"
+    },
+    "SKUuc0WTMCQ": {
+        "duration": "228.600000",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "6858",
+        "avg_frame_rate": "30/1"
+    },
+    "_3A44_jg2Vw": {
+        "duration": "144.466667",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "8668",
+        "avg_frame_rate": "60/1"
+    },
+    "dkcRHnRa84E": {
+        "duration": "76.743254",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "2298",
+        "avg_frame_rate": "3743/125"
+    },
+    "3tYNTO2DKkA": {
+        "duration": "167.800967",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "5029",
+        "avg_frame_rate": "30000/1001"
+    },
+    "q7J2T6MFA9g": {
+        "duration": "167.800967",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "5029",
+        "avg_frame_rate": "30000/1001"
+    },
+    "KFpfrpJTOPQ": {
+        "duration": "85.218467",
+        "height": 1080,
+        "width": 608,
+        "num_orig_frames": "2554",
+        "avg_frame_rate": "30000/1001"
+    },
+    "BT3o0k3-OXk": {
+        "duration": "848.147300",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "50840",
+        "avg_frame_rate": "508400000/8481473"
+    },
+    "FyiUpoe7QHE": {
+        "duration": "93.960200",
+        "height": 480,
+        "width": 854,
+        "num_orig_frames": "2817",
+        "avg_frame_rate": "14085000/469801"
+    },
+    "UzK2EVSsr1c": {
+        "duration": "93.960200",
+        "height": 480,
+        "width": 854,
+        "num_orig_frames": "2817",
+        "avg_frame_rate": "14085000/469801"
+    },
+    "0Il8jzbn_zQ": {
+        "duration": "244.077156",
+        "height": 480,
+        "width": 854,
+        "num_orig_frames": "5853",
+        "avg_frame_rate": "32923125/1372934"
+    },
+    "TKa-w-jEy_w": {
+        "duration": "43.309933",
+        "height": 480,
+        "width": 720,
+        "num_orig_frames": "1298",
+        "avg_frame_rate": "30000/1001"
+    },
+    "0fin1uaLScg": {
+        "duration": "269.102167",
+        "height": 480,
+        "width": 640,
+        "num_orig_frames": "8065",
+        "avg_frame_rate": "30000/1001"
+    },
+    "1dwnRDPT0Xo": {
+        "duration": "269.102167",
+        "height": 480,
+        "width": 640,
+        "num_orig_frames": "8065",
+        "avg_frame_rate": "30000/1001"
+    },
+    "bE4u1cjIE1c": {
+        "duration": "128.633333",
+        "height": 1920,
+        "width": 1088,
+        "num_orig_frames": "3859",
+        "avg_frame_rate": "30/1"
+    },
+    "4dQGf3AE0MU": {
+        "duration": "209.042167",
+        "height": 720,
+        "width": 960,
+        "num_orig_frames": "6265",
+        "avg_frame_rate": "30000/1001"
+    },
+    "00PzDuj6hds": {
+        "duration": "56.266667",
+        "height": 720,
+        "width": 408,
+        "num_orig_frames": "1688",
+        "avg_frame_rate": "30/1"
+    },
+    "L-5muE6ha20": {
+        "duration": "362.880000",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "9072",
+        "avg_frame_rate": "25/1"
+    },
+    "3qt-mUDR1UM": {
+        "duration": "1036.520000",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "25913",
+        "avg_frame_rate": "25/1"
+    },
+    "u8UpNGofzQE": {
+        "duration": "255.989067",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "7672",
+        "avg_frame_rate": "30000/1001"
+    },
+    "OwrqRXfSZoc": {
+        "duration": "370.636933",
+        "height": 360,
+        "width": 640,
+        "num_orig_frames": "11108",
+        "avg_frame_rate": "30000/1001"
+    },
+    "LTmazGkODxM": {
+        "duration": "1050.600000",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "26265",
+        "avg_frame_rate": "25/1"
+    },
+    "WqJqkMsnIAY": {
+        "duration": "261.427833",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "6268",
+        "avg_frame_rate": "24000/1001"
+    },
+    "n107rRG3IMY": {
+        "duration": "67.333333",
+        "height": 480,
+        "width": 480,
+        "num_orig_frames": "2020",
+        "avg_frame_rate": "30/1"
+    },
+    "vRt7_Ey3yFY": {
+        "duration": "53.880000",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "1347",
+        "avg_frame_rate": "25/1"
+    },
+    "2MY-cfpXK90": {
+        "duration": "1840.004833",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "55145",
+        "avg_frame_rate": "30000/1001"
+    },
+    "ff1Flg2WX1w": {
+        "duration": "832.965467",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "24964",
+        "avg_frame_rate": "30000/1001"
+    },
+    "zNrWHCQ0pzw": {
+        "duration": "384.417367",
+        "height": 240,
+        "width": 320,
+        "num_orig_frames": "11521",
+        "avg_frame_rate": "30000/1001"
+    },
+    "JWCekJzVhuE": {
+        "duration": "384.417367",
+        "height": 240,
+        "width": 320,
+        "num_orig_frames": "11521",
+        "avg_frame_rate": "30000/1001"
+    },
+    "oK0sTid4ZV4": {
+        "duration": "489.760000",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "12244",
+        "avg_frame_rate": "25/1"
+    },
+    "4OeeexFUxZU": {
+        "duration": "178.511667",
+        "height": 480,
+        "width": 640,
+        "num_orig_frames": "5350",
+        "avg_frame_rate": "30000/1001"
+    },
+    "NmoERV9EmG0": {
+        "duration": "572.863958",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "13735",
+        "avg_frame_rate": "24000/1001"
+    },
+    "UXQ8nR7dwbg": {
+        "duration": "285.833667",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "8576",
+        "avg_frame_rate": "25728000/857501"
+    },
+    "nHuCfY3ABpM": {
+        "duration": "41.600000",
+        "height": 720,
+        "width": 408,
+        "num_orig_frames": "1248",
+        "avg_frame_rate": "30/1"
+    },
+    "xtZRXHUREKQ": {
+        "duration": "77.560000",
+        "height": 480,
+        "width": 640,
+        "num_orig_frames": "1939",
+        "avg_frame_rate": "25/1"
+    },
+    "AJhx4F5YUyg": {
+        "duration": "564.920000",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "14123",
+        "avg_frame_rate": "25/1"
+    },
+    "ejX5U8cOMTw": {
+        "duration": "105.572133",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "3164",
+        "avg_frame_rate": "30000/1001"
+    },
+    "SYc8NKVlKn8": {
+        "duration": "153.653500",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "3684",
+        "avg_frame_rate": "24000/1001"
+    },
+    "LrmC1NNEdu4": {
+        "duration": "230.458333",
+        "height": 360,
+        "width": 626,
+        "num_orig_frames": "5531",
+        "avg_frame_rate": "24/1"
+    },
+    "lL3EmNRjlvE": {
+        "duration": "186.653133",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "5594",
+        "avg_frame_rate": "30000/1001"
+    },
+    "UMgrB0xQoFI": {
+        "duration": "139.106558",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "3335",
+        "avg_frame_rate": "27187/1134"
+    },
+    "li7cf8zXUWA": {
+        "duration": "139.106558",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "3335",
+        "avg_frame_rate": "27187/1134"
+    },
+    "0oxBqkZJ1Yk": {
+        "duration": "188.020833",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "4509",
+        "avg_frame_rate": "1503000000/62673611"
+    },
+    "LKDK4C-t_KM": {
+        "duration": "89.633333",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "2689",
+        "avg_frame_rate": "30/1"
+    },
+    "I3YGr5tpnxc": {
+        "duration": "289.322367",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "8671",
+        "avg_frame_rate": "30000/1001"
+    },
+    "Iptw7B3eTQ4": {
+        "duration": "289.322367",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "8671",
+        "avg_frame_rate": "30000/1001"
+    },
+    "1Ozqhiu4PNs": {
+        "duration": "289.322367",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "8671",
+        "avg_frame_rate": "30000/1001"
+    },
+    "uD4ByZFULIg": {
+        "duration": "1103.802700",
+        "height": 480,
+        "width": 852,
+        "num_orig_frames": "33081",
+        "avg_frame_rate": "30000/1001"
+    },
+    "c825RGczdto": {
+        "duration": "286.800000",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "7170",
+        "avg_frame_rate": "25/1"
+    },
+    "rfhH_qVX4ww": {
+        "duration": "213.375000",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "5121",
+        "avg_frame_rate": "24/1"
+    },
+    "I7_t4xT-i2I": {
+        "duration": "309.375000",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "7425",
+        "avg_frame_rate": "24/1"
+    },
+    "5p3KjmbGwvw": {
+        "duration": "145.360000",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "3634",
+        "avg_frame_rate": "25/1"
+    },
+    "qB3SFB8dSSw": {
+        "duration": "820.840000",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "20521",
+        "avg_frame_rate": "25/1"
+    },
+    "y52c9ebL-Wo": {
+        "duration": "69.320000",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "1733",
+        "avg_frame_rate": "25/1"
+    },
+    "c7Q1s7ppSwc": {
+        "duration": "120.078292",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "2879",
+        "avg_frame_rate": "24000/1001"
+    },
+    "GH_gS5poQZ8": {
+        "duration": "243.266667",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "7298",
+        "avg_frame_rate": "30/1"
+    },
+    "RwP5xqbqXTs": {
+        "duration": "46.380000",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "1391",
+        "avg_frame_rate": "69550/2319"
+    },
+    "chUgQ4bcf4U": {
+        "duration": "304.103800",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "9114",
+        "avg_frame_rate": "30000/1001"
+    },
+    "vskxwYKtueI": {
+        "duration": "237.680000",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "5943",
+        "avg_frame_rate": "148575/5942"
+    },
+    "VOxU2a7kMrk": {
+        "duration": "133.800333",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "4010",
+        "avg_frame_rate": "30000/1001"
+    },
+    "yMHr1uTfRLI": {
+        "duration": "511.218700",
+        "height": 480,
+        "width": 854,
+        "num_orig_frames": "12257",
+        "avg_frame_rate": "122570000/5112187"
+    },
+    "_s-FG6JrE0g": {
+        "duration": "91.925167",
+        "height": 2160,
+        "width": 3840,
+        "num_orig_frames": "2204",
+        "avg_frame_rate": "24000/1001"
+    },
+    "ksLwSIUljP4": {
+        "duration": "535.251383",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "32083",
+        "avg_frame_rate": "60000/1001"
+    },
+    "NTS5r1IlVao": {
+        "duration": "413.212800",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "12384",
+        "avg_frame_rate": "30000/1001"
+    },
+    "1P0JVpM0-84": {
+        "duration": "226.359467",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "6784",
+        "avg_frame_rate": "30000/1001"
+    },
+    "3H3AFX4zG1M": {
+        "duration": "68.601867",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "2056",
+        "avg_frame_rate": "30000/1001"
+    },
+    "cDm9Aj5LTso": {
+        "duration": "167.360000",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "4184",
+        "avg_frame_rate": "25/1"
+    },
+    "2dP1WOa1jGY": {
+        "duration": "167.360000",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "4184",
+        "avg_frame_rate": "25/1"
+    },
+    "O9iMqfl4cGY": {
+        "duration": "251.080000",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "6277",
+        "avg_frame_rate": "25/1"
+    },
+    "HhLp67wLK1E": {
+        "duration": "79.646233",
+        "height": 480,
+        "width": 640,
+        "num_orig_frames": "2387",
+        "avg_frame_rate": "30000/1001"
+    },
+    "R30VNf9VUKc": {
+        "duration": "70.937533",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "2126",
+        "avg_frame_rate": "30000/1001"
+    },
+    "-m182ydTDQU": {
+        "duration": "123.280000",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "3082",
+        "avg_frame_rate": "25/1"
+    },
+    "A_3fH2zZ9i4": {
+        "duration": "317.884233",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "9527",
+        "avg_frame_rate": "30000/1001"
+    },
+    "DtQBaRiwS_0": {
+        "duration": "282.480000",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "7062",
+        "avg_frame_rate": "25/1"
+    },
+    "WyZA2jzXqCw": {
+        "duration": "306.520000",
+        "height": 480,
+        "width": 640,
+        "num_orig_frames": "7663",
+        "avg_frame_rate": "25/1"
+    },
+    "5ELALU6laG4": {
+        "duration": "90.000000",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "2250",
+        "avg_frame_rate": "25/1"
+    },
+    "Q_rERmYw6eo": {
+        "duration": "90.000000",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "2250",
+        "avg_frame_rate": "25/1"
+    },
+    "PIdqcqsNrkk": {
+        "duration": "373.773400",
+        "height": 480,
+        "width": 852,
+        "num_orig_frames": "11202",
+        "avg_frame_rate": "30000/1001"
+    },
+    "yK6zQC3VQHI": {
+        "duration": "476.017200",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "11413",
+        "avg_frame_rate": "28532500/1190043"
+    },
+    "nT-P3rgI3Gg": {
+        "duration": "317.750767",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "9523",
+        "avg_frame_rate": "30000/1001"
+    },
+    "QGL1xJHrAsQ": {
+        "duration": "256.000000",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "6400",
+        "avg_frame_rate": "25/1"
+    },
+    "T7U_yMPjMmI": {
+        "duration": "205.440000",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "5136",
+        "avg_frame_rate": "25/1"
+    },
+    "bEBEOuaQcag": {
+        "duration": "205.440000",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "5136",
+        "avg_frame_rate": "25/1"
+    },
+    "iyjL3eZlP90": {
+        "duration": "222.422200",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "6666",
+        "avg_frame_rate": "30000/1001"
+    },
+    "lp12TNmwRGs": {
+        "duration": "603.603000",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "18090",
+        "avg_frame_rate": "30000/1001"
+    },
+    "27V4eiA_ES8": {
+        "duration": "603.603000",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "18090",
+        "avg_frame_rate": "30000/1001"
+    },
+    "EMAH_-SWrrg": {
+        "duration": "279.654367",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "6705",
+        "avg_frame_rate": "201150000/8389631"
+    },
+    "wWsoWNAqt_c": {
+        "duration": "328.250000",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "6565",
+        "avg_frame_rate": "20/1"
+    },
+    "nHlRuU6_tbE": {
+        "duration": "75.341933",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "2258",
+        "avg_frame_rate": "30000/1001"
+    },
+    "OdQ4BWamueo": {
+        "duration": "190.640000",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "4766",
+        "avg_frame_rate": "25/1"
+    },
+    "zuJkRpJ7Fxg": {
+        "duration": "68.400000",
+        "height": 360,
+        "width": 638,
+        "num_orig_frames": "2052",
+        "avg_frame_rate": "30/1"
+    },
+    "354b6lI2-S4": {
+        "duration": "67.233333",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "2017",
+        "avg_frame_rate": "30/1"
+    },
+    "gHZdBY-CkGw": {
+        "duration": "387.136750",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "23205",
+        "avg_frame_rate": "60000/1001"
+    },
+    "OkG99yQ-Nvk": {
+        "duration": "326.659667",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "7832",
+        "avg_frame_rate": "24000/1001"
+    },
+    "cZxui-KQQZc": {
+        "duration": "333.266267",
+        "height": 480,
+        "width": 848,
+        "num_orig_frames": "9988",
+        "avg_frame_rate": "30000/1001"
+    },
+    "KhjwyqSxveQ": {
+        "duration": "115.301651",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "3421",
+        "avg_frame_rate": "2967/100"
+    },
+    "cFA_5xrCTGQ": {
+        "duration": "84.082496",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "2226",
+        "avg_frame_rate": "13237/500"
+    },
+    "hyMMw_WRi_I": {
+        "duration": "74.908167",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "2245",
+        "avg_frame_rate": "30000/1001"
+    },
+    "V99-R12iCS4": {
+        "duration": "251.718133",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "7544",
+        "avg_frame_rate": "30000/1001"
+    },
+    "vL8Bvu3Pdyo": {
+        "duration": "300.760000",
+        "height": 2160,
+        "width": 3840,
+        "num_orig_frames": "7519",
+        "avg_frame_rate": "25/1"
+    },
+    "oFU4fHTYDCc": {
+        "duration": "300.760000",
+        "height": 2160,
+        "width": 3840,
+        "num_orig_frames": "7519",
+        "avg_frame_rate": "25/1"
+    },
+    "AXElfhO3UT4": {
+        "duration": "155.688867",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "4666",
+        "avg_frame_rate": "30000/1001"
+    },
+    "NzzOAFKDvq8": {
+        "duration": "132.800000",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "3320",
+        "avg_frame_rate": "25/1"
+    },
+    "45qDPFj4IpI": {
+        "duration": "263.730133",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "7904",
+        "avg_frame_rate": "30000/1001"
+    },
+    "0FXzHFlmQmk": {
+        "duration": "151.151000",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "3624",
+        "avg_frame_rate": "24000/1001"
+    },
+    "tNHB_Z4EfJA": {
+        "duration": "779.200000",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "23376",
+        "avg_frame_rate": "30/1"
+    },
+    "9JbpUjI-TYg": {
+        "duration": "163.163000",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "4890",
+        "avg_frame_rate": "30000/1001"
+    },
+    "2Pwq3mKPl5I": {
+        "duration": "151.900000",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "4557",
+        "avg_frame_rate": "30/1"
+    },
+    "jxIOSbfzWIU": {
+        "duration": "232.520000",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "5814",
+        "avg_frame_rate": "145350/5813"
+    },
+    "I85zA4ZG0zY": {
+        "duration": "94.100167",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "2706",
+        "avg_frame_rate": "16236000/564601"
+    },
+    "cY5N8cks0Vw": {
+        "duration": "371.304267",
+        "height": 360,
+        "width": 640,
+        "num_orig_frames": "11128",
+        "avg_frame_rate": "30000/1001"
+    },
+    "57KAIkJ6aag": {
+        "duration": "177.385542",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "4253",
+        "avg_frame_rate": "24000/1001"
+    },
+    "dWgPDS6fr7o": {
+        "duration": "177.385542",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "4253",
+        "avg_frame_rate": "24000/1001"
+    },
+    "Av_XfofvYgU": {
+        "duration": "655.100000",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "19653",
+        "avg_frame_rate": "30/1"
+    },
+    "nLSPKgh2BcM": {
+        "duration": "133.758759",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "3207",
+        "avg_frame_rate": "2997/125"
+    },
+    "wAa_C0SIqiE": {
+        "duration": "133.758759",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "3207",
+        "avg_frame_rate": "2997/125"
+    },
+    "Ngj2XO6tRCo": {
+        "duration": "478.010867",
+        "height": 226,
+        "width": 400,
+        "num_orig_frames": "14326",
+        "avg_frame_rate": "30000/1001"
+    },
+    "MZmmtuFgpUw": {
+        "duration": "152.240000",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "3806",
+        "avg_frame_rate": "25/1"
+    },
+    "YJl23sG-bWA": {
+        "duration": "104.960000",
+        "height": 480,
+        "width": 854,
+        "num_orig_frames": "2624",
+        "avg_frame_rate": "25/1"
+    },
+    "IjiFE-4H2_g": {
+        "duration": "402.480000",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "10062",
+        "avg_frame_rate": "25/1"
+    },
+    "1NlmQVOt5wQ": {
+        "duration": "402.480000",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "10062",
+        "avg_frame_rate": "25/1"
+    },
+    "vqfIU9CVbNI": {
+        "duration": "1048.636800",
+        "height": 1440,
+        "width": 2304,
+        "num_orig_frames": "61232",
+        "avg_frame_rate": "7299/125"
+    },
+    "iqNwi0xh74g": {
+        "duration": "136.500000",
+        "height": 240,
+        "width": 322,
+        "num_orig_frames": "3276",
+        "avg_frame_rate": "24/1"
+    },
+    "CD5X4FyB6qE": {
+        "duration": "216.282733",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "6482",
+        "avg_frame_rate": "30000/1001"
+    },
+    "TUmX0s3SrCs": {
+        "duration": "173.239733",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "5192",
+        "avg_frame_rate": "30000/1001"
+    },
+    "FREYDwotESE": {
+        "duration": "1057.733333",
+        "height": 480,
+        "width": 632,
+        "num_orig_frames": "15866",
+        "avg_frame_rate": "15/1"
+    },
+    "zE2TVhkF5B8": {
+        "duration": "317.984333",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "9530",
+        "avg_frame_rate": "30000/1001"
+    },
+    "IjyOM1_jmKs": {
+        "duration": "2017.700000",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "60531",
+        "avg_frame_rate": "30/1"
+    },
+    "CoB9oZA4DE0": {
+        "duration": "190.757233",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "5717",
+        "avg_frame_rate": "30000/1001"
+    },
+    "JfJ6dQdTXVU": {
+        "duration": "273.072800",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "8185",
+        "avg_frame_rate": "10231250/341341"
+    },
+    "jZusvD_9j2E": {
+        "duration": "273.072800",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "8185",
+        "avg_frame_rate": "10231250/341341"
+    },
+    "tTrWj_wrLmA": {
+        "duration": "186.144292",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "4463",
+        "avg_frame_rate": "24000/1001"
+    },
+    "OTA5K28h7Jw": {
+        "duration": "7.900375",
+        "height": 360,
+        "width": 640,
+        "num_orig_frames": "236",
+        "avg_frame_rate": "3734/125"
+    },
+    "uMUNkyNCNPM": {
+        "duration": "163.362733",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "9794",
+        "avg_frame_rate": "146910000/2450441"
+    },
+    "jj5nAQyg2RI": {
+        "duration": "1492.457633",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "44730",
+        "avg_frame_rate": "191700000/6396247"
+    },
+    "obGeRCgfEno": {
+        "duration": "48.548489",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "1165",
+        "avg_frame_rate": "26212500/1092341"
+    },
+    "1vrFD3aDAXA": {
+        "duration": "214.800000",
+        "height": 480,
+        "width": 854,
+        "num_orig_frames": "5370",
+        "avg_frame_rate": "25/1"
+    },
+    "RCdf6S6eag0": {
+        "duration": "297.280000",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "7432",
+        "avg_frame_rate": "25/1"
+    },
+    "Wj6JTso7Nyg": {
+        "duration": "98.440000",
+        "height": 480,
+        "width": 854,
+        "num_orig_frames": "2461",
+        "avg_frame_rate": "25/1"
+    },
+    "H8AYd4eDvwA": {
+        "duration": "209.108900",
+        "height": 480,
+        "width": 642,
+        "num_orig_frames": "6267",
+        "avg_frame_rate": "30000/1001"
+    },
+    "Rg8TFuG_Isk": {
+        "duration": "90.520000",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "2264",
+        "avg_frame_rate": "56600/2263"
+    },
+    "wiqCESRE_Zg": {
+        "duration": "103.018411",
+        "height": 480,
+        "width": 720,
+        "num_orig_frames": "3052",
+        "avg_frame_rate": "274680000/9271657"
+    },
+    "3eP6bh441po": {
+        "duration": "161.680000",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "8084",
+        "avg_frame_rate": "50/1"
+    },
+    "bdVB13Dh470": {
+        "duration": "59.559500",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "1785",
+        "avg_frame_rate": "30000/1001"
+    },
+    "8Yo_hmuUaFs": {
+        "duration": "3232.128900",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "96867",
+        "avg_frame_rate": "30000/1001"
+    },
+    "Oj8JrjVCY_s": {
+        "duration": "218.518300",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "6549",
+        "avg_frame_rate": "30000/1001"
+    },
+    "XLEMXaI6jbI": {
+        "duration": "118.000000",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "2950",
+        "avg_frame_rate": "25/1"
+    },
+    "E2qclyjTqEU": {
+        "duration": "206.206000",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "4944",
+        "avg_frame_rate": "24000/1001"
+    },
+    "WqgY9uSz5hs": {
+        "duration": "77.619200",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "1861",
+        "avg_frame_rate": "1163125/48512"
+    },
+    "cHk6eoQIyxQ": {
+        "duration": "255.200000",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "7656",
+        "avg_frame_rate": "30/1"
+    },
+    "qw0B7gPP1OY": {
+        "duration": "1144.977167",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "34315",
+        "avg_frame_rate": "30000/1001"
+    },
+    "F5fvpWfYMUI": {
+        "duration": "482.448633",
+        "height": 360,
+        "width": 600,
+        "num_orig_frames": "14459",
+        "avg_frame_rate": "30000/1001"
+    },
+    "kQY35Zjni9o": {
+        "duration": "428.761667",
+        "height": 480,
+        "width": 854,
+        "num_orig_frames": "12850",
+        "avg_frame_rate": "30000/1001"
+    },
+    "HAz0suSEL7w": {
+        "duration": "110.777333",
+        "height": 480,
+        "width": 640,
+        "num_orig_frames": "3320",
+        "avg_frame_rate": "30000/1001"
+    },
+    "Obqy0wi_Qfg": {
+        "duration": "110.777333",
+        "height": 480,
+        "width": 640,
+        "num_orig_frames": "3320",
+        "avg_frame_rate": "30000/1001"
+    },
+    "CcxEh0gYYeU": {
+        "duration": "181.760000",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "4544",
+        "avg_frame_rate": "25/1"
+    },
+    "cMYSVin-Itw": {
+        "duration": "256.422833",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "7685",
+        "avg_frame_rate": "30000/1001"
+    },
+    "Bg3wb3196ew": {
+        "duration": "166.333333",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "9980",
+        "avg_frame_rate": "60/1"
+    },
+    "gUSgPXaICEU": {
+        "duration": "77.377300",
+        "height": 480,
+        "width": 854,
+        "num_orig_frames": "2319",
+        "avg_frame_rate": "30000/1001"
+    },
+    "QS8PlRplvEU": {
+        "duration": "523.556367",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "15691",
+        "avg_frame_rate": "30000/1001"
+    },
+    "PJbJ5IFvtIg": {
+        "duration": "523.556367",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "15691",
+        "avg_frame_rate": "30000/1001"
+    },
+    "1wj-zixnz2s": {
+        "duration": "463.133333",
+        "height": 720,
+        "width": 1280,
+        "num_orig_frames": "13894",
+        "avg_frame_rate": "30/1"
+    },
+    "K1_Dz3Gan38": {
+        "duration": "212.266667",
+        "height": 1080,
+        "width": 1920,
+        "num_orig_frames": "6368",
+        "avg_frame_rate": "30/1"
+    }
+}
