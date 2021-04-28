@@ -16,15 +16,6 @@ sys.path.insert(0,'..')  # for import from a directory 1 level up in fs
 from utils.utils import write_json, read_json
 
 
-video_transform = transforms.Compose([
-    transforms.Resize((112, 112)),
-    transforms.ToTensor(),
-    transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225]),  # imagenet
-    # transforms.Normalize([0.43216, 0.394666, 0.37645], [0.22803, 0.22145, 0.216989])  # dan's
-])
-
-
-
 class VideoClipDataset(Dataset):
     def __init__(self, segment_label_path, video_id_path, split_type, frame_dir):
 
@@ -35,13 +26,15 @@ class VideoClipDataset(Dataset):
         segment = [video_id, [start,end]], where start / end are the interval of frames
 
         :param segment_label_path: str, path to json containing segments and labels
-        :param video_id_path:
-        :param split_type:
-        :param frame_dir:
+        :param video_id_path: str, path to json with video id splits
+        :param split_type: str, train val or test
+        :param frame_dir: str, path to the frames root
         '''
 
         self.EXT = ".jpeg"
         self.frame_dir = frame_dir
+        self.image_height = 224
+        self.image_width = 224
 
         # retrieve list of ids for the data split
         video_id_by_split = read_json(video_id_path)
@@ -51,6 +44,14 @@ class VideoClipDataset(Dataset):
         segments_and_labels = read_json(segment_label_path)[split_type]
         self.segments = segments_and_labels['segments']
         self.labels = segments_and_labels['labels']
+
+        # add transforms here
+        self.video_transform = transforms.Compose([
+            transforms.Resize((self.image_height, self.image_width)),
+            transforms.ToTensor(),
+            transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225]),  # imagenet
+            # transforms.Normalize([0.43216, 0.394666, 0.37645], [0.22803, 0.22145, 0.216989])  # dan's
+        ])
 
 
     def get_images(self, video_id, frame_list):
@@ -116,7 +117,7 @@ class VideoClipDataset(Dataset):
         images, height, width = self.get_images(video_id, frame_list)
 
         # apply transforms
-        img_tensors = [video_transform(img).unsqueeze(0) for img in images]
+        img_tensors = [self.video_transform(img).unsqueeze(0) for img in images]
 
         # stack
         img_tensors = torch.cat(img_tensors, dim=0)
