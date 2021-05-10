@@ -28,7 +28,7 @@ def save_frames(frames, out_dir, video_id, frame_names):
     return
 
 
-def write_on_frames(frames, pred, target, is_pred_compression_started, is_target_compression_started, send_alert):
+def write_on_frames(frames, pred, target, pred_phase, target_phase, send_alert):
     width = 640
     height = 360
     font = cv2.FONT_HERSHEY_SIMPLEX  # font
@@ -54,18 +54,16 @@ def write_on_frames(frames, pred, target, is_pred_compression_started, is_target
         if pred == 1:
             pred_text = 'pred: compression'
         else:
-            if is_pred_compression_started:
-                pred_text = 'pred: pause'
-            else:
-                pred_text = 'pred: not started'
+            if pred_phase == 'started':
+                pred_phase = 'no compression'
+            pred_text = 'pred: {}'.format(pred_phase)
 
         if target == 1:
             target_text = 'target: compression'
         else:
-            if is_target_compression_started:
-                target_text = 'target: pause'
-            else:
-                target_text = 'target: not started'
+            if target_phase == 'started':
+                target_phase = 'no compression'
+            target_text = 'target: {}'.format(target_phase)
 
         if pred == target and target == 1:
             font_color = green
@@ -84,9 +82,9 @@ def write_on_frames(frames, pred, target, is_pred_compression_started, is_target
         cv2.putText(resized, pred_text, pred_loc, font,
                           fontScale, font_color, thickness, cv2.LINE_AA)
 
-        if send_alert:
-            cv2.putText(resized, "ALERT Pause too long!", alert_loc, font,
-                        fontScale, red, thickness, cv2.LINE_AA)
+        # if send_alert:
+        #     cv2.putText(resized, "ALERT Pause too long!", alert_loc, font,
+        #                 fontScale, red, thickness, cv2.LINE_AA)
 
 
         frames_with_text.append(resized)
@@ -111,6 +109,28 @@ def get_frames(prefix, segment):
     return images, img_names
 
 
+# Function for finding first and last
+# occurrence of an elements
+def find_first_and_last(arr, x=1):
+    first = -1
+    last = -1
+
+    n = len(arr)
+
+    for i in range(0, n):
+        if x != arr[i]:
+            continue
+        if first == -1:
+            first = i
+        last = i
+
+    if first != -1:
+        return first, last
+    else:
+        return 0, 0
+
+
+
 def main(args):
     # loop thru videos
     # loop thru pred/target
@@ -122,12 +142,6 @@ def main(args):
     results_dir = args.results_dir
     frame_dir = args.frame_dir
     out_dir = args.out_dir
-
-    # contains a dict of videos
-    # 'video_id':
-    # 'targets': []
-    # 'preds': []
-    # 'segments': []
 
     # constants
     ALERT_CLIP_COUNT_THRESH = 6
@@ -147,28 +161,52 @@ def main(args):
         segments = video_json['segments']
 
         # tracking certain events for text
-        is_pred_compression_started = False
-        is_target_compression_started = False
+        # is_pred_compression_started = False
+        # is_target_compression_started = False
+
+        pred_phase = 'not started'
+        target_phase = 'not started'
+
+        # need to track last pred / target somehow
+
         compression_clip_counter = 0
         paused_clip_counter = 0
         send_alert = False
 
+        # find end segment of compression for target and preds
+        pred_start, pred_end = find_first_and_last(preds)
+        target_start, target_end = find_first_and_last(targets)
+
         # loop thru clips
         for i in range(len(targets)):
 
+            # calculate phase
+            if i < pred_start:
+                pred_phase = 'not started'
+            elif i >= pred_start and i < pred_end:
+                pred_phase = 'started'
+            else:
+                pred_phase = 'ended'
+
+            if i < target_start:
+                target_phase = 'not started'
+            elif i >= target_start and i < target_end:
+                target_phase = 'started'
+            else:
+                target_phase = 'ended'
+
             if preds[i] == 1:
-
                 send_alert = False
-                is_pred_compression_started = True
+                # pred_phase = 'started'
 
-                # if enough compressions occured, then reset the paused clip counter
+                # if enough compressions occurred, then reset the paused clip counter
                 if compression_clip_counter >= 2:
                     paused_clip_counter = 0
 
                 compression_clip_counter += 1
 
             # we only track 0's if compression started already
-            if preds[i] == 0 and is_pred_compression_started:
+            if preds[i] == 0 and pred_phase == 'started':
 
                 if paused_clip_counter >= ALERT_CLIP_COUNT_THRESH:
                     send_alert = True
@@ -176,9 +214,9 @@ def main(args):
                 compression_clip_counter = 0
                 paused_clip_counter += 1
 
-            # need to track target started
-            if targets[i] == 1:
-                is_target_compression_started = True
+            # # need to track target started
+            # if targets[i] == 1:
+            #     target_phase = 'started'
 
             # calc prefix
             prefix = os.path.join(frame_dir, video_id)
@@ -187,7 +225,8 @@ def main(args):
             frames, frame_names = get_frames(prefix, segments[i])
 
             # write on frames (all with same text)
-            frames_with_text = write_on_frames(frames, preds[i], targets[i], is_pred_compression_started, is_target_compression_started, send_alert)
+            frames_with_text = write_on_frames(
+                frames, preds[i], targets[i], pred_phase, target_phase, send_alert)
 
             save_frames(frames_with_text, out_dir, video_id, frame_names)
 
@@ -211,7 +250,7 @@ if __name__ == '__main__':
 python write_text_on_frames.py \
 --results-dir /vision2/u/enguyen/results/pretrain1_cont2/val_1/val.json \
 --frame-dir /vision2/u/enguyen/mini_cba/new_fps10/ \
---out-dir /vision2/u/enguyen/mini_cba/frames_with_text2/
+--out-dir /vision2/u/enguyen/mini_cba/frames_with_text_no_alert2/
 
 
 '''
