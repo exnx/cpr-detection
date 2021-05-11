@@ -11,7 +11,7 @@ count the number of frames made. Will log any errors (video ids) at any stage.
 
 '''
 
-new_fps = 10
+new_fps = 24
 max_height = 360
 
 def count_num_frames(input_dir):
@@ -57,7 +57,7 @@ def downsize(height, width):
     return new_height, new_width
 
 
-def main(datasplit_path, path_to_raw_videos, meta_path, frame_path):
+def main(video_ids_path, path_to_raw_videos, meta_path, frame_path):
 
     '''
 
@@ -81,85 +81,94 @@ def main(datasplit_path, path_to_raw_videos, meta_path, frame_path):
     conversion_fail = []
     count_off = []
 
-    with open(datasplit_path) as f:
-        datasplit_json = json.load(f)
+    with open(video_ids_path) as f:
+        video_ids_list = json.load(f)['clip_filenames']
 
     video_metadata = {}
 
-    # loop thru all data splits
-    for split in datasplit_json.keys():
-        data_split = datasplit_json[split]
+    # loop thru ids
+    for i, video_id in enumerate(video_ids_list):
 
-        # loop thru ids
-        for video_id in data_split:
+        # if i == 10:
+        #     break
 
-            print('video id', video_id)
-            # create video path
-            video_path = os.path.join(path_to_raw_videos, "{}.mp4".format(video_id))
+        print('video id', video_id)
+        # create video path
+        video_path = os.path.join(path_to_raw_videos, "{}.mp4".format(video_id))
 
-            # try opening and getting metadata
-            try:
-                # retrieve meta data
-                meta_data = ffmpeg.probe(video_path)['streams'][0]
-                video_metadata['duration'] = meta_data['duration']
-                video_metadata['height'] = meta_data['height']
-                video_metadata['width'] = meta_data['width']
-                video_metadata['num_orig_frames'] = meta_data['nb_frames']
-                video_metadata['avg_frame_rate'] = meta_data['avg_frame_rate']
+        # try opening and getting metadata
+        try:
+            # retrieve meta data
+            meta_data = ffmpeg.probe(video_path)['streams'][0]
+            video_metadata['duration'] = meta_data['duration']
+            video_metadata['height'] = meta_data['height']
+            video_metadata['width'] = meta_data['width']
+            video_metadata['num_orig_frames'] = meta_data['nb_frames']
+            video_metadata['avg_frame_rate'] = meta_data['avg_frame_rate']
 
-            except ffmpeg.Error as e:
-                print('video id not found:', video_id)
-                print(e.stderr)
-                missing_list.append(video_id)
+        except ffmpeg.Error as e:
+            print('video id not found:', video_id)
+            print(e.stderr)
+            missing_list.append(video_id)
 
-                print('current missing')
-                for i in missing_list:
+            print('current missing')
+            for i in missing_list:
+                print(i)
+
+        # try converting videos to frames
+        try:
+            # need to convert to frames
+            frame_dir = os.path.join(frame_path, video_id)
+            os.makedirs(frame_dir, exist_ok=True)
+
+            # downsize (if necessary)
+            # new_height, new_width = downsize(meta_data['height'], meta_data['width'])
+
+            # hard code this
+            new_height = 224
+            new_width = 224
+
+            # use python wrapper for ffmpeg (more stable than ffmpeg in terminal)
+            (ffmpeg.input(video_path)
+             .filter('fps', fps=new_fps)  # use all frames this time
+             .output(os.path.join(frame_dir, "%5d.jpeg"),
+                     video_bitrate='5000k',
+                     s='{}x{}'.format(str(new_width), str(new_height)),
+                     sws_flags='bilinear',
+                     start_number=0)
+             .run(capture_stdout=True, capture_stderr=True))
+
+            # update new meta_data
+            video_metadata['new_height'] = new_height
+            video_metadata['new_width'] = new_width
+            video_metadata['new_fps'] = new_fps
+
+        except ffmpeg.Error as e:
+            print('video conversion failed to start:', video_id)
+            print(e.stderr)
+            conversion_fail.append(video_id)
+
+            print('current conv. failed')
+            for i in conversion_fail:
+                print(i)
+
+        # save metadata
+        if video_metadata != {}:
+            # compare orig to new number of frames, make note if different
+            new_frame_count = count_num_frames(frame_dir)
+
+            diff = abs(new_frame_count - float(meta_data['duration']) * new_fps)
+            print('count {}, duration {}, diff {:.2f}, old fps {}'.format(new_frame_count, float(meta_data['duration']), diff, video_metadata['avg_frame_rate']))
+            if diff > new_fps:
+                count_off.append(video_id)
+
+                print('current off count')
+                for i in count_off:
                     print(i)
 
-            # try converting videos to frames
-            try:
-                # need to convert to frames
-                frame_dir = os.path.join(frame_path, video_id)
-                os.makedirs(frame_dir, exist_ok=True)
-
-                # downsize (if necessary)
-                new_height, new_width = downsize(meta_data['height'], meta_data['width'])
-
-                # use python wrapper for ffmpeg (more stable than ffmpeg in terminal)
-                (ffmpeg.input(video_path)
-                 .filter('fps', fps=new_fps)
-                 .output(os.path.join(frame_dir, "%5d.jpeg"),
-                         video_bitrate='5000k',
-                         s='{}x{}'.format(str(new_height), str(new_width)),
-                         sws_flags='bilinear',
-                         start_number=0)
-                 .run(capture_stdout=True, capture_stderr=True))
-
-            except ffmpeg.Error as e:
-                print('video conversion failed to start:', video_id)
-                print(e.stderr)
-                conversion_fail.append(video_id)
-
-                print('current conv. failed')
-                for i in conversion_fail:
-                    print(i)
-
-            # save metadata
-            if video_metadata != {}:
-                # compare orig to new number of frames, make note if different
-                new_frame_count = count_num_frames(frame_dir)
-
-                diff = abs(new_frame_count - float(meta_data['duration']) * new_fps)
-                print('count {}, duration {}, diff {}'.format(new_frame_count, float(meta_data['duration']), diff))
-                if diff > new_fps:
-                    count_off.append(video_id)
-
-                    print('current off count')
-                    for i in count_off:
-                        print(i)
-
-                video_metadata['num_new_frames'] = new_frame_count
-                metadata[video_id] = copy.deepcopy(video_metadata)
+            video_metadata['num_new_frames'] = new_frame_count
+            video_metadata['new_duration'] = new_frame_count / new_fps
+            metadata[video_id] = copy.deepcopy(video_metadata)
 
     meta_out = os.path.join(meta_path, "video_metadata.json")
     missing_path = os.path.join(meta_path, 'missing_list.txt')
@@ -191,35 +200,28 @@ if __name__ == '__main__':
     print('started...')
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('-d', '--datasplit', help='path to video ids')
+    parser.add_argument('-d', '--video-ids', help='path to video ids')
     parser.add_argument('-rv', '--raw', help='path to raw videos')
     parser.add_argument('-m', '--meta-path', default=None, help='path to meta data output')
     parser.add_argument('-f', '--frame-path', default=None, help='path to frames output')
 
     args = parser.parse_args()
 
-    datasplit = args.datasplit
+    video_ids = args.video_ids
     raw_path = args.raw
     meta_path = args.meta_path
     frame_path = args.frame_path
 
-    main(datasplit, raw_path, meta_path, frame_path)
+    main(video_ids, raw_path, meta_path, frame_path)
 
 
 '''
 
 
 python video_to_frame_and_meta.py \
---datasplit /vision2/u/enguyen/MOMA_Tools/clip_video_webtool/post_processing_code/data_split.json \
---raw /vision/group/miniCBA/download_video/videos/allVideos \
---meta-path /vision2/u/enguyen/mini_cba/new_fps10/metadata \
---frame-path /vision2/u/enguyen/mini_cba/new_fps10/
-
-python video_to_frame_and_meta.py \
---datasplit /vision2/u/enguyen/MOMA_Tools/clip_video_webtool/post_processing_code/data_split.json \
---raw /vision2/u/enguyen/videos/ \
---meta-path /vision2/u/enguyen/mini_cba/temp_fps10/metadata \
---frame-path /vision2/u/enguyen/mini_cba/temp_fps10/
-
+--video-ids /vision2/u/enguyen/cpr-detection/post_processing_code/data/432/clip_filenames.json \
+--raw /vision2/u/enguyen/mini_cba/clipped_videos/432 \
+--meta-path /vision2/u/enguyen/cpr-detection/post_processing_code/data/432 \
+--frame-path /vision2/u/enguyen/mini_cba/clipped_frames/432
 
 '''
