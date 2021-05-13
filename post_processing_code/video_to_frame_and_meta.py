@@ -57,7 +57,7 @@ def downsize(height, width):
     return new_height, new_width
 
 
-def main(video_ids_path, path_to_raw_videos, meta_path, frame_path):
+def main(video_ids_path, path_to_raw_videos, meta_path, frame_path, start_idx, end_idx):
 
     '''
 
@@ -74,6 +74,8 @@ def main(video_ids_path, path_to_raw_videos, meta_path, frame_path):
     :return: None
     '''
 
+    print('Processing start: {} to end: {}'.format(start_idx, end_idx))
+
     os.makedirs(meta_path, exist_ok=True)
 
     metadata = {}
@@ -84,10 +86,17 @@ def main(video_ids_path, path_to_raw_videos, meta_path, frame_path):
     with open(video_ids_path) as f:
         video_ids_list = json.load(f)['clip_filenames']
 
+    # import pdb; pdb.set_trace()
+
     video_metadata = {}
 
     # loop thru ids
     for i, video_id in enumerate(video_ids_list):
+
+        # make sure we only process idxs from [start:end]
+        if start_idx is not None:
+            if i < start_idx or i >= end_idx:
+                continue
 
         # if i == 10:
         #     break
@@ -135,6 +144,7 @@ def main(video_ids_path, path_to_raw_videos, meta_path, frame_path):
                      video_bitrate='5000k',
                      s='{}x{}'.format(str(new_width), str(new_height)),
                      sws_flags='bilinear',
+                     # **{'qscale:v': 3},  # not sure how to use this quality argå
                      start_number=0)
              .run(capture_stdout=True, capture_stderr=True))
 
@@ -204,6 +214,8 @@ if __name__ == '__main__':
     parser.add_argument('-rv', '--raw', help='path to raw videos')
     parser.add_argument('-m', '--meta-path', default=None, help='path to meta data output')
     parser.add_argument('-f', '--frame-path', default=None, help='path to frames output')
+    parser.add_argument('-s', '--start', default=None, type=int, help='start idx to process')
+    parser.add_argument('-e', '--end', default=None, type=int, help='end idx to process')
 
     args = parser.parse_args()
 
@@ -211,8 +223,10 @@ if __name__ == '__main__':
     raw_path = args.raw
     meta_path = args.meta_path
     frame_path = args.frame_path
+    start = args.start
+    end = args.end
 
-    main(video_ids, raw_path, meta_path, frame_path)
+    main(video_ids, raw_path, meta_path, frame_path, start, end)
 
 
 '''
@@ -222,6 +236,32 @@ python video_to_frame_and_meta.py \
 --video-ids /vision2/u/enguyen/cpr-detection/post_processing_code/data/432/clip_filenames.json \
 --raw /vision2/u/enguyen/mini_cba/clipped_videos/432 \
 --meta-path /vision2/u/enguyen/cpr-detection/post_processing_code/data/432 \
---frame-path /vision2/u/enguyen/mini_cba/clipped_frames/432
+--frame-path /vision2/u/enguyen/mini_cba/clipped_frames/432 \
+--start None \
+--end None
+
+
+
+# running on slowed frames
+
+python video_to_frame_and_meta.py \
+--video-ids /vision2/u/enguyen/cpr-detection/post_processing_code/data/432/clip_filenames.json \
+--raw /vision2/u/enguyen/mini_cba/slowed_clip_videos \
+--meta-path /vision2/u/enguyen/cpr-detection/post_processing_code/data/432/slowed \
+--frame-path /vision2/u/enguyen/mini_cba/slowed_clip_videos/frames
+
+
+
+python video_to_frame_and_meta.py \
+--video-ids /vision2/u/enguyen/cpr-detection/post_processing_code/data/432/clip_filenames.json \
+--raw /vision2/u/enguyen/mini_cba/slowed_clip_videos \
+--meta-path /scr-ssd/enguyen/slowed/432/frames_fps24/meta \
+--frame-path /scr-ssd/enguyen/slowed/432/frames_fps24
+ 
+
+
+
+
+
 
 '''

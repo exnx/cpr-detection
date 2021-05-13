@@ -1,21 +1,15 @@
 import json
 
 
-
 def read_json(path):
 
-    try:
-        with open(path) as f:
-            data_dict = json.load(f)
-
-    except Exception as e:
-        print(e)
-        return False
+    with open(path) as f:
+        data_dict = json.load(f)
 
     return data_dict
 
 
-def write_json(data_dict, path, indent=4):
+def write_json(data_dict, path):
 
     '''
 
@@ -25,26 +19,12 @@ def write_json(data_dict, path, indent=4):
     :return:
     '''
 
-    try:
-        with open(path, 'w', encoding='utf-8') as f:
-            json.dump(data_dict, f, ensure_ascii=False, indent=indent)
-
-    except Exception as e:
-        print(e)
-        return False
-
-    return True
+    with open(path, 'w', encoding='utf-8') as f:
+        json.dump(data_dict, f, ensure_ascii=False, indent=4)
 
 
 def write_list(data_list, path):
 
-    with open(missing_path, "w") as f:
-        try:
-            for item in missing_list:
-                f.write("%s\n" % item)
-
-        except Exception as e:
-            print(e)
-            return False
-
-    return True
+    with open(path, "w") as f:
+        for item in data_list:
+            f.write("%s\n" % item)

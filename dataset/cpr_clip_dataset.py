@@ -3,7 +3,6 @@ from torch.utils.data import Dataset, DataLoader
 import torchvision
 import os
 from PIL import Image
-import numpy as numpy
 import random
 import json
 import argparse
