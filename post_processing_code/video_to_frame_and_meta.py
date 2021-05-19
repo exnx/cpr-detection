@@ -11,8 +11,6 @@ count the number of frames made. Will log any errors (video ids) at any stage.
 
 '''
 
-new_fps = 24
-max_height = 360
 
 def count_num_frames(input_dir):
 
@@ -29,35 +27,8 @@ def count_num_frames(input_dir):
 
     return num_files
 
-def downsize(height, width):
 
-    '''
-
-    Downsize the the height to a fixed amount (constant),
-    and keep the same aspect ratio
-
-    :param height:
-    :param width:
-    :return:
-        new_height, int
-        new_width, int
-    '''
-
-    aspect = width / height
-
-    if height > max_height:
-        new_height = 360
-    else:
-        return height, width
-
-    new_width = int(new_height * aspect)
-
-    print('new height/width: {}/{}'.format(new_height, new_width))
-
-    return new_height, new_width
-
-
-def main(video_ids_path, path_to_raw_videos, meta_path, frame_path, start_idx, end_idx):
+def main(video_ids_path, path_to_raw_videos, meta_path, frame_path, start_idx, end_idx, new_fps):
 
     '''
 
@@ -74,6 +45,10 @@ def main(video_ids_path, path_to_raw_videos, meta_path, frame_path, start_idx, e
     :return: None
     '''
 
+    # hard code this
+    new_height = 224
+    new_width = 224
+
     print('Processing start: {} to end: {}'.format(start_idx, end_idx))
 
     os.makedirs(meta_path, exist_ok=True)
@@ -86,8 +61,6 @@ def main(video_ids_path, path_to_raw_videos, meta_path, frame_path, start_idx, e
     with open(video_ids_path) as f:
         video_ids_list = json.load(f)['clip_filenames']
 
-    # import pdb; pdb.set_trace()
-
     video_metadata = {}
 
     # loop thru ids
@@ -97,9 +70,6 @@ def main(video_ids_path, path_to_raw_videos, meta_path, frame_path, start_idx, e
         if start_idx is not None:
             if i < start_idx or i >= end_idx:
                 continue
-
-        # if i == 10:
-        #     break
 
         print('video id', video_id)
         # create video path
@@ -130,13 +100,6 @@ def main(video_ids_path, path_to_raw_videos, meta_path, frame_path, start_idx, e
             frame_dir = os.path.join(frame_path, video_id)
             os.makedirs(frame_dir, exist_ok=True)
 
-            # downsize (if necessary)
-            # new_height, new_width = downsize(meta_data['height'], meta_data['width'])
-
-            # hard code this
-            new_height = 224
-            new_width = 224
-
             # use python wrapper for ffmpeg (more stable than ffmpeg in terminal)
             (ffmpeg.input(video_path)
              .filter('fps', fps=new_fps)  # use all frames this time
@@ -144,7 +107,7 @@ def main(video_ids_path, path_to_raw_videos, meta_path, frame_path, start_idx, e
                      video_bitrate='5000k',
                      s='{}x{}'.format(str(new_width), str(new_height)),
                      sws_flags='bilinear',
-                     # **{'qscale:v': 3},  # not sure how to use this quality argå
+                     # **{'qscale:v': 3},  # not sure how to use this quality arg
                      start_number=0)
              .run(capture_stdout=True, capture_stderr=True))
 
@@ -216,6 +179,7 @@ if __name__ == '__main__':
     parser.add_argument('-f', '--frame-path', default=None, help='path to frames output')
     parser.add_argument('-s', '--start', default=None, type=int, help='start idx to process')
     parser.add_argument('-e', '--end', default=None, type=int, help='end idx to process')
+    parser.add_argument('-fp', '--fps', default=24, type=int, help='fps output of frames')
 
     args = parser.parse_args()
 
@@ -225,8 +189,9 @@ if __name__ == '__main__':
     frame_path = args.frame_path
     start = args.start
     end = args.end
+    fps = args.fps
 
-    main(video_ids, raw_path, meta_path, frame_path, start, end)
+    main(video_ids, raw_path, meta_path, frame_path, start, end, fps)
 
 
 '''
@@ -239,6 +204,13 @@ python video_to_frame_and_meta.py \
 --frame-path /vision2/u/enguyen/mini_cba/clipped_frames/432 \
 --start None \
 --end None
+
+python video_to_frame_and_meta.py \
+--video-ids /vision2/u/enguyen/cpr-detection/post_processing_code/data/432/clip_filenames.json \
+--raw /vision2/u/enguyen/mini_cba/clipped_videos/432_redo2 \
+--meta-path /scr-ssd/enguyen/normal_1.0x/frames_fps16/meta \
+--frame-path /scr-ssd/enguyen/normal_1.0x/frames_fps16 \
+--fps 16
 
 
 
@@ -260,7 +232,20 @@ python video_to_frame_and_meta.py \
  
 
 
+python video_to_frame_and_meta.py \
+--video-ids /vision2/u/enguyen/cpr-detection/post_processing_code/data/432/clip_filenames.json \
+--raw /vision2/u/enguyen/mini_cba/slowed_clips_0.2x \
+--meta-path /scr-ssd/enguyen/slowed_0.2x/frames_fps24/meta \
+--frame-path /scr-ssd/enguyen/slowed_0.2x/frames_fps24 \
+--fps 24
 
+
+python video_to_frame_and_meta.py \
+--video-ids /vision2/u/enguyen/cpr-detection/post_processing_code/data/432/clip_filenames.json \
+--raw /vision2/u/enguyen/mini_cba/slowed_clips_0.2x \
+--meta-path /scr-ssd/enguyen/slowed_0.2x/frames_fps16/meta \
+--frame-path /scr-ssd/enguyen/slowed_0.2x/frames_fps16 \
+--fps 16
 
 
 
