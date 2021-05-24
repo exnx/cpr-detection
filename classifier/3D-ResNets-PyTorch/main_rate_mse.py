@@ -6,6 +6,7 @@ import os
 import numpy as np
 import torch
 from torch.nn import CrossEntropyLoss
+from torch.nn import MSELoss
 from torch.optim import SGD, lr_scheduler
 import torch.multiprocessing as mp
 import torch.distributed as dist
@@ -27,10 +28,10 @@ from temporal_transforms import (LoopPadding, TemporalRandomCrop,
 from temporal_transforms import Compose as TemporalCompose
 from dataset import get_training_data, get_validation_data, get_inference_data
 from utils import Logger, worker_init_fn, get_lr
-from training import train_epoch
-from validation import val_epoch
+from training_mse import train_epoch
+from validation_mse import val_epoch
 # import inference
-import inference_rate as inference  # changed for rate pred
+import inference_mse as inference  # changed for rate pred
 
 
 def json_serial(obj):
@@ -196,10 +197,10 @@ def get_train_utils(opt, model_parameters):
 
     if opt.is_master_node:
         train_logger = Logger(opt.result_path / 'train.log',
-                              ['epoch', 'loss', 'acc', 'lr', 'precision', 'recall', 'f1', 'tiou'])
+                              ['epoch', 'loss', 'mae', 'lr'])
         train_batch_logger = Logger(
             opt.result_path / 'train_batch.log',
-            ['epoch', 'batch', 'iter', 'loss', 'acc', 'lr'])
+            ['epoch', 'batch', 'iter', 'loss', 'mae', 'lr'])
     else:
         train_logger = None
         train_batch_logger = None
@@ -268,7 +269,7 @@ def get_val_utils(opt):
 
     if opt.is_master_node:
         val_logger = Logger(opt.result_path / 'val.log',
-                            ['epoch', 'loss', 'acc', 'precision', 'recall', 'f1', 'tiou'])
+                            ['epoch', 'loss', 'mae'])
     else:
         val_logger = None
 
@@ -365,7 +366,8 @@ def main_worker(index, opt):
     if opt.is_master_node:
         print(model)
 
-    criterion = CrossEntropyLoss().to(opt.device)
+    # criterion = CrossEntropyLoss().to(opt.device)
+    criterion = MSELoss().to(opt.device)
 
     if not opt.no_train:
         (train_loader, train_sampler, train_logger, train_batch_logger,
@@ -446,209 +448,52 @@ if __name__ == '__main__':
 
 # for rate pretrain and fine tune
 
-python main_rate.py \
---label_path /scr-ssd/enguyen/slowed_clips_0.5x/frames_fps16/meta/video_metadata.json \
---video_id_path /scr-ssd/enguyen/432_meta/clip_ids_split_merged.json \
---frame_dir /scr-ssd/enguyen/slowed_clips_0.5x/frames_fps16/ \
+python main_rate_mse.py \
+--label_path /scr-ssd/enguyen/slowed_0.2x/frames_fps16/meta/video_metadata.json \
+--video_id_path /scr-ssd/enguyen/slowed_clips_0.5x/432_fps24/clip_ids_split_merged.json \
+--frame_dir /scr-ssd/enguyen/slowed_0.2x/frames_fps16/ \
 --image_size 224 \
---result_path /vision2/u/enguyen/results/rate_pred/run5_stoch_window24 \
+--result_path /vision2/u/enguyen/results/rate_pred/run8_res18_mse_action_pretrained \
 --dataset cpr_rate \
---n_classes 2 \
---checkpoint 4 \
---batch_size 32 \
---n_threads 24 \
+--n_classes 1 \
+--checkpoint 2 \
+--batch_size 16 \
+--n_threads 1 \
+--n_val_samples 1 \
 --tensorboard \
---pretrain_path /vision2/u/enguyen/pretrained_models/r3d18_K_200ep.pth \
---n_pretrain_classes 700 \
+--pretrain_path /vision2/u/enguyen/results/pretrain1_cont2/save_64.pth \
+--n_pretrain_classes 2 \
 --model resnet \
 --model_depth 18 \
---window_size 24 \
---learning_rate 0.01
-
-
-python main_rate.py \
---label_path /scr-ssd/enguyen/slowed_clips_0.5x/frames_fps16/meta/video_metadata.json \
---video_id_path /scr-ssd/enguyen/432_meta/clip_ids_split_merged.json \
---frame_dir /scr-ssd/enguyen/slowed_clips_0.5x/frames_fps16/ \
---image_size 224 \
---result_path /vision2/u/enguyen/results/rate_pred/run6_res101_stoch_window24 \
---dataset cpr_rate \
---n_classes 2 \
---checkpoint 4 \
---batch_size 16 \
---n_threads 24 \
---tensorboard \
---pretrain_path /vision2/u/enguyen/pretrained_models/r3d101_K_200ep.pth \
---n_pretrain_classes 700 \
---model resnet \
---model_depth 101 \
 --window_size 24 \
 --learning_rate 0.001
 
 
 
-
-python main_rate.py \
---label_path /scr-ssd/enguyen/slowed_clips_0.5x/432_fps24/clip_metadata.json \
---video_id_path /scr-ssd/enguyen/slowed_clips_0.5x/432_fps24/clip_ids_split_merged.json \
---frame_dir /scr-ssd/enguyen/slowed_clips_0.5x/432_fps24/frames \
---image_size 224 \
---result_path /vision2/u/enguyen/results/rate_pred/run4_simple_window24 \
---dataset cpr_rate \
---n_classes 2 \
---checkpoint 4 \
---batch_size 32 \
---n_threads 24 \
---tensorboard \
---pretrain_path /vision2/u/enguyen/pretrained_models/r3d18_K_200ep.pth \
---n_pretrain_classes 700 \
---model resnet \
---model_depth 18 \
---window_size 24 \
---learning_rate 0.01
-
-
-python main_rate.py \
+# inference, on just ground truth video ids
+CUDA_VISIBLE_DEVICES=0 python main_rate_mse.py \
 --label_path /scr-ssd/enguyen/slowed_0.2x/frames_fps16/meta/video_metadata.json \
---video_id_path /scr-ssd/enguyen/slowed_clips_0.5x/432_fps24/clip_ids_split_merged.json \
+--video_id_path /vision2/u/enguyen/cpr-detection/post_processing_code/data/432/clip_ids_for_rate_truth.json \
 --frame_dir /scr-ssd/enguyen/slowed_0.2x/frames_fps16/ \
 --image_size 224 \
---result_path /vision2/u/enguyen/results/rate_pred/run4_res18 \
+--result_path /vision2/u/enguyen/results/rate_pred/run8_res18_mse_action_pretrained/inference_results \
 --dataset cpr_rate \
---n_classes 2 \
+--n_classes 1 \
 --checkpoint 4 \
---batch_size 16 \
---n_threads 24 \
+--batch_size 4 \
+--n_threads 1 \
+--n_val_samples 1 \
 --tensorboard \
---pretrain_path /vision2/u/enguyen/pretrained_models/r3d18_K_200ep.pth \
+--inference \
+--resume_path /vision2/u/enguyen/results/rate_pred/run8_res18_mse_action_pretrained/save_24.pth \
 --n_pretrain_classes 700 \
 --model resnet \
 --model_depth 18 \
 --window_size 24 \
---learning_rate 0.01
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# use pretrain then fine tune
-python main.py \
---segment_label_path /vision2/u/enguyen/cpr-detection/post_processing_code/data/segments_and_labels.json \
---video_id_path /vision2/u/enguyen/cpr-detection/post_processing_code/data/data_split.json \
---frame_dir /vision2/u/enguyen/mini_cba/new_fps10 \
---image_size 224 \
---result_path /vision2/u/enguyen/results/pretrain1 \
---dataset cpr \
---n_classes 2 \
---checkpoint 4 \
---n_val_samples 1 \
---batch_size 32 \
---n_threads 28 \
---tensorboard \
---pretrain_path /vision2/u/enguyen/pretrained_models/r3d18_K_200ep.pth \
---n_pretrain_classes 700 \
---model resnet \
---model_depth 18
-
-
-# resume training
-
-python main.py \
---segment_label_path /vision2/u/enguyen/cpr-detection/post_processing_code/data/segments_and_labels.json \
---video_id_path /vision2/u/enguyen/cpr-detection/post_processing_code/data/data_split.json \
---frame_dir /vision2/u/enguyen/mini_cba/new_fps10 \
---image_size 224 \
---result_path /vision2/u/enguyen/results/run6_cont18 \
---dataset cpr \
---n_classes 2 \
---batch_size 32 \
---n_threads 28 \
---tensorboard \
---resume_path /vision2/u/enguyen/results/run6/save_10.pth \
---checkpoint 2 \
---n_val_samples 1
-
-
-
-# resume training from pretrained
-
-python main.py \
---segment_label_path /vision2/u/enguyen/cpr-detection/post_processing_code/data/segments_and_labels.json \
---video_id_path /vision2/u/enguyen/cpr-detection/post_processing_code/data/data_split.json \
---frame_dir /vision2/u/enguyen/mini_cba/new_fps10 \
---image_size 224 \
---result_path /vision2/u/enguyen/results/pretrain1_cont3 \
---dataset cpr \
---n_classes 2 \
---batch_size 32 \
---n_threads 24 \
---tensorboard \
---resume_path /vision2/u/enguyen/results/pretrain1/save_8.pth \
---checkpoint 2 \
---n_val_samples 1
-
-
-
-# inference (make sure not to use pretrained path, use resume_path)
-
-python main.py \
---segment_label_path /vision2/u/enguyen/cpr-detection/post_processing_code/data/segments_and_labels.json \
---video_id_path /vision2/u/enguyen/cpr-detection/post_processing_code/data/data_split.json \
---frame_dir /vision2/u/enguyen/mini_cba/new_fps10 \
---image_size 224 \
---result_path /vision2/u/enguyen/results/pretrain1_cont2/val_1 \
---dataset cpr \
---n_classes 2 \
---batch_size 32 \
---n_threads 28 \
---tensorboard \
---resume_path /vision2/u/enguyen/results/pretrain1_cont2/save_64.pth \
---n_val_samples 1 \
---inference \
---no_train \
 --no_val \
---inference_no_average
-
-
-python main_rate.py \
---label_path /scr-ssd/enguyen/normal_1.0x/frames_fps16/meta/video_metadata.json \
---video_id_path /scr-ssd/enguyen/432_meta/clip_ids_split_merged.json \
---frame_dir /scr-ssd/enguyen/normal_1.0x/frames_fps16/ \
---image_size 224 \
---result_path /vision2/u/enguyen/results/run6_res101_inference_ep20 \
---dataset rate \
---n_classes 2 \
---batch_size 24 \
---n_threads 24 \
---tensorboard \
---resume_path /vision2/u/enguyen/results/rate_pred/run6_res101_stoch_window24/save_20.pth \
---n_val_samples 1 \
---inference \
 --no_train \
---no_val \
 --inference_no_average \
---window_size 24 \
---model resnet \
---model_depth 101 \
 --inference_label_path /scr-ssd/enguyen/normal_1.0x/frames_fps16/meta/video_metadata.json \
 --inference_frame_dir /scr-ssd/enguyen/normal_1.0x/frames_fps16/
-
-
-
 
 '''

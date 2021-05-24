@@ -32,9 +32,17 @@ in for loop
 
 
 class SlowClipDataset(Dataset):
-    def __init__(self, meta_path, video_id_path, split_type, frame_dir, image_size):
+    def __init__(self, meta_path,
+                 video_id_path,
+                 split_type,
+                 frame_dir,
+                 image_size,
+                 window_size=24,
+                 is_inference=False):
 
         self.set_seeds(0)  # set seeds
+
+        self.is_inference = is_inference
 
         self.EXT = '.jpeg'
         self.image_size = image_size
@@ -42,8 +50,8 @@ class SlowClipDataset(Dataset):
         self.meta_data = self.read_json(meta_path)
         self.video_ids = self.read_json(video_id_path)[split_type]
 
-        self.window_size = 24  # number of frames to use
-        self.space_between_starts = self.window_size * 3  # space between starts of compressions
+        self.window_size = window_size  # number of frames to use
+        self.space_between_starts = self.window_size * 4  # space between starts of compressions
 
         # returns a list of segments (start, end)
         # these are fixed
@@ -51,11 +59,13 @@ class SlowClipDataset(Dataset):
 
         # add transforms here
         self.video_transform = transforms.Compose([
-            # transforms.Resize((self.image_size, self.image_size)),
+            transforms.Resize((self.image_size, self.image_size)),
             transforms.ToTensor(),
             transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225]),  # imagenet
             # transforms.Normalize([0.43216, 0.394666, 0.37645], [0.22803, 0.22145, 0.216989])  # dan's
         ])
+
+        self.class_names = ["slow", "normal"]
 
     def set_seeds(self, seed=0):
         random.seed(seed)
@@ -89,7 +99,10 @@ class SlowClipDataset(Dataset):
 
         '''
 
-        window_padded = self.window_size * 4  # we need room to speed (skip frames)
+        if not self.is_inference:
+            window_padded = self.space_between_starts  # we need room to speed (skip frames)
+        else:
+            window_padded = self.window_size  # no skipping, use all frames
 
         start_delay = 0
         segments = []  # segments contain list of list [video_id, [start,end]]
@@ -103,7 +116,7 @@ class SlowClipDataset(Dataset):
             if num_frames < window_padded:
                 segments.append([video_id, [0, num_frames]])
 
-            for start in range(start_delay, num_frames, self.space_between_starts):
+            for start in range(start_delay, num_frames, window_padded):
 
                 # need to take make sure the segment is full
                 if start + window_padded >= num_frames:
@@ -113,6 +126,18 @@ class SlowClipDataset(Dataset):
                 segments.append([video_id, [start, end]])
 
         return segments
+
+    def extend_list(self, frame_list):
+
+        # double the list by appending a reversed copy of the frame list
+        reversed_list = frame_list[::-1]
+        reversed_list.pop(0)  # need to remove very first before appending, since it's a duplicate of the last frame
+
+        frame_list.extend(reversed_list)
+
+        extended_list = frame_list[:self.window_size]
+
+        return extended_list
 
     def get_label(self, segment):
 
@@ -137,8 +162,8 @@ class SlowClipDataset(Dataset):
         num_frames = end - start
 
         # we need to ensure at least window_size num of frames are used
-        if num_frames < self.window_size * 3:
-            label = 1  # need to force it to be slow speed, so that it uses 24 frames
+        if num_frames < self.space_between_starts:
+            label = 0  # need to force it to be slow speed, so that it uses 24 frames
             skip_factor = 1.4
             return label, skip_factor
         else:
@@ -146,7 +171,7 @@ class SlowClipDataset(Dataset):
             label = random.choice([0, 1])
 
         # f_range are hyperparameters
-        if label == 0:
+        if label == 1:
             f_range = [2, 2.4]  # cut in half, allows for speed (1-1.2x)
         else:
             f_range = [1.4, 1.8]  # cut in half, allows for speed (0.7-0.9x)
@@ -172,33 +197,29 @@ class SlowClipDataset(Dataset):
 
         frame_list = []
 
-        valid_window = False
+        # # use all frames
+        # if end - start < 35:
+        #     frame_list = [num for num in range(start, end)]
+        # drop some
+        # else:
+        for i in range(start, end):
 
-        while not valid_window:
+            # decide to drop or not
+            is_drop = np.random.choice(2, 1, p=[1 / skip_factor, 1 - 1 / skip_factor])
 
-            # # use all frames
-            # if end - start < 35:
-            #     frame_list = [num for num in range(start, end)]
-            # drop some
-            # else:
-            for i in range(start, end):
+            if not is_drop:
+                frame_list.append(i)
 
-                # decide to drop or not
-                is_drop = np.random.choice(2, 1, p=[1 / skip_factor, 1 - 1 / skip_factor])
+        final_list = frame_list[:self.window_size]
 
-                if not is_drop:
-                    frame_list.append(i)
+        if len(final_list) < self.window_size:
+            print('!!!final_list is less than window!!!')
+            print('start {}, end {}, f {}, len {}'.format(start, end, skip_factor, len(final_list)))
+            print('frame list', frame_list)
 
-            final_list = frame_list[:self.window_size]
+            final_list = self.extend_list(final_list)
 
-            if len(final_list) < 24:
-                print('!!!final_list is less than 24!!!')
-                print('start {}, end {}, f {}, len {}'.format(start, end, skip_factor, len(final_list)))
-                print('frame list', frame_list)
-                skip_factor -= 0.1
-                skip_factor = max(1, skip_factor)
-            else:
-                valid_window = True
+            print('Doubling the list! new list size:', len(final_list))
 
         return final_list
 
@@ -236,16 +257,21 @@ class SlowClipDataset(Dataset):
 
         # sample label and skip factor f
         # need to pass segment to make sure there's enough frames
-        label, skip_factor = self.get_label(segment)
-        frame_list = self.get_frame_list(segment, skip_factor)
+
+        if not self.is_inference:
+            label, skip_factor = self.get_label(segment)
+            frame_list = self.get_frame_list(segment, skip_factor)
+            rate_tensor = torch.tensor(0.5 * skip_factor)
+        else:
+            label, skip_factor = 1, 1
+            frame_list = self.get_frame_list(segment, skip_factor)  # still use, can extend if short
+            rate_tensor = torch.tensor(1)
 
         # retrieve frames
         images = self.get_images(video_id, frame_list)
 
-        # save images for debugging
-        save_frames(images, video_id, label)
-
-        # import pdb; pdb.set_trace()
+        # # # save images for debugging
+        # save_frames(images, video_id, label)
 
         # apply transforms
         img_tensors = [self.video_transform(img).unsqueeze(0) for img in images]
@@ -254,11 +280,16 @@ class SlowClipDataset(Dataset):
         img_tensors = torch.cat(img_tensors, dim=0)
         label_tensor = torch.tensor(label)
 
-        # change axis order
+        # change axis order, will now be C, T, W, H
         img_tensors = img_tensors.permute(1, 0, 2, 3)
 
-        # return [img_tensors, [label_tensor, video_id, segment, skip_factor]]
-        return [img_tensors, [label_tensor, video_id, segment, skip_factor, frame_list]]
+        frame_list_np = np.asarray(frame_list)
+        segment_np = np.asarray(segment)
+
+        # # just for debugging
+        # return [img_tensors, [label_tensor, rate_tensor, video_id, segment_np, frame_list_np]]
+
+        return [img_tensors, [label_tensor, rate_tensor, video_id, segment_np]]
 
 
 def save_frames(frames, video_id, label):
@@ -295,8 +326,17 @@ def main(args):
     frame_dir = args.frame_dir
     batch_size = args.batch_size
     num_workers = args.num_workers
+    is_inference = args.is_inference
+    window_size = args.window_size
 
-    dataset = SlowClipDataset(meta_path, video_id_path, split_type, frame_dir, image_size=224)
+    dataset = SlowClipDataset(meta_path,
+                              video_id_path,
+                              split_type,
+                              frame_dir,
+                              image_size=224,
+                              window_size=window_size,
+                              is_inference=is_inference)
+
     train_dataloader = DataLoader(dataset, batch_size=batch_size, num_workers=num_workers, shuffle=False)
 
     count = 0
@@ -311,13 +351,14 @@ def main(args):
 
         data_time.update(time.time() - end_time)
 
-        label_tensor, video_id, segment, skip_factor, frame_list = label
+        # label_tensor, rate_tensor, video_id, segment_np = label
+        label_tensor, rate_tensor, video_id, segment_np, frame_list = label
         end_time = time.time()
 
         print('i: {} / {}, time: {data_time.val:.3f} ({data_time.avg:.3f})'.format(i, len(train_dataloader),
                                                                                    data_time=data_time))
-        # import pdb;
-        # pdb.set_trace()
+        import pdb;
+        pdb.set_trace()
 
     print('finished at: {:.3f}'.format(end_time - begin_time))
 
@@ -351,6 +392,8 @@ if __name__ == '__main__':
     parser.add_argument('-fd', '--frame-dir', help="dir to all the frames")
     parser.add_argument('-b', '--batch-size', type=int, help="batch size")
     parser.add_argument('-n', '--num-workers', type=int, help="num workers")
+    parser.add_argument('-in', '--is-inference', action='store_true', help="is inference or not")
+    parser.add_argument('-w', '--window-size', type=int, help="window size")
 
     args = parser.parse_args()
 
@@ -363,9 +406,10 @@ if __name__ == '__main__':
 python slow_clip_dataset.py \
 --meta-path /scr-ssd/enguyen/slowed_clips_0.5x/432_fps24/clip_metadata.json \
 --video-id  /scr-ssd/enguyen/slowed_clips_0.5x/432_fps24/clip_ids_split_merged.json \
---split-type train \
+--split-type val \
 --frame-dir /scr-ssd/enguyen/slowed_clips_0.5x/432_fps24/frames \
 --batch-size 8 \
---num-workers 2
+--num-workers 2 \
+--window-size 24
 
 '''

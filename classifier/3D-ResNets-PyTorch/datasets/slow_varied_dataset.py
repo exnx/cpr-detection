@@ -388,13 +388,14 @@ if __name__ == '__main__':
 
 # example usage
 
-python slow_simple_dataset.py \
---meta-path /scr-ssd/enguyen/slowed_clips_0.5x/432_fps24/clip_metadata.json \
+python slow_varied_dataset.py \
+--meta-path /scr-ssd/enguyen/slowed_0.2x/frames_fps16/meta/video_metadata.json \
 --video-id  /scr-ssd/enguyen/slowed_clips_0.5x/432_fps24/clip_ids_split_merged.json \
 --split-type train \
---frame-dir /scr-ssd/enguyen/slowed_clips_0.5x/432_fps24/frames \
+--frame-dir /scr-ssd/enguyen/slowed_0.2x/frames_fps16 \
 --batch-size 16 \
---num-workers 8
+--num-workers 1 \
+--window-size 24
 
 
 python slow_varied_dataset.py \

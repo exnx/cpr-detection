@@ -3,6 +3,14 @@ import cv2
 import argparse
 import json
 import os
+import pandas as pd
+
+
+base_rate = 109
+
+def read_csv_as_df(path):
+    df = pd.read_csv(path)
+    return df
 
 
 def read_json(path):
@@ -28,44 +36,57 @@ def save_frames(frames, out_dir, video_id, frame_names):
     return
 
 
-def write_on_frames(frames, pred, prob):
+def write_on_frames(frames, output, rate_label):
+
+    '''
+
+    :param frames: list of frames
+    :param output: float, is the speed factor
+    :param rate_label: float, ground truth rate
+    :return:
+    '''
+
+
     width = 640
     height = 360
     font = cv2.FONT_HERSHEY_SIMPLEX  # font
-    pred_loc = (50, 50)
-    prob_loc = (50, 75)
+
+    output_loc = (50, 50)
+    rate_pred_loc = (50, 75)
+    rate_label_loc = (50, 100)
 
     fontScale = 1  # fontScale
     thickness = 2  # Line thickness of 2 px
 
-    blue = (255, 0, 0)
+    # blue = (255, 0, 0)
     green = (0, 255, 0)
-    red = (0, 0, 255)
+    # red = (0, 0, 255)
 
     # ranges
     # 0.0 - 0.3 is red
     # 0.3 - 0.49 is blue
     # 0.50 - 1.00 is green
 
+
     frames_with_text = []
 
-    prob_text = '{}%'.format(int(prob*100))
-    pred_text = 'pred: {}'.format(pred)
+    # import pdb; pdb.set_trace()
 
-    if prob < 0.3:
-        font_color = red
-    elif prob < 0.5:
-        font_color = blue
-    else:
-        font_color = green
+    output_text = '{:.2f}x'.format(output)
+    rate_pred_text = 'pred: {:.1f}'.format(int(base_rate*output))
+    rate_label_text = 'label: {:.1f}'.format(rate_label)
+
+    font_color = green
 
     for frame in frames:
         resized = cv2.resize(frame, (width, height))
 
         # Using cv2.putText() method
-        cv2.putText(resized, prob_text, prob_loc, font,
+        cv2.putText(resized, output_text, output_loc, font,
                           fontScale, font_color, thickness, cv2.LINE_AA)
-        cv2.putText(resized, pred_text, pred_loc, font,
+        cv2.putText(resized, rate_pred_text, rate_pred_loc, font,
+                          fontScale, font_color, thickness, cv2.LINE_AA)
+        cv2.putText(resized, rate_label_text, rate_label_loc, font,
                           fontScale, font_color, thickness, cv2.LINE_AA)
 
         frames_with_text.append(resized)
@@ -110,37 +131,61 @@ def main(args):
     results_dir = args.results_dir
     frame_dir = args.frame_dir
     out_dir = args.out_dir
+    rate_labels_dir = args.rate_labels
 
     results_json = read_json(results_dir)['results']
 
+    # new for using labels
+    rate_labels_df = read_csv_as_df(rate_labels_dir)
+    rate_video_ids = rate_labels_df['video_id'].tolist()
+    rate_labels = rate_labels_df['rate'].tolist()
+
+    total_mae = 0
+    count = 0
+
     # loop thru video
-    for video_id, video_json in results_json.items():
+    for i in range(len(rate_video_ids)):
+
+        video_id = rate_video_ids[i]
+        rate_label = rate_labels[i]
 
         print('processing video:', video_id)
+
+        # get model output from from results
+        video_json = results_json[video_id]
 
         out_video_dir = os.path.join(out_dir, video_id)
 
         # make a new dir
         os.makedirs(out_video_dir, exist_ok=True)
 
-        preds = video_json['preds']
-        probs = video_json['outputs']
+        # preds = video_json['preds']
+        outputs = video_json['outputs']
         segments = video_json['segments']
 
         # calc prefix
         prefix = os.path.join(frame_dir, video_id)
 
         # loop thru clips
-        for i in range(len(preds)):
+        for j in range(len(outputs)):
 
-            # retrieve frames
-            frames, frame_names = get_frames(prefix, segments[i])
+            # calc error
+            output = outputs[j][0]
+            mae = abs(output*base_rate - rate_label)
+            total_mae += mae
+            count += 1
 
-            # write on frames (all with same text)
-            frames_with_text = write_on_frames(
-                frames, preds[i], probs[i][1])
+            # import pdb; pdb.set_trace()
 
-            save_frames(frames_with_text, out_dir, video_id, frame_names)
+            # # retrieve frames
+            # frames, frame_names = get_frames(prefix, segments[i])
+            #
+            # # write on frames (all with same text)
+            # frames_with_text = write_on_frames(frames, output, rate_label)
+            #
+            # save_frames(frames_with_text, out_dir, video_id, frame_names)
+
+    print('MAE: {:.2f}, segments count: {}'.format(total_mae / count, count))
 
 
 if __name__ == '__main__':
@@ -148,21 +193,19 @@ if __name__ == '__main__':
     parser.add_argument('-r', '--results-dir', help='dir to the inference results file')
     parser.add_argument('-v', '--frame-dir', help='root dir to all frames')
     parser.add_argument('-o', '--out-dir', help='path to the output dir')
+    parser.add_argument('-rl', '--rate-labels', default=None, help='path to rate labels')
 
     args = parser.parse_args()
-
-    results_dir = args.results_dir
-    frame_dir = args.frame_dir
-    out_dir = args.out_dir
 
     main(args)
 
 '''
 
-python write_rate_on_frames.py \
---results-dir /vision2/u/enguyen/results/run6_res101_inference_ep20/test_results.json \
+python write_rate_on_frames_mse.py \
+--results-dir /vision2/u/enguyen/results/rate_pred/run8_res18_mse_action_pretrained/inference_results/test_results.json \
 --frame-dir /scr-ssd/enguyen/normal_1.0x/frames_fps16 \
---out-dir /vision2/u/enguyen/demos/rate_pred/run6/frames
+--out-dir /vision2/u/enguyen/demos/rate_pred/run8_res18_mse_action_pretrained/frames \
+--rate-labels /vision2/u/enguyen/cpr-detection/post_processing_code/data/432/rate_labels.csv
 
 
 '''

@@ -247,6 +247,13 @@ python video_to_frame_and_meta.py \
 --frame-path /scr-ssd/enguyen/slowed_0.2x/frames_fps16 \
 --fps 16
 
+python video_to_frame_and_meta.py \
+--video-ids /vision2/u/enguyen/cpr-detection/post_processing_code/data/432/clip_filenames.json \
+--raw /vision2/u/enguyen/mini_cba/slowed_clips_0.5x/432_24fps/videos \
+--meta-path /scr-ssd/enguyen/slowed_clips_0.5x/frames_fps16/meta \
+--frame-path /scr-ssd/enguyen/slowed_clips_0.5x/frames_fps16 \
+--fps 16
+
 
 
 '''
