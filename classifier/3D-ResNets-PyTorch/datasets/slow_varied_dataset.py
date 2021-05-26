@@ -117,14 +117,18 @@ class SlowClipDataset(Dataset):
             # this ensures at least 1 segment included
             if num_frames < window_padded:
                 segments.append([video_id, [0, num_frames]])
+                continue
 
             for start in range(start_delay, num_frames, window_padded):
 
+                end = start + window_padded
+
                 # need to take make sure the segment is full
-                if start + window_padded >= num_frames:
+                if end > num_frames:
+                    end = num_frames
+                    segments.append([video_id, [end-self.window_size, end]])
                     break
 
-                end = start + window_padded
                 segments.append([video_id, [start, end]])
 
         return segments

@@ -6,12 +6,24 @@ import os
 import pandas as pd
 
 
-base_rate = 111.9
+base_rate = 110
 
 def read_csv_as_df(path):
     df = pd.read_csv(path)
     return df
 
+def write_json(data_dict, path):
+
+    '''
+
+    :param data_dict: dict to write to json
+    :param path: path to json
+    :param indent: for easy viewing.  Use None if you want to save a lot of space
+    :return:
+    '''
+
+    with open(path, 'w', encoding='utf-8') as f:
+        json.dump(data_dict, f, ensure_ascii=False, indent=4)
 
 def read_json(path):
     try:
@@ -36,7 +48,7 @@ def save_frames(frames, out_dir, video_id, frame_names):
     return
 
 
-def write_on_frames(frames, output, outputs_avg, rate_label):
+def write_on_frames(frames, prev_rep_count, output, outputs_avg, rate_label, count_label, fps=16):
 
     '''
 
@@ -51,47 +63,52 @@ def write_on_frames(frames, output, outputs_avg, rate_label):
     height = 360
     font = cv2.FONT_HERSHEY_SIMPLEX  # font
 
-    output_loc = (50, 50)
-    rate_pred_loc = (50, 75)
-    rate_avg_loc = (50, 100)
-    rate_label_loc = (50, 125)
+    # output_loc = (50, 50)
+    rate_pred_loc = (50, 50)
+    rate_avg_loc = (50, 75)
+    rate_label_loc = (50, 100)
+    count_loc = (50, 125)
+    # count_label_loc = (50, 175)
 
     fontScale = 1  # fontScale
     thickness = 2  # Line thickness of 2 px
 
-    # blue = (255, 0, 0)
     green = (0, 255, 0)
-    # red = (0, 0, 255)
-
-    # ranges
-    # 0.0 - 0.3 is red
-    # 0.3 - 0.49 is blue
-    # 0.50 - 1.00 is green
-
 
     frames_with_text = []
 
-    # import pdb; pdb.set_trace()
+    rate_pred = base_rate*output
 
-    output_text = '{:.2f}x'.format(output)
-    rate_pred_text = 'pred: {:.1f}'.format(int(base_rate*output))
+    # output_text = '{:.2f}x'.format(output)
+    rate_pred_text = 'rate: {:.1f}'.format(int(rate_pred))
     rate_avg_text = 'avg pred: {:.1f}'.format(int(base_rate*outputs_avg))
     rate_label_text = 'avg label: {:.1f}'.format(rate_label)
+    # count_label_text = 'total count label: {:.1f}'.format(count_label)
 
     font_color = green
 
-    for frame in frames:
+    for i, frame in enumerate(frames):
+        # calculate current count for frame, round down
+        window_fraction = (i + 1 / len(frames))
+        curr_rep_count = int(prev_rep_count + rate_pred * window_fraction / fps / 60)
+
+        count_text = 'count: {}/{}'.format(curr_rep_count, int(count_label))
+
         resized = cv2.resize(frame, (width, height))
 
         # Using cv2.putText() method
-        cv2.putText(resized, output_text, output_loc, font,
-                          fontScale, font_color, thickness, cv2.LINE_AA)
+        # cv2.putText(resized, output_text, output_loc, font,
+        #                   fontScale, font_color, thickness, cv2.LINE_AA)
         cv2.putText(resized, rate_pred_text, rate_pred_loc, font,
                           fontScale, font_color, thickness, cv2.LINE_AA)
         cv2.putText(resized, rate_avg_text, rate_avg_loc, font,
                           fontScale, font_color, thickness, cv2.LINE_AA)
         cv2.putText(resized, rate_label_text, rate_label_loc, font,
                           fontScale, font_color, thickness, cv2.LINE_AA)
+        cv2.putText(resized, count_text, count_loc, font,
+                          fontScale, font_color, thickness, cv2.LINE_AA)
+        # cv2.putText(resized, count_label_text, count_label_loc, font,
+        #                   fontScale, font_color, thickness, cv2.LINE_AA)
 
         frames_with_text.append(resized)
 
@@ -132,6 +149,11 @@ def main(args):
     # write target/labels on frames
     # save frames to path
 
+    final_rep_counts = {}
+
+    fps = args.fps
+    window = args.window
+
     results_dir = args.results_dir
     frame_dir = args.frame_dir
     out_dir = args.out_dir
@@ -143,15 +165,17 @@ def main(args):
     rate_labels_df = read_csv_as_df(rate_labels_dir)
     rate_video_ids = rate_labels_df['video_id'].tolist()
     rate_labels = rate_labels_df['rate'].tolist()
+    count_labels = rate_labels_df['count'].tolist()
 
     total_mae = 0
-    count = 0
+    segment_count = 0
 
     # loop thru video
     for i in range(len(rate_video_ids)):
 
         video_id = rate_video_ids[i]
         rate_label = rate_labels[i]
+        count_label = count_labels[i]
 
         print('processing video:', video_id)
 
@@ -178,27 +202,47 @@ def main(args):
         prefix = os.path.join(frame_dir, video_id)
 
         # need to track the count so far...
+        curr_rep_count = 0
 
         # loop thru clips
         for j in range(len(outputs)):
 
             # calc error
             output = outputs[j][0]
-            mae = abs(output*base_rate - rate_label)
+            rate_pred = output*base_rate
+            mae = abs(rate_pred - rate_label)
             total_mae += mae
-            count += 1
+            segment_count += 1
 
             # import pdb; pdb.set_trace()
 
             # retrieve frames
             frames, frame_names = get_frames(prefix, segments[j])
 
+            # if last segment, need to adjust count for partial repeating segment
+            if j == len(outputs) - 1:
+                # get prev end
+                prev_end = segments[j-1][1]
+                curr_start = segments[j][0]
+                diff = prev_end - curr_start
+                count_diff = (diff/window) * (rate_pred * window / fps / 60)
+                curr_rep_count -= count_diff
+                curr_rep_count = max(curr_rep_count, 0)
+
             # write on frames (all with same text)
-            frames_with_text = write_on_frames(frames, output, outputs_avg, rate_label)
+            frames_with_text = write_on_frames(frames, curr_rep_count, output, outputs_avg, rate_label, count_label, fps)
 
             save_frames(frames_with_text, out_dir, video_id, frame_names)
 
-    print('MAE: {:.2f}, segments count: {}'.format(total_mae / count, count))
+            curr_rep_count = curr_rep_count + rate_pred * window / fps / 60
+
+        print('final count for video {}, count: {}'.format(video_id, int(curr_rep_count)))
+        final_rep_counts[video_id] = int(curr_rep_count)
+
+        count_path = os.path.join(out_dir, 'counts.json')
+        write_json(final_rep_counts, count_path)
+
+    print('MAE: {:.2f}, segments count: {}'.format(total_mae / segment_count, segment_count))
 
 
 if __name__ == '__main__':
@@ -207,6 +251,9 @@ if __name__ == '__main__':
     parser.add_argument('-v', '--frame-dir', help='root dir to all frames')
     parser.add_argument('-o', '--out-dir', help='path to the output dir')
     parser.add_argument('-rl', '--rate-labels', default=None, help='path to rate labels')
+    parser.add_argument('-f', '--fps', default=16, help='fps')
+    parser.add_argument('-w', '--window', default=24, help='sliding window size')
+
 
     args = parser.parse_args()
 
@@ -214,10 +261,10 @@ if __name__ == '__main__':
 
 '''
 
-python write_rate_on_frames_mse.py \
+python write_rate_on_frames_mse_count.py \
 --results-dir /vision2/u/enguyen/results/rate_pred/run8_res18_mse_action_pretrained/inference_results_last_segment/test_results.json \
 --frame-dir /scr-ssd/enguyen/normal_1.0x/frames_fps16 \
---out-dir /vision2/u/enguyen/demos/rate_pred/run8_res18_mse_action_pretrained_last_segment/frames_corrected \
+--out-dir /vision2/u/enguyen/demos/rate_pred/run8_res18_mse_action_pretrained_last_segment/frames_fix \
 --rate-labels /vision2/u/enguyen/cpr-detection/post_processing_code/data/432/rate_labels_corrected.csv
 
 

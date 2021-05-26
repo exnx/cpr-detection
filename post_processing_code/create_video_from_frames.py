@@ -30,8 +30,8 @@ if __name__ == '__main__':
 '''
 
 python create_video_from_frames.py \
---root-dir /vision2/u/enguyen/demos/rate_pred/run8_res18_mse_action_pretrained/frames \
---out-dir /vision2/u/enguyen/demos/rate_pred/run8_res18_mse_action_pretrained/videos
+--root-dir /vision2/u/enguyen/demos/rate_pred/run8_res18_mse_action_pretrained_last_segment/frames_fix \
+--out-dir /vision2/u/enguyen/demos/rate_pred/run8_res18_mse_action_pretrained_last_segment/videos_fix
 
 
 '''

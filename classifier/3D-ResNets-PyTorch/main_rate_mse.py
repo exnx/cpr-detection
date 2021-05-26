@@ -471,12 +471,12 @@ python main_rate_mse.py \
 
 
 # inference, on just ground truth video ids
-CUDA_VISIBLE_DEVICES=0 python main_rate_mse.py \
+python main_rate_mse.py \
 --label_path /scr-ssd/enguyen/slowed_0.2x/frames_fps16/meta/video_metadata.json \
 --video_id_path /vision2/u/enguyen/cpr-detection/post_processing_code/data/432/clip_ids_for_rate_truth.json \
 --frame_dir /scr-ssd/enguyen/slowed_0.2x/frames_fps16/ \
 --image_size 224 \
---result_path /vision2/u/enguyen/results/rate_pred/run8_res18_mse_action_pretrained/inference_results \
+--result_path /vision2/u/enguyen/results/rate_pred/run8_res18_mse_action_pretrained/inference_results_last_segment \
 --dataset cpr_rate \
 --n_classes 1 \
 --checkpoint 4 \
