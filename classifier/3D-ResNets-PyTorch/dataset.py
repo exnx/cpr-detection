@@ -12,7 +12,7 @@ from datasets.loader import VideoLoader, VideoLoaderHDF5, VideoLoaderFlowHDF5
 # for rate dataset
 # from datasets.slow_clip_dataset import SlowClipDataset  # 0.7-0.9x, or 1-1.2x, stochastically sampled
 # from datasets.slow_simple_dataset import SlowClipDataset  # deterministic, 0.5x or 1x
-from datasets.slow_varied_dataset import SlowClipDataset  # deterministic, 0.4, 0.6, 0.8, 1.0 or 1.2x
+from datasets.slow_varied_dataset import SlowClipDataset  # deterministic, 0.4, 0.6, 0.8, 1.0 1.2x, or 1.4x
 
 
 def image_name_formatter(x):

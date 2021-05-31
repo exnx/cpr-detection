@@ -53,7 +53,7 @@ class SlowClipDataset(Dataset):
         self.video_ids = self.read_json(video_id_path)[split_type]
 
         self.window_size = window_size  # number of frames to use
-        self.space_between_starts = self.window_size * 6  # space between starts of compressions
+        self.space_between_starts = self.window_size * 7  # space between starts of compressions
 
         # returns a list of segments (start, end)
         # these are fixed
@@ -125,8 +125,10 @@ class SlowClipDataset(Dataset):
 
                 # need to take make sure the segment is full
                 if end > num_frames:
-                    end = num_frames
-                    segments.append([video_id, [end-self.window_size, end]])
+
+                    if self.is_inference:
+                        end = num_frames
+                        segments.append([video_id, [end-self.window_size, end]])
                     break
 
                 segments.append([video_id, [start, end]])
@@ -154,6 +156,7 @@ class SlowClipDataset(Dataset):
         # we need to ensure at least window_size * 6 num of frames are used
         # otherwise, we need it to be slow for sure to get enough frames
         if num_frames < self.space_between_starts:
+
             label = 0  # need to force it to be slow speed, so that it uses 24 frames
             skip_factor = 2  # translates to 0.4x
             return label, skip_factor
@@ -165,7 +168,7 @@ class SlowClipDataset(Dataset):
         if label == 0:
             skip_factor = random.choice([2, 3, 4])  # slow
         else:
-            skip_factor = random.choice([5, 6])  # normal or slightly fast
+            skip_factor = random.choice([5, 6, 7])  # normal or slightly fast
 
         return label, skip_factor
 
@@ -341,7 +344,7 @@ def main(args):
 
         data_time.update(time.time() - end_time)
 
-        label_tensor, rate, video_id, segment = labels
+        # label_tensor, rate, video_id, segment = labels
         end_time = time.time()
 
         # import pdb; pdb.set_trace()

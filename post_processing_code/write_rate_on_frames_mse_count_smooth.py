@@ -6,6 +6,19 @@ import os
 import pandas as pd
 
 
+class StreamingMovingAverage:
+    def __init__(self, window_size):
+        self.window_size = window_size
+        self.values = []
+        self.sum = 0
+
+    def process(self, value):
+        self.values.append(value)
+        self.sum += value
+        if len(self.values) > self.window_size:
+            self.sum -= self.values.pop(0)
+        return float(self.sum) / len(self.values)
+
 base_rate = 111
 
 def read_csv_as_df(path):
@@ -169,10 +182,13 @@ def main(args):
     total_count_diff = 0
     total_mae_by_video = 0
     total_mae_by_segment = 0
+    total_rate_diff = 0
     segment_count = 0
     curr_video_count = 0
 
     all_results = {}
+
+    moving_average = StreamingMovingAverage(window_size=3)
 
     # loop thru video
     for i in range(len(rate_video_ids)):
@@ -180,13 +196,13 @@ def main(args):
         video_result = {}
 
         video_id = rate_video_ids[i]
-        print('processing video:', video_id)
+        # print('processing video:', video_id)
         rate_label = rate_labels[i]
         count_label = count_labels[i]
         duration_label = duration_labels[i]
         avg_rate_pred = 0
 
-        if duration_label < 5:
+        if duration_label < 10:
             continue
 
         curr_video_count += 1
@@ -217,11 +233,13 @@ def main(args):
             # calc error
             output = outputs[j][0]
             rate_pred = output*base_rate
-            mae = abs(rate_pred - rate_label)
+            rate_smoothed = moving_average.process(rate_pred)
+
+            mae = abs(rate_smoothed - rate_label)
             total_mae_by_segment += mae
             curr_video_mae += mae
             segment_count += 1
-            avg_rate_pred += rate_pred
+            avg_rate_pred += rate_smoothed
 
             # if last segment, need to adjust count for partial repeating segment
             if j == len(outputs) - 1:
@@ -229,7 +247,7 @@ def main(args):
                 prev_end = segments[j-1][1]
                 curr_start = segments[j][0]
                 diff = prev_end - curr_start
-                count_diff = (diff/window) * (rate_pred * window / fps / 60)
+                count_diff = (diff/window) * (rate_smoothed * window / fps / 60)
                 curr_rep_count -= count_diff
                 curr_rep_count = max(curr_rep_count, 0)
 
@@ -242,15 +260,21 @@ def main(args):
         #     save_frames(frames_with_text, out_dir, video_id, frame_names)
         #
             # make sure to do this after writing/saving frames
-            curr_rep_count = curr_rep_count + rate_pred * window / fps / 60
+            curr_rep_count = curr_rep_count + rate_smoothed * window / fps / 60
 
         video_count_diff = abs(curr_rep_count - count_label)
         total_count_diff += video_count_diff
         curr_video_mae /= num_segments  # divide by num segments
         total_mae_by_video += curr_video_mae  # then add for the video
+        rate_diff = avg_rate_pred / num_segments - rate_label
+        total_rate_diff += abs(rate_diff)
 
-        print('final count for video {}: {}'.format(video_id, int(curr_rep_count)))
-        print('MAE for video {}: {:.2f}'.format(video_id, curr_video_mae / num_segments))
+        # print('final count for video {}: {}'.format(video_id, int(curr_rep_count)))
+
+        # print('{} MAE: {:.2f}'.format(video_id, curr_video_mae))
+        # print('{} MAE: {:.2f}, rate label: {:.2f}, avg rate pred {:.2f}'.format(video_id, curr_video_mae, rate_label, rate_smoothed))
+        print('{} MAE: {:.2f}, rate diff: {:.2f}'.format(video_id, curr_video_mae, abs(rate_label-rate_smoothed)))
+
 
         # save video results
         video_result['num_segments'] = num_segments
@@ -263,11 +287,13 @@ def main(args):
 
         all_results[video_id] = video_result
 
+    avg_rate_diff = total_rate_diff / curr_video_count
     avg_count_diff = total_count_diff / curr_video_count
     mae = total_mae_by_video / curr_video_count
     mae_weighted = total_mae_by_segment / segment_count
 
     print('\n')
+    print('Avg rate diff: {:.2f}'.format(avg_rate_diff))
     print('Avg count diff: {:.2f}, video count {}'.format(avg_count_diff, curr_video_count))
     print('MAE: {:.2f}, video count {}'.format(mae, curr_video_count))
     print('MAE (weighted): {:.2f}, segments count: {}'.format(mae_weighted, segment_count))
@@ -293,7 +319,7 @@ if __name__ == '__main__':
 
 '''
 
-python write_rate_on_frames_mse_count.py \
+python write_rate_on_frames_mse_count_smooth.py \
 --results-dir /vision2/u/enguyen/results/rate_pred/run8_res18_mse_action_pretrained/inference_results_last_segment/test_results.json \
 --frame-dir /scr-ssd/enguyen/normal_1.0x/frames_fps16 \
 --out-dir /vision2/u/enguyen/demos/rate_pred/run8_res18_mse_action_pretrained_last_segment/frames_fix \

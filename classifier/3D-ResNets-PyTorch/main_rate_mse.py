@@ -453,7 +453,7 @@ python main_rate_mse.py \
 --video_id_path /scr-ssd/enguyen/slowed_clips_0.5x/432_fps24/clip_ids_split_merged.json \
 --frame_dir /scr-ssd/enguyen/slowed_0.2x/frames_fps16/ \
 --image_size 224 \
---result_path /vision2/u/enguyen/results/rate_pred/run8_res18_mse_action_pretrained \
+--result_path /vision2/u/enguyen/results/rate_pred/run10_1.4x \
 --dataset cpr_rate \
 --n_classes 1 \
 --checkpoint 2 \
@@ -461,8 +461,8 @@ python main_rate_mse.py \
 --n_threads 1 \
 --n_val_samples 1 \
 --tensorboard \
---pretrain_path /vision2/u/enguyen/results/pretrain1_cont2/save_64.pth \
---n_pretrain_classes 2 \
+--pretrain_path /vision2/u/enguyen/results/rate_pred/run8_res18_mse_action_pretrained/save_24.pth \
+--n_pretrain_classes 1 \
 --model resnet \
 --model_depth 18 \
 --window_size 24 \
@@ -476,7 +476,7 @@ python main_rate_mse.py \
 --video_id_path /vision2/u/enguyen/cpr-detection/post_processing_code/data/432/clip_ids_for_rate_truth.json \
 --frame_dir /scr-ssd/enguyen/slowed_0.2x/frames_fps16/ \
 --image_size 224 \
---result_path /vision2/u/enguyen/results/rate_pred/run8_res18_mse_action_pretrained/inference_results_last_segment \
+--result_path /vision2/u/enguyen/results/rate_pred/run8_res18_mse_action_pretrained/inference_chpt24 \
 --dataset cpr_rate \
 --n_classes 1 \
 --checkpoint 4 \
