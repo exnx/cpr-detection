@@ -89,6 +89,3 @@ create_video_from_frames.py
 ```
 Same as above
 
-```
-post_process_inference_results_rate.py 
-```
