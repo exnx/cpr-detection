@@ -28,7 +28,7 @@ Runs the training for compression detection, and the inference (separate step).
 ```
 classifier/3D-ResNets-Pytorch/inference.py
 ```
-main.py runs this, but this script was heavily modified to save results to disk for analyzing.
+main.py runs this, but this script was heavily modified to save results to disk.  This inference script already performs prec/recall (unlike the rate inference code).
 
 ##### post_processing_code/  
 
@@ -47,8 +47,6 @@ create_video_from_frames.py
 ```
 Creates videos from frames.
 
-
-Note:  analyzing saved predictions vs labels is on Notebook on Eric's local computer, can ask him.
 
 ### 2. Rate prediction
 
