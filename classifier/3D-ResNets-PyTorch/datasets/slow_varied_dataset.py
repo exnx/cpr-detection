@@ -12,26 +12,6 @@ import time
 import os
 
 
-'''
-
-- open clip metadata
-- retrieve clip ids
-    aggregate all into 1 list (instead of by video id)
-
-in for loop
-- get clip id
-- get get total num frames from meta
-- choose N start frames
-    - need to sample somewhat evenly, and have at least 3T forward
-- decide if slow or normal 50%, based on f = skip factor
-- create frames list
-    - have start and end (start + 3T frames)
-    - skip a frame with prob 1 - 1/f
-    - finalize frame list
-
-'''
-
-
 class SlowClipDataset(Dataset):
     def __init__(self,
                  meta_path,
@@ -89,8 +69,6 @@ class SlowClipDataset(Dataset):
 
         Given a video id, it calculates the candidate segments [start, end] to be used.
 
-
-
                                     space_between_starts
         begin of          <---------------------------------------->                                            end of video
         video
@@ -141,10 +119,10 @@ class SlowClipDataset(Dataset):
 
         segment: list (start, end) - used to see how many frames there are
 
-        0 is slow down (0.5x speed)
-        1 is normal version (range is 1x speed)
+        0 is slow down (0.4-0.8x speed)
+        1 is normal version (range is 1-1.2x speed)
 
-        Note: counter-intuitive:  videos are already slowed down by 0.5x.
+        Note: counter-intuitive:  videos are already slowed down by 0.2x.
         ie, so we need to speed up to make it normal
 
         '''

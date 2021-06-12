@@ -26,7 +26,7 @@ from temporal_transforms import (LoopPadding, TemporalRandomCrop,
                                  TemporalCenterCrop, TemporalEvenCrop,
                                  SlidingWindow, TemporalSubsampling)
 from temporal_transforms import Compose as TemporalCompose
-from dataset import get_training_data, get_validation_data, get_inference_data
+from dataset_rate import get_training_data, get_validation_data, get_inference_data
 from utils import Logger, worker_init_fn, get_lr
 from training_mse import train_epoch
 from validation_mse import val_epoch
