@@ -86,105 +86,6 @@ def read_json(path):
 
     return data_dict
 
-
-def save_frames(frames, out_dir, video_id, frame_names):
-    prefix = os.path.join(out_dir, video_id)
-
-    for i in range(len(frames)):
-        frame_path = os.path.join(prefix, frame_names[i])
-
-        cv2.imwrite(frame_path, frames[i])
-
-    return
-
-
-def write_on_frames(frames, prev_rep_count, rate_pred, outputs_avg, rate_label, count_label, fps=16):
-    '''
-    :param frames: list of frames
-    :param output: float, is the speed factor
-    :param rate_label: float, ground truth rate
-    :return:
-    '''
-
-    width = 640
-    height = 360
-    font = cv2.FONT_HERSHEY_SIMPLEX  # font
-
-    # output_loc = (50, 50)
-    rate_pred_loc = (50, 50)
-    rate_avg_loc = (50, 75)
-    rate_label_loc = (50, 100)
-    count_loc = (50, 125)
-    # count_label_loc = (50, 175)
-
-    fontScale = 1  # fontScale
-    thickness = 2  # Line thickness of 2 px
-
-    green = (0, 255, 0)
-
-    frames_with_text = []
-
-    # output_text = '{:.2f}x'.format(output)
-    rate_pred_text = 'rate: {:.1f}'.format(int(rate_pred))
-    rate_avg_text = 'avg pred: {:.1f}'.format(int(base_rate * outputs_avg))
-    rate_label_text = 'avg label: {:.1f}'.format(rate_label)
-    # count_label_text = 'total count label: {:.1f}'.format(count_label)
-
-    font_color = green
-
-    for i, frame in enumerate(frames):
-        # calculate current count for frame, round down
-        window_fraction = (i + 1 / len(frames))
-        curr_rep_count = prev_rep_count + rate_pred * window_fraction / fps / 60
-
-        count_text = 'count: {}/{}'.format(int(curr_rep_count), int(count_label))
-
-        resized = cv2.resize(frame, (width, height))
-
-        # Using cv2.putText() method
-        # cv2.putText(resized, output_text, output_loc, font,
-        #                   fontScale, font_color, thickness, cv2.LINE_AA)
-        cv2.putText(resized, rate_pred_text, rate_pred_loc, font,
-                    fontScale, font_color, thickness, cv2.LINE_AA)
-        cv2.putText(resized, rate_avg_text, rate_avg_loc, font,
-                    fontScale, font_color, thickness, cv2.LINE_AA)
-        cv2.putText(resized, rate_label_text, rate_label_loc, font,
-                    fontScale, font_color, thickness, cv2.LINE_AA)
-        cv2.putText(resized, count_text, count_loc, font,
-                    fontScale, font_color, thickness, cv2.LINE_AA)
-        # cv2.putText(resized, count_label_text, count_label_loc, font,
-        #                   fontScale, font_color, thickness, cv2.LINE_AA)
-
-        frames_with_text.append(resized)
-
-    return frames_with_text
-
-
-def get_frames(prefix, segment):
-    ext = ".jpeg"
-
-    images = []
-    img_names = []
-
-    for i in range(segment[0], segment[1]):
-        name = str(i).zfill(5) + ext
-        file_path = os.path.join(prefix, name)
-
-        try:
-            img = cv2.imread(file_path)
-            if img is not None:
-                images.append(img)
-                img_names.append(name)
-            else:
-                print('img is not', file_path)
-
-        except Exception as e:
-            print('cannot open img:'.format(file_path))
-            print(e)
-
-    return images, img_names
-
-
 def convert_label(rate_np):
     low_bar = 100
     high_bar = 120
@@ -200,9 +101,6 @@ def run_classification(per_frame_rate, rate_label):
     rate_np = np.zeros(len(per_frame_rate))
     rate_np[:] = rate_label
 
-    # constant = np.zeros(len(per_frame_rate))
-    # constant[:] = 111.9
-
     y_test = convert_label(rate_label)
     y_pred = convert_label(per_frame_rate)
 
@@ -212,12 +110,6 @@ def run_classification(per_frame_rate, rate_label):
     print('recall: {}'.format(recall))
     print('fscore: {}'.format(fscore))
     print('support: {}'.format(support))
-
-    # import pdb; pdb.set_trace()
-
-    # print(f1_score(y_test, y_pred, average="macro"))
-    # print(precision_score(y_test, y_pred, average="macro"))
-    # print(recall_score(y_test, y_pred, average="macro"))
 
     return (precision, recall, fscore, support)
 
@@ -237,7 +129,6 @@ def main(args):
     fps = args.fps
     window = args.window
     results_dir = args.results_dir
-    frame_dir = args.frame_dir
     out_dir = args.out_dir
     rate_labels_dir = args.rate_labels
 
@@ -277,10 +168,6 @@ def main(args):
         duration_label = duration_labels[i]
         avg_rate_pred = AverageMeter()
 
-        # for making videos
-        # out_video_dir = os.path.join(out_dir, video_id)
-        # os.makedirs(out_video_dir, exist_ok=True)  # make a new dir
-        #
         if duration_label < min_duration:
             continue
 
@@ -301,9 +188,6 @@ def main(args):
         for o in range(num_segments):
             outputs_avg.update(outputs[o][0])
 
-        # calc prefix
-        prefix = os.path.join(frame_dir, video_id)
-
         last_end = 0
 
         # loop thru segments
@@ -311,9 +195,6 @@ def main(args):
             # calc error
             output = outputs[j][0]
             rate_pred = output * base_rate
-
-            # for trying a constant comparison„
-            # rate_pred = 109
 
             if use_smooth:
                 rate_pred = moving_average.process(rate_pred)
@@ -331,23 +212,6 @@ def main(args):
             per_frame_count[start:end] = rate_pred / (fps * 60)
 
             last_end = end
-            # per_frame_rate_normal[start:end] = rate_pred
-
-        # # write on frames
-        # for i in range(0, num_frames, window):
-        #     # retrieve frames
-        #     start = i
-        #     end = min(i+window, num_frames)
-        #     # frames, frame_names = get_frames(prefix, [start, end])
-        #     rate_pred = np.average(per_frame_rate[start:end])
-
-        #     # write on frames (all with same text)
-        #     frames_with_text = write_on_frames(frames, curr_rep_count, rate_pred, outputs_avg.avg, rate_label, count_label, fps)
-        #
-        #     save_frames(frames_with_text, out_dir, video_id, frame_names)
-        #
-        # make sure to do this after writing/saving frames
-        # curr_rep_count = curr_rep_count + rate_pred * window / fps / 60
 
         video_rate_avg_pred = np.average(per_frame_rate)
         video_mae = np.average(np.absolute(per_frame_rate - rate_label))
@@ -388,9 +252,6 @@ def main(args):
                 import pdb;
                 pdb.set_trace()
 
-    # import pdb;
-    # pdb.set_trace()
-
     # run 3 level classification
     precision, recall, fscore, support = run_classification(all_per_frame_rate, all_rate_label)
     classification_results = {'precision': precision, 'recall': recall, 'fscore': fscore, 'support': support}
@@ -424,7 +285,7 @@ if __name__ == '__main__':
     main(args)
 
 '''
-python write_rate_on_frames_mse_count_smooth_frame_level.py \
+python post_process_inference_results.py \
 --results-dir /vision2/u/enguyen/results/rate_pred/run8_res18_mse_action_pretrained/inference_chpt24/test_results.json \
 --frame-dir /scr-ssd/enguyen/normal_1.0x/frames_fps16 \
 --out-dir /vision2/u/enguyen/demos/rate_pred/run8_chpt24/frames_level_results \
@@ -432,7 +293,7 @@ python write_rate_on_frames_mse_count_smooth_frame_level.py \
 --use-smooth \
 --min-duration 0
 
-python write_rate_on_frames_mse_count_smooth_frame_level.py \
+python post_process_inference_results.py  \
 --results-dir /vision2/u/enguyen/results/rate_pred/run8_res18_mse_action_pretrained/inference_chpt60/test_results.json \
 --frame-dir /scr-ssd/enguyen/normal_1.0x/frames_fps16 \
 --out-dir /vision2/u/enguyen/demos/rate_pred/run8_chpt60/frames_level_results \

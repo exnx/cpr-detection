@@ -177,8 +177,8 @@ if __name__ == '__main__':
     parser.add_argument('-rv', '--raw', help='path to raw videos')
     parser.add_argument('-m', '--meta-path', default=None, help='path to meta data output')
     parser.add_argument('-f', '--frame-path', default=None, help='path to frames output')
-    parser.add_argument('-s', '--start', default=None, type=int, help='start idx to process')
-    parser.add_argument('-e', '--end', default=None, type=int, help='end idx to process')
+    parser.add_argument('-s', '--start', default=0, type=int, help='start idx to process')
+    parser.add_argument('-e', '--end', default=10000, type=int, help='end idx to process')
     parser.add_argument('-fp', '--fps', default=24, type=int, help='fps output of frames')
 
     args = parser.parse_args()
@@ -199,11 +199,10 @@ if __name__ == '__main__':
 
 python video_to_frame_and_meta.py \
 --video-ids /vision2/u/enguyen/cpr-detection/post_processing_code/data/432/clip_filenames.json \
---raw /vision2/u/enguyen/mini_cba/clipped_videos/432 \
---meta-path /vision2/u/enguyen/cpr-detection/post_processing_code/data/432 \
---frame-path /vision2/u/enguyen/mini_cba/clipped_frames/432 \
---start None \
---end None
+--raw /vision2/u/enguyen/mini_cba/clipped_videos_fps30 \
+--meta-path /scr-ssd/enguyen/normal_1.0x/frames_fps30/meta \
+--frame-path /scr-ssd/enguyen/normal_1.0x/frames_fps30
+
 
 python video_to_frame_and_meta.py \
 --video-ids /vision2/u/enguyen/cpr-detection/post_processing_code/data/432/clip_filenames.json \
@@ -211,6 +210,14 @@ python video_to_frame_and_meta.py \
 --meta-path /scr-ssd/enguyen/normal_1.0x/frames_fps16/meta \
 --frame-path /scr-ssd/enguyen/normal_1.0x/frames_fps16 \
 --fps 16
+
+
+python video_to_frame_and_meta.py \
+--video-ids /vision2/u/enguyen/cpr-detection/post_processing_code/data/432/clip_filenames.json \
+--raw /vision2/u/enguyen/mini_cba/clipped_videos/432_redo2 \
+--meta-path /scr-ssd/enguyen/normal_1.0x/frames_fps30/meta \
+--frame-path /scr-ssd/enguyen/normal_1.0x/frames_fps30 \
+--fps 30
 
 
 
@@ -223,23 +230,6 @@ python video_to_frame_and_meta.py \
 --frame-path /vision2/u/enguyen/mini_cba/slowed_clip_videos/frames
 
 
-
-python video_to_frame_and_meta.py \
---video-ids /vision2/u/enguyen/cpr-detection/post_processing_code/data/432/clip_filenames.json \
---raw /vision2/u/enguyen/mini_cba/slowed_clip_videos \
---meta-path /scr-ssd/enguyen/slowed/432/frames_fps24/meta \
---frame-path /scr-ssd/enguyen/slowed/432/frames_fps24
- 
-
-
-python video_to_frame_and_meta.py \
---video-ids /vision2/u/enguyen/cpr-detection/post_processing_code/data/432/clip_filenames.json \
---raw /vision2/u/enguyen/mini_cba/slowed_clips_0.2x \
---meta-path /scr-ssd/enguyen/slowed_0.2x/frames_fps24/meta \
---frame-path /scr-ssd/enguyen/slowed_0.2x/frames_fps24 \
---fps 24
-
-
 python video_to_frame_and_meta.py \
 --video-ids /vision2/u/enguyen/cpr-detection/post_processing_code/data/432/clip_filenames.json \
 --raw /vision2/u/enguyen/mini_cba/slowed_clips_0.2x \
@@ -247,13 +237,9 @@ python video_to_frame_and_meta.py \
 --frame-path /scr-ssd/enguyen/slowed_0.2x/frames_fps16 \
 --fps 16
 
-python video_to_frame_and_meta.py \
---video-ids /vision2/u/enguyen/cpr-detection/post_processing_code/data/432/clip_filenames.json \
---raw /vision2/u/enguyen/mini_cba/slowed_clips_0.5x/432_24fps/videos \
---meta-path /scr-ssd/enguyen/slowed_clips_0.5x/frames_fps16/meta \
---frame-path /scr-ssd/enguyen/slowed_clips_0.5x/frames_fps16 \
---fps 16
 
+
+/vision2/u/enguyen/demos/rate_pred/repnet_frames/v1
 
 
 '''

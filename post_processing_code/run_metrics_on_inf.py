@@ -10,8 +10,9 @@ from functools import singledispatch
 # from sklearn.metrics import accuracy_score, f1_score, precision_score, recall_score
 from sklearn.metrics import precision_recall_fscore_support as score
 
-base_rate = 109
 
+
+base_rate = 109
 
 class AverageMeter(object):
     """Computes and stores the average and current value"""
@@ -31,7 +32,6 @@ class AverageMeter(object):
         self.count += n
         self.avg = self.sum / self.count
 
-
 class StreamingMovingAverage:
     def __init__(self, window_size):
         self.window_size = window_size
@@ -46,25 +46,25 @@ class StreamingMovingAverage:
         return float(self.sum) / len(self.values)
 
 
+
 @singledispatch
 def to_serializable(val):
     """Used by default."""
     return str(val)
-
 
 @to_serializable.register(np.float32)
 def ts_float32(val):
     """Used if *val* is an instance of numpy.float32."""
     return np.float64(val)
 
-
 def read_csv_as_df(path):
     df = pd.read_csv(path)
     return df
 
-
 def write_json(data_dict, path):
+
     '''
+
     :param data_dict: dict to write to json
     :param path: path to json
     :param indent: for easy viewing.  Use None if you want to save a lot of space
@@ -73,7 +73,6 @@ def write_json(data_dict, path):
 
     with open(path, 'w', encoding='utf-8') as f:
         json.dump(data_dict, f, ensure_ascii=False, indent=4, default=to_serializable)
-
 
 def read_json(path):
     try:
@@ -85,104 +84,6 @@ def read_json(path):
         raise Exception
 
     return data_dict
-
-
-def save_frames(frames, out_dir, video_id, frame_names):
-    prefix = os.path.join(out_dir, video_id)
-
-    for i in range(len(frames)):
-        frame_path = os.path.join(prefix, frame_names[i])
-
-        cv2.imwrite(frame_path, frames[i])
-
-    return
-
-
-def write_on_frames(frames, prev_rep_count, rate_pred, outputs_avg, rate_label, count_label, fps=16):
-    '''
-    :param frames: list of frames
-    :param output: float, is the speed factor
-    :param rate_label: float, ground truth rate
-    :return:
-    '''
-
-    width = 640
-    height = 360
-    font = cv2.FONT_HERSHEY_SIMPLEX  # font
-
-    # output_loc = (50, 50)
-    rate_pred_loc = (50, 50)
-    rate_avg_loc = (50, 75)
-    rate_label_loc = (50, 100)
-    count_loc = (50, 125)
-    # count_label_loc = (50, 175)
-
-    fontScale = 1  # fontScale
-    thickness = 2  # Line thickness of 2 px
-
-    green = (0, 255, 0)
-
-    frames_with_text = []
-
-    # output_text = '{:.2f}x'.format(output)
-    rate_pred_text = 'rate: {:.1f}'.format(int(rate_pred))
-    rate_avg_text = 'avg pred: {:.1f}'.format(int(base_rate * outputs_avg))
-    rate_label_text = 'avg label: {:.1f}'.format(rate_label)
-    # count_label_text = 'total count label: {:.1f}'.format(count_label)
-
-    font_color = green
-
-    for i, frame in enumerate(frames):
-        # calculate current count for frame, round down
-        window_fraction = (i + 1 / len(frames))
-        curr_rep_count = prev_rep_count + rate_pred * window_fraction / fps / 60
-
-        count_text = 'count: {}/{}'.format(int(curr_rep_count), int(count_label))
-
-        resized = cv2.resize(frame, (width, height))
-
-        # Using cv2.putText() method
-        # cv2.putText(resized, output_text, output_loc, font,
-        #                   fontScale, font_color, thickness, cv2.LINE_AA)
-        cv2.putText(resized, rate_pred_text, rate_pred_loc, font,
-                    fontScale, font_color, thickness, cv2.LINE_AA)
-        cv2.putText(resized, rate_avg_text, rate_avg_loc, font,
-                    fontScale, font_color, thickness, cv2.LINE_AA)
-        cv2.putText(resized, rate_label_text, rate_label_loc, font,
-                    fontScale, font_color, thickness, cv2.LINE_AA)
-        cv2.putText(resized, count_text, count_loc, font,
-                    fontScale, font_color, thickness, cv2.LINE_AA)
-        # cv2.putText(resized, count_label_text, count_label_loc, font,
-        #                   fontScale, font_color, thickness, cv2.LINE_AA)
-
-        frames_with_text.append(resized)
-
-    return frames_with_text
-
-
-def get_frames(prefix, segment):
-    ext = ".jpeg"
-
-    images = []
-    img_names = []
-
-    for i in range(segment[0], segment[1]):
-        name = str(i).zfill(5) + ext
-        file_path = os.path.join(prefix, name)
-
-        try:
-            img = cv2.imread(file_path)
-            if img is not None:
-                images.append(img)
-                img_names.append(name)
-            else:
-                print('img is not', file_path)
-
-        except Exception as e:
-            print('cannot open img:'.format(file_path))
-            print(e)
-
-    return images, img_names
 
 
 def convert_label(rate_np):
@@ -197,6 +98,7 @@ def convert_label(rate_np):
 
 
 def run_classification(per_frame_rate, rate_label):
+
     rate_np = np.zeros(len(per_frame_rate))
     rate_np[:] = rate_label
 
@@ -212,12 +114,6 @@ def run_classification(per_frame_rate, rate_label):
     print('recall: {}'.format(recall))
     print('fscore: {}'.format(fscore))
     print('support: {}'.format(support))
-
-    # import pdb; pdb.set_trace()
-
-    # print(f1_score(y_test, y_pred, average="macro"))
-    # print(precision_score(y_test, y_pred, average="macro"))
-    # print(recall_score(y_test, y_pred, average="macro"))
 
     return (precision, recall, fscore, support)
 
@@ -235,7 +131,7 @@ def main(args):
     use_smooth = args.use_smooth
     min_duration = args.min_duration
     fps = args.fps
-    window = args.window
+    # window = args.window
     results_dir = args.results_dir
     frame_dir = args.frame_dir
     out_dir = args.out_dir
@@ -310,7 +206,7 @@ def main(args):
         for j in range(num_segments):
             # calc error
             output = outputs[j][0]
-            rate_pred = output * base_rate
+            rate_pred = output*base_rate
 
             # for trying a constant comparison„
             # rate_pred = 109
@@ -333,26 +229,10 @@ def main(args):
             last_end = end
             # per_frame_rate_normal[start:end] = rate_pred
 
-        # # write on frames
-        # for i in range(0, num_frames, window):
-        #     # retrieve frames
-        #     start = i
-        #     end = min(i+window, num_frames)
-        #     # frames, frame_names = get_frames(prefix, [start, end])
-        #     rate_pred = np.average(per_frame_rate[start:end])
-
-        #     # write on frames (all with same text)
-        #     frames_with_text = write_on_frames(frames, curr_rep_count, rate_pred, outputs_avg.avg, rate_label, count_label, fps)
-        #
-        #     save_frames(frames_with_text, out_dir, video_id, frame_names)
-        #
-        # make sure to do this after writing/saving frames
-        # curr_rep_count = curr_rep_count + rate_pred * window / fps / 60
-
         video_rate_avg_pred = np.average(per_frame_rate)
-        video_mae = np.average(np.absolute(per_frame_rate - rate_label))
+        video_mae = np.average(np.absolute(per_frame_rate-rate_label))
         total_mae_by_video.update(video_mae)  # then add for the video
-        video_rate_diff = abs(video_rate_avg_pred - rate_label)
+        video_rate_diff = abs(video_rate_avg_pred-rate_label)
         total_rate_diff.update(video_rate_diff)
 
         curr_video_rep_count = sum(per_frame_count)
@@ -385,8 +265,7 @@ def main(args):
                 all_per_frame_rate = np.concatenate((all_per_frame_rate, per_frame_rate))
                 all_rate_label = np.concatenate((all_rate_label, rate_label_np))
             except:
-                import pdb;
-                pdb.set_trace()
+                import pdb; pdb.set_trace()
 
     # import pdb;
     # pdb.set_trace()
@@ -401,12 +280,10 @@ def main(args):
     print('Avg count diff: {:.2f}'.format(total_count_diff.avg))
     print('MAE: {:.2f}'.format(total_mae_by_video.avg))
 
-    results = {'video_results': all_results, 'avg_count_diff': total_count_diff.avg, 'mae': total_mae_by_video.avg,
-               'classification': classification_results}
+    results = {'video_results': all_results, 'avg_count_diff': total_count_diff.avg, 'mae': total_mae_by_video.avg, 'classification': classification_results}
 
     out_path = os.path.join(out_dir, 'test_results.json')
     write_json(results, out_path)
-
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
@@ -424,7 +301,8 @@ if __name__ == '__main__':
     main(args)
 
 '''
-python write_rate_on_frames_mse_count_smooth_frame_level.py \
+
+python run_metrics_on_inf.py \
 --results-dir /vision2/u/enguyen/results/rate_pred/run8_res18_mse_action_pretrained/inference_chpt24/test_results.json \
 --frame-dir /scr-ssd/enguyen/normal_1.0x/frames_fps16 \
 --out-dir /vision2/u/enguyen/demos/rate_pred/run8_chpt24/frames_level_results \
@@ -432,7 +310,8 @@ python write_rate_on_frames_mse_count_smooth_frame_level.py \
 --use-smooth \
 --min-duration 0
 
-python write_rate_on_frames_mse_count_smooth_frame_level.py \
+
+python run_metrics_on_inf.py \
 --results-dir /vision2/u/enguyen/results/rate_pred/run8_res18_mse_action_pretrained/inference_chpt60/test_results.json \
 --frame-dir /scr-ssd/enguyen/normal_1.0x/frames_fps16 \
 --out-dir /vision2/u/enguyen/demos/rate_pred/run8_chpt60/frames_level_results \
@@ -440,7 +319,20 @@ python write_rate_on_frames_mse_count_smooth_frame_level.py \
 --use-smooth \
 --min-duration 5
 
+ 
+
+
 '''
+
+
+
+
+
+
+
+
+
+
 
 
 
