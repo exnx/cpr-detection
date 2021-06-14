@@ -127,7 +127,9 @@ This directory has the best results, with frames, and videos created. Other run8
 
 This node has frames saved to disk for faster training, at various FPS, basically 16 fps for rate prediction, and full (30) fps for inference.
 
+##### All videos location
 
+`/vision/group/miniCBA/download_video/videos/allVideos`
 
 
 
