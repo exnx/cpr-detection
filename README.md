@@ -87,3 +87,49 @@ create_video_from_frames.py
 ```
 Same as above
 
+
+
+### Data stored on SC node and Macondo3 (for SVL only)
+
+##### /vision2/u/enguyen/results
+
+Lots of results for compression detection.  Latest (best) is: 
+
+`pretrain1_cont2`
+
+The checkpoints, logs are in here.
+
+Below tells you a lot:
+
+python write_action_on_frames.py \
+--results-dir /vision2/u/enguyen/results/pretrain1_cont2/val_1/val.json \
+--frame-dir /vision2/u/enguyen/mini_cba/new_fps10/ \
+--out-dir /vision2/u/enguyen/mini_cba/frames_with_text_no_alert2/
+
+- Inference results on in val_1/val.json
+- Frames used are at 10 FPS
+
+##### /vision2/u/enguyen/results/rate_pred
+
+`/vision2/u/enguyen/results/rate_pred/run8_res18_mse_action_pretrained`
+
+This contains the best rate predictor.  It used the pretrained model from the compression detector to start.  Uses MSE loss also.
+
+##### /vision2/u/enguyen/demos
+
+This director contains frames with results written on them, but also directories with just the inference results (no frames written), for Res and RepNet.
+
+`/vision2/u/enguyen/demos/rate_pred/run8_chpt24`
+
+This directory has the best results, with frames, and videos created. Other run8 folders here were drafts basically.
+
+##### Macondo3
+
+This node has frames saved to disk for faster training, at various FPS, basically 16 fps for rate prediction, and full (30) fps for inference.
+
+
+
+
+
+
+
